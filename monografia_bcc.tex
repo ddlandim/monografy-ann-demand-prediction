@@ -1,0 +1,659 @@
+% Modelo de TCC do Bacharelado em Ciência da Computação da UNIFESP 
+% Baseado no Modelo de Documentos Academicos do ABNTex2  
+
+\documentclass[	12pt, Times, openright, twoside, a4paper, english, brazil]{abntex2}
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{cmap}				% Mapear caracteres especiais no PDF
+%\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage{times}
+\usepackage[T1]{fontenc}			% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+%\usepackage{natbib}
+\usepackage{indentfirst}			% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+% ---
+\usepackage[portuguese, ruled, linesnumbered]{algorithm2e} %Peseudocodigo
+\usepackage{amssymb} %checkmarker
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% numeração de figuras e elas 
+\counterwithout{figure}{section}
+\counterwithout{table}{section}
+
+%\renewcommand\tablename{Tabela{\arabic{chapter}.}}
+
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{ANÁLISE DE DEMANDA VIA INTELIGÊNCIA ARTIFICIAL NO RESTAURANTE UNIVERSITÁRIO DO INSTITUTO CENTRAL DE TECNOLOGIA DA UNIFESP}
+\autor{Douglas Diniz Landim}
+\local{São José dos Campos, SP}
+\data{Março de 2018}
+\orientador{Prof. Dr. Vinicius Veloso}
+%\coorientador{Prof. Dr. }
+\instituicao{%
+  Universidade Federal de São Paulo -- UNIFESP
+  \par
+  Instituto de Ciência de Tecnologia
+  \par
+  Bacharelado em Ciência da Computação}
+\tipotrabalho{Trabalho de Graduação}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Trabalho de conclusão de curso apresentado ao Instituto de Ciência e Tecnologia – UNIFESP, como parte das atividades para obtenção do título de Bacharel em Ciência da Computação.}
+% ---
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+
+\makeatother
+% --- 
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% ---
+
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\begin{capa}
+  \begin{center}
+   \includegraphics[width=.25\textwidth]{logo-unifesp.pdf}
+    \vspace*{\fill}
+    
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vspace*{\fill}
+    
+    {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+    \vspace*{\fill}\vspace*{\fill}
+    
+   \imprimirlocal
+   \end{center}
+\end{capa}
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% Inserir folha de aprovação
+% ---
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+    
+   Trabalho aprovado em 01 de Julho de 2013:
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{Professor} \\ Convidado 1}
+   \assinatura{\textbf{Professor} \\ Convidado 2}
+   \assinatura{\textbf{Professor} \\ Convidado 3}
+   %\assinatura{\textbf{Professor} \\ Convidado 4}
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+  
+\end{folhadeaprovacao}
+% ---
+
+% ---
+% Dedicatória
+% ---
+\begin{dedicatoria}
+   \vspace*{\fill}
+   \centering
+   \noindent
+   \textit{ Este trabalho é dedicado aos meus pais que apoiaram e sacrificaram esforços para me manter ativo nessa jornada, e a todos os professores que me somaram conhecimentos, oportunidades e esperanças indo além de suas rotinas e agendas em prol do ensino. } \vspace*{\fill}
+\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+Minha jornada pela graduação foi marcada por muita persistencia, dificuldades e fracassos. Agradeço primeiramente a Deus por me dar fé e alimentar minha persistência e esperança. Apesar de todo o conteúdo técnico das mais de 40 disciplinas do meu curso, o que mais me agregou crescimento foi o ambiente extremamente desafiador desta universidade que somado à muitas dificuldades pessoais, acidentes e contra-tempos de saúde, profissão e família, formou a soma perfeita que me derrubou muitas e muitas vezes e me fez ser uma pessoa melhor, mais convicta e mais persistente a cada nova tentativa de aprovação que era reiniciada.  Agradeço à minha família por sempre me apoiar dando tudo de si, a meu professor orientador por me aceitar orientar, e me motivar sempre me dando atenção como um amigo nas conversas no fim da aula durante o caminho até o estacionamento da faculdade, nas reuniões e chat online até nos finais de semana, e aos familiares e amigos, e a todos os professores que me acompanharam e ofereceram desafios em todos esses anos na UNIFESP. 
+
+\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{Mesmo desacreditado e ignorado por todos, não posso desistir, pois para mim, vencer é nunca desistir.\\
+		(Albert Einstein)}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\begin{resumo}
+O presente trabalho tem como objetivo a continuidade daanálise das vendas do restaurante universitário da Unifesp, previamente feita pelo autor deste projeto com aplicação de métodos estatísticos, e atualmente realizada com métodos de aprendizado de máquina. A temperatura da região onde se localiza o campus do restaurante foi analisada por recorrência via bootstrap como um fator que exerce impacto sobre as vendas do restaurante em certos períodos do semestre, e agora em uma nova análise serão obtidas novas variáveis na análise da previsão de demanda de refeições do restaurante a fim de que seja obtido um modelo de previsão viável para evitar super-projeção de demanda com consequência de desperdício de alimentos, ou subprojeção com consequência de docentes ou discentes sem refeições.
+ 
+ \vspace{\onelineskip}
+    
+ \noindent
+ \textbf{Palavras-chaves}: redes neurais. previsão de demanda. 
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+ The objective of this work is the continuity of the sales analysis in Unifesp 's university restaurant, previously made by the author of this project with the application of statistical methods, and currently performed with machine learning methods. The temperature of the region where the restaurant campus is located was analyzed by bootstrap as a factor that has an impact on the restaurant sales in certain periods of the semester, and now in a new analysis will be obtained new variables in the analysis of the demand forecast of the restaurant in order to obtain a feasible forecast model to avoid over projection of demand as a result of food waste or underproduction with the consequence of teachers or students without meals.
+
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Key-words}: Previsão de demanda. Inteligência Artificial. Aprendizado de Máquina
+ \end{otherlanguage*}
+\end{resumo}
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+\begin{siglas}
+\item[EPFL] Escola Politécnica Federal de Lausana
+\item[GPS] Global Positioning System
+\item[IB-SMoT] Intersection-Based Stops and Moves of Trajectories
+\item[SMoT] Stops and Moves of Trajectories
+\item[UFSC] Universidade Federal de Santa Catarina
+\item[UNIFESP] Universidade Federal de São Paulo
+\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+\chapter{Introdução}
+\section{Contextualização e Motivação}
+
+A população de dispositivos móveis com localização por GPS (Global Positioning System), cresce continuamente e traz benefícios significativos para determinadas atividades de monitoramento de objetos, pessoas e ainda contribui para que empresas tomem decisões eficazes em suas visões estratégicas. Esse monitoramento tem como resultado a geração de grandes quantidades de dados sobre as trajetórias desses objetos \cite{Spaccapietra2008}. Entretanto esses dados são brutos, ou seja, baseado somente na forma física da trajetória onde não se encontra nenhum valor real agregado a estes dados, os dados destes dispositivos foram captados e ainda estão crus para certos domínios de aplicação e a questão entorno disto é como obter informações benéficas através deste dados que são gerados em grande volume a todo momento. Ferramentas completas para análise destes tipos de dados é um ponto fraco quando se fala em analisar trajetórias para obter resultados úteis, sendo assim a evolução deste tipo de análise, e ferramentas para este fim estão sendo estudadas e desenvolvidas.\\
+\indent Este tipo de dado permite prever diversos eventos como tráfego urbano, trajetórias de pessoas como turistas em uma cidade, trajetórias de pássaros quando migram, prever uma melhor rota para ônibus em uma cidade, entre outras aplicações que utilizam estes dados espaço-temporais.\\
+\indent A captura desses dados através do monitoramento móvel gera dados brutos que em algumas aplicações não é um tipo de dado que convém para ser analisado, entretanto dados brutos que já podem ser analisados são como fotos tiradas por satélite ou sensoriamento remoto onde existe softwares específicos para trabalhar com esse tipo de dado bruto podendo gerar mapas cartográficos e outros produtos. Dados gerados por dispositivos móveis são também dados brutos, porém precisam ser semanticamente enriquecidos para que seja possível analisá-los e extrair conhecimento interessante e útil para determinada aplicação. Uma trajetória bruta pode ser enriquecida com diferentes informações semânticas, de acordo com o contexto da aplicação e o problema que o usuário pretende resolver \cite{Bogorny2008}.\\
+\indent Este trabalho deverá evidenciar o uso de dados brutos captados por dispositivos móveis e adicionar semântica a estes dados, sendo assim usar mineração de dados e algoritmos para detectar padrões de encontro de pessoas e/ou multidões, desvios e recorrências de trajetórias. As aplicações com trajetórias semânticas são muitas dentre elas estão monitorar objetos que podem ser de grande risco em vias públicas com automóveis verificando aceleração, desaceleração e mudança de direção de veículos em determinados pontos de um mapa sendo assim essas informações são relevantes para uma empresa. Encontro de trajetórias em determinado espaço poderá indicar um itinerário a ser seguido e melhorado por um ônibus onde determinadas paradas podem ser pontuais e outras não.
+
+\section{Definição do problema}
+O problema a definir neste trabalho é aplicar o método SMoT \textit{(Stops and Moves of Trajectories)}, proposto por \cite{alvares2007} para enriquecer as trajetórias com informações do contexto em que elas ocorrem por meio do modelo \textit{stops e moves}, e usar determinados algoritmos nestas trajetórias.
+
+\section{Justificativas}
+As abordagens tradicionais de algoritmos em trajetórias geométricas já não são tão eficazes em determinadas aplicações, portanto neste trabalho inclui métodos de enriquecimento de semântica que são de certa forma modernos para este tipo de abordagem, com dados espaço-temporais de objetos móveis. Aplicar semântica aos dados brutos, deixam esses dados acessíveis a diversos domínios de aplicação. Para isso é necessário um modelo genérico para adicionar a semântica desejada, então aplicaremos o método SMoT e um algoritmo para detectar encontros e validar a eficácia da semântica aplicada através de \textit{stops e moves}.
+
+\section{Objetivos}
+\subsection{Objetivo geral}
+O objetivo geral deste trabalho é aplicar semântica adequadamente em um tipo de dado genérico de trajetórias usando o método SMoT, e criar um algoritmo que detecta encontros nestes dados enriquecidos.
+\subsection{Objetivos específicos}
+\begin{itemize}
+\item Investigar qual a semântica adequada a ser adicionada; 
+\item Implementar o método SMoT;
+\item Implementar algoritmo de detecção de encontros;
+\item Testar e verificar a eficácia destes algoritmos;
+\end{itemize}
+
+\section{Metodologia}
+As trajetórias brutas oferece limitações de domínios de problemas, resultados específicos deveram ser obtidos através de uma trajetória mais flexível, ou seja, trajetórias semanticamente enriquecidas, através de métodos robustos empregados recentemente o trabalho tem como metodologia as seguintes etapas a serem realizadas, onde primeiramente a pesquisa por bibliografias correlatas deste trabalho será de suma importância para se ter um conhecimento sólido e mas abrangente dos conceitos básicos e dos algoritmos a ser implementado junto com suas bases de dados, em seguida será feita a análise de qual será a semântica mais adequada para que o algoritmo tenha êxito em obter encontros nas trajetórias verificadas. Aplicando a semântica nos dados através do método SMoT, será implementado o algoritmo de detecção, e por último serão realizados testes de eficácia em experimentos com dados de uma determinada base.
+
+\section{Organização do documento}
+Este trabalho está organizado da seguinte forma: o capítulo 2 apresenta os conceitos básicos para o entendimento do trabalho. O capítulo 3 apresenta trabalhos relacionados. O capítulo 4 demonstra o plano de atividades para o TCC II. O capítulo 5 conclui este trabalho.
+% ----------------------------------------------------------
+% Fundamentação Teórica
+% ----------------------------------------------------------
+\chapter{Fundamentação Teórica}
+\section{Introdução}
+Dados geométricos de uma trajetória bruta com características de tempo e espaço que permitem analisar onde e quando algum evento ocorreu podem ser gerados por objetos móveis, porém na forma como são originalmente gerados pelos dispositivos, não possuem muita utilidade, e necessita de novas técnicas, métodos e algoritmos para interpretar esses dados e extrair conhecimento útil e interessante. Grande volume de dados geralmente esconde conhecimento novo e interessante, que pode ser muito útil em processos de tomada de decisões em diversas áreas. Esses conhecimentos estão juntos com a ideia de agregar semântica a trajetória, onde é proposto um sentido mais real a este dado que o torna relevante para a aplicação e torna os resultados bem mais interessantes do que era sem essa informação. Neste capítulo o principal objetivo é definir todos os conceitos que serão necessários para o entendimento total deste trabalho, levando em conta seus artifícios em torno de dados de trajetória.
+
+\section{Dados}
+Segundo \cite{Rezende2003}, o dado pode ser entendido como um elemento puro, quantificável, sobre um determinado evento onde este não tem um entendimento de uma determinada situação. Os dados estão na forma de números, textos, fatos ou qualquer forma de mídia que podem ser armazenados, recuperados, tratados e processados de diversas formas.
+
+\subsection{Dados espaço-temporais}
+Dados espaço-temporais chamados de trajetórias brutas, são coletados através de dispositivos móveis. Uma trajetória bruta é representada por um conjunto de pontos \textit{(tid,x,y,t)}, em que \textit{tid} é o identificador da trajetória e \textit{x, y}, são coordenadas geográficas correspondentes a um lugar no espaço em determinado tempo \textit{t}.
+
+\subsection{Informação}
+A informação é o dado analisado e seu contexto ser bem definido compreendendo seus padrões, onde deve-se ter um conjunto de dados a ser processado que podem gerar um valor adicional além dos próprios fatos obtidos.
+
+\subsection{Conhecimento}
+Em \cite{Rezende2003}, o conhecimento refere-se à habilidade de se criar um modelo mental que descreva o objeto e indique as ações a serem implementadas e as decisões a tomar. A compreensão e análise se tornam necessárias para a tomada de decisões inteligentes, onde são realizadas a partir do nível do conhecimento obtido através das etapas de obtenção dos dados e sua compreensão, retirar informações e obter conhecimento.\\
+
+\begin{figure}[htb]
+\center{\includegraphics[width=0.65\textwidth]{Figuras/figura1.png}}
+\caption{Relação entre dados, informação e conhecimento. Retirada de \cite{Rezende2003}.\label{fig:relação}}
+\end{figure}
+
+\section{Trajetória}
+Trajetórias podem ser geradas por qualquer objeto que carregue um dispositivo, seja um pedestre, um carro ou até um animal. Cada trajetória tem um conjunto de propriedades que descrevem o movimento de um objeto. Segundo \cite{Giannotti2008}, tais propriedades podem ser divididas em características momentâneas e gerais. As momentâneas são o objeto em um determinado tempo t ou determinado momento de um tempo t. As características gerais referem-se a trajetória como um todo, como a forma geométrica, o tamanho total da trajetória, a duração e velocidade média e etc. Podemos definir então trajetória como um segmento espaço-temporal do caminho percorrido por um objeto como definido por \cite{Spaccapietra2008}.\\
+\indent Na figura 2 demonstra exemplos de trajetórias brutas, de apenas um objeto e de vários objetos gerados por um dispositivo móvel, já na tabela 1 mostra como é a forma destes dados gerados.
+\begin{figure}[!ht]
+\center{\includegraphics[width=0.65\textwidth]{Figuras/trajetorias.png}}
+\caption{Uma trajetória e um conjunto de trajetórias. Adaptado de \cite{Giannotti2008}.\label{fig:trajetorias}}
+\end{figure}
+
+\begin{table}[!ht]
+	\centering
+		\caption{Tabela de trajetórias. Fonte:\cite{Bogorny2012}}	\label{tab:exemplo}
+		\begin{tabular}{|c|c|c|}
+			\hline  \textbf{Tid} &	\textbf{Posição(x,y)} &	\textbf{Tempo(t)} \\
+			\hline 1 & 48.890018	2.246100	& 10:18	\\
+			\hline 1 & 48.890020	2.246102	& 10:19	\\
+			\hline 1 & 48.888880	2.248208	& 10:20	\\
+			\hline 1 & 48.885732	2.255031	& 10:21	\\
+			\hline 1 & 48.878433	2.283517	& 10:22	\\
+            \hline 1 & 48.863214	2.279415	& 10:23	\\
+			\hline 
+		\end{tabular}
+\end{table}
+
+\subsection{Trajetória de objetos móveis}
+Em \cite{Bogorny2012}, um aparelho de GPS pode ser configurado para gravar novos dados e consegue, por exemplo, gravar um ponto a cada segundo em que o objeto se move, um ponto a cada uma determinada distância em que o objeto se move ou ainda gravar pontos em determinado tempo \textit{t}, portanto a sequência dos pontos registrados para cada indivíduo é chamada de trajetória do objeto móvel.
+
+\subsection{Ponto}
+É um registro \textit{(x, y, t)}, no qual \textit{x} e \textit{y} são as coordenadas geográficas e \textit{t} é a identificação de tempo em que a coordenada foi coletada \cite{Bogorny2014}.
+
+\subsection{Objeto}
+É o objeto em movimento e que transporta um dispositivo móvel. Pode
+ser uma pessoa, um carro, um animal, um robô etc \cite{Bogorny2014}.
+
+\subsection{Dados semânticos}
+São dados que buscam complementar as informações referentes às trajetórias, agregando valor, por exemplo, meio de transporte, velocidade, informações climáticas, entre outras \cite{Bogorny2014}.
+
+\subsection{Enriquecimento semântico}
+Em \cite{Furletti2013} é definido que o processo de agregar informações semânticas às trajetórias brutas é chamado enriquecimento semântico e, gera como saída uma trajetória semântica. Por exemplo, eventos, comportamento, objetivo, ambiente e atividade são formas de enriquecer uma trajetória bruta.
+
+\subsection{Semântica em trajetórias}
+Em trajetória bruta onde os dados são gerados por dispositivos móveis como GPS, é difícil extrair conhecimento interessante, entretanto se enriquecermos essas trajetórias com informações que agregam valor aos dados coletados pelos dispositivos de localização então a aplicação de extração de dados poderá ser mais eficiente em seus objetivos. Os benefícios de dados semanticamente enriquecidos podem alcançar resultados onde trajetórias brutas não permitiriam ter essa potencial visibilidade de prever ou tomar alguma decisão, por exemplo, se uma pessoa parou em um local por um determinado período de tempo (e.g. shopping, hotel, supermercado), permite observar qual o deslocamento de certas trajetórias como pessoas que estão hospedadas em um hotel e percorrem a cidade buscando por pontos turísticos e então a partir destes pontos quais restaurantes são mais visitados por essas pessoas.\\
+\indent A idéia de agregar semântica às trajetórias de objetos móveis para facilitar a análise deste tipo de dado foi introduzida pela professora Vânia Bogorny e professor Luís Otávio Alvares ambos da UFSC em conjunto com o grupo da universidade de Hasselt, um pesquisador da Universidade de Buenos Aires e pesquisadores da EPFL. Foi criado um modelo para adicionar semântica às trajetórias, a fim de facilitar e otimizar consultas espaço-temporais \cite{alvares2007}, com o algoritmo SMoT. Os autores teve como base de seu trabalho o modelo conceitual para trajetórias elaborado pelo grupo de pesquisas do professor Spaccapietra, \cite{Spaccapietra2008}, chamado \textit{stop and moves} como \cite{Bogorny2012} diz em seu livro, uma trajetória bruta pode ser enriquecida com diferentes informações semânticas, de acordo com o contexto da aplicação e o problema que o usuário pretende resolver, ao tentarmos analisar uma trajetória bruta, será muito difícil encontrar algum padrão novo e interessante. Os padrões semânticos podem ser independentes de localização geográfica (se tiverem em lugares esparsos ou com poucos pontos ou trajetórias, em vez de locais densos, com muitos pontos ou trajetórias) e não apresentar nenhuma similaridade. Então padrões semânticos dificilmente serão extraídos de trajetórias brutas, depois de uma análise dos dados não se pode enriquecer semanticamente as trajetórias.\\
+\indent	A área de pesquisa que considera contexto ou semântica em trajetórias ainda está na sua infância \cite{Bogorny2012}. 
+
+\subsubsection{O modelo \textit{stops and moves}}
+Até 2006 os estudos de trajetórias consideravam basicamente a geometria das trajetórias. No fim de 2006, publicado oficialmente em 2008, o trabalho de \cite{Spaccapietra2008}, criou um modelo conceitual para trajetórias chamado \textit{stops and moves}.\\
+\indent Este modelo proposto define os \textit{stops} como as partes importantes da trajetória do ponto de vista da aplicação, ou seja, nas paradas de uma trajetória onde a mesma permaneceu por um determinado intervalo de tempo em lugar específico é onde o \textit{stop} tem mais importância, já que certas informações de semânticas podem dizer a qual lugar esta parada indica. Um \textit{move} é definido como a parte da trajetória (ou a subtrajetória) onde liga um \textit{stop} qualquer ate o seu próximo \textit{stop} consecutivo, e ainda a parte da trajetória até encontrar um \textit{stop} e a outra parte quando após o último \textit{stop} da trajetória, ou seja, entre o instante inicial e final da trajetória caso não exista nenhum \textit{stop}. Nesse modelo, todas as partes da trajetória que não são \textit{stops} representam \textit{moves}.\\
+\indent Ao considerarmos, por exemplo, um hotel como um \textit{stop}, onde o objeto móvel é uma pessoa que ficou um determinado tempo \textit{t} neste hotel, no ponto de vista da aplicação o objeto ficou parado no \textit{stop}, pois se mostra relevante a permanência da pessoa no hotel por um determinado tempo.\\
+\indent O processo de \textit{stops and moves} é muito similar à engenharia reversa de banco de dados, neste processo precisamos dos dados para que o modelo \textit{stops and moves} seja gerado a partir desses dados.\\
+\indent \cite{Spaccapietra2008} define \textit{stops and moves} como a seguir: 
+
+\begin{itemize}
+\item \textit{Stop}:
+	\begin{itemize}
+    \item O usuário explicitamente define parte do percurso em início e término para representar um \textit{stop}.
+    \item O tempo de um percurso de início e término é um intervalo de tempo não nulo.
+    \item O tempo de todas as paradas são separados, ou seja, o tempo de duas paradas são sempre disjuntas.
+    \end{itemize}
+\item \textit{Move:}
+	\begin{itemize}
+    \item Uma parte é delimitada por duas extremidades que representam dois \textit{stops} consecutivos, ou o início e o primeiro \textit{stop}, ou o último \textit{stop} e término, ou [início, término] (sem \textit{stops}).
+    \item O tempo de um percurso de início e término é um intervalo de tempo não nulo.
+    \item O alcance espacial da trajetória de início e término de um intervalo é o espaço-temporal de uma linha (não um ponto) definido pela função da trajetória.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trajetória semântica}
+Trajetória bruta tem suas limitações citadas ao longo de deste trabalho, trabalhar com trajetória semântica tem vantagem por ser mais receptivas e compreendidas, onde são fáceis de perceber a diferença entre essas trajetórias, pois semânticas são carregadas com informações ao longo da trajetória, abaixo na figura 3 existem 3 trajetórias (1) Bruta e (2) e (3) semânticas, é fácil diferenciá-las, porém na trajetória 2 se trata de uma aplicação de turismo, pois os pontos de interesse são lugares onde faz parte do contexto da aplicação. Já na trajetória 3 a semântica faz parte de uma aplicação de trânsito e as partes mais interessantes são partes onde se tem o maior movimento de veículos parados. Pontos importantes da trajetória que identificamos na figura 3 onde nas trajetórias (2) e (3) são lugares marcados com cores, significa pontos de \textit{stops}, e o restante dessas trajetórias são \textit{moves}.  
+
+\begin{figure}[!ht]
+\center{\includegraphics[width=0.65\textwidth]{Figuras/trajetorias2.jpg}}
+\caption{Exemplos de trajetórias:(1) bruta, (2) e (3) semânticas. Retirada de \cite{Bogorny2012}.\label{fig:figura}}
+\end{figure}
+
+\section{O algoritmo SMoT}
+A tarefa desempenhada por este algoritmo é verificar se cada ponto de uma trajetória bruta \textit{T} tem uma intersecção com a área geométrica de um candidato a \textit{stop}, ou seja, essa área geométrica são objetos geográficos relevantes para a aplicação. Se existe a validação de intersecção em algum ponto da trajetória, então o algoritmo verifica a duração da intersecção, que deve ser igual ou superior que o tempo mínimo estabelecido para aquele tipo de objeto geográfico, então o objeto será considerado um \textit{stop}, em caso de o tempo não ter o seu mínimo atingido aquele objeto geográfico não pode ser considerado um \textit{stop} então não é adicionado aos \textit{stops} encontrados. Este algoritmo possui como entrada um conjunto de trajetórias e um conjunto de candidatos à \textit{stop}, tendo como saída uma tabela de \textit{stops} e uma tabela de \textit{moves}.
+No Algoritmo 1 é apresentado um pseudocódigo de extração de \textit{stops and moves}, proposto por \cite{alvares2007}. \\
+
+\begin{algorithm}[H]
+   \SetAlgoLined
+   \Entrada{$T, A$} 
+%  \Saida{Número esperado de nodos atingidos}
+   \Inicio{
+    $S \leftarrow new  Stops()$\ \\
+    $M \leftarrow new  Moves()$\ \\
+    \Para{$cada \,\, trajetória \,\, t \in T$}{
+   	 $i \leftarrow 0$\ \\
+     $previousStop \leftarrow null$\ \\
+      \Enqto{$i \le size(t)$}{
+      	\Se{$\exists\,\,(Rc,\Delta c) \in A \mid geometria(t[i]) \cap Rc$}{
+        	$enterTime \leftarrow time(t[i])$\ \\
+            $i++$\ \\
+        \Enqto{$geometria(t[i]) \cap Rc)$}{
+        	$i++$\
+        }
+        $i--$\ \,\, , \,\,
+        $leaveTime \leftarrow time(t[i])$\ \\
+        \Se{$leaveTime - enterTime \ge \Delta c$}{
+        	$stop \leftarrow (t,Rc,enterTime,leaveTime)$\ \\
+            $S.add(stop)$\ \\
+            $move \leftarrow (t,previousStop,stop,previousStop.leaveTime,enterTime)$\ \\
+            $M.add(move)$\ \\
+            $previousStop \leftarrow stop$\
+         }
+        }
+        $i++$\ \,\, ,\,\,
+        $j \leftarrow 1$\ \\
+        \Enqto{$(i+j \le size(t))\,\, and\,\, (t[i+j]-t[i] < min\,\, \Delta c\, (A))$}{
+        	$j++$\
+        }
+        \Se{$\not\exists \,\,(Rc,\Delta c) \in A \mid geometria(t[i+j-1]) \,\, \cap Rc$}{
+        $i \leftarrow i+j$\
+        }
+   	  }
+      \Se{$ t[i-1]\,\, not \in previousStop$}{
+      $move \leftarrow (t,previousStop,null,previousStop.leaveTime,time(t[i-1]))$\ \\
+      $M.add(move)$\
+      }
+    }
+   }
+   \label{algoritmo1}
+   \caption{\textsc{Pseudocódigo SMoT}}
+\end{algorithm}
+
+O algoritmo verifica para cada ponto de uma trajetória t se cruza com a geometria de um candidato a\textit{ stop Rc} (linha 8). Em caso afirmativo, o algoritmo avalia a duração da intersecção tem, pelo menos, um limite igual a \textit{$\Delta$c} (linha 15). Se esse é o caso esse \textit{stop} é gravado. Note que quando usamos \textit{t} e \textit{Rc} como parâmetros (por exemplo, linha 16), usamos e atribuímos na realidade um identificador de chave estrangeira e não toda uma estrutura de dados. \\
+\indent Esse método de \textit{stops and moves} tem um nome mais específico chamado IB-SMoT \textit{(Intersection-Based Stops and Moves of Trajectories)} que por meio de sobreposição dos principais pontos de uma trajetória bruta, respeitando o tempo limite mínimo de intersecção do ponto, se obtêm a partir de locais preestabelecidos pelo usuário candidatos de \textit{stops} na trajetória. Na figura 4 o algoritmo IB-SMoT encontrou três candidatos a \textit{stop} na trajetória.
+
+\begin{figure}[!ht]
+\center{\includegraphics[width=0.65\textwidth]{Figuras/IB-SMOT.jpg}}
+\caption{Exemplo de IB-SMOT com \textit{stops} encontrados.\cite{alvares2007}\label{fig:IB-SMOT}}
+\end{figure}
+
+\subsection{Padrões de movimentos em trajetórias}
+Um movimento relativo de várias trajetórias de objetos móveis pode auxiliar a encontrar certos padrões em trajetórias como recorrências e encontros que é o principal foco deste trabalho, em \cite{laube2005finding} descreve esses padrões de movimentos como a seguir:
+\begin{itemize}
+\item Encontro é um determinado número de trajetórias dentro de um raio \textit{R}, onde um conjunto \textit{m} de trajetórias em um determinado intervalo \textit{i} se move em uma mesma direção, passando por uma determinada área fazendo intersecção com o intervalo de raio \textit{R} tendo uma mesma velocidade.
+\item Convergência é um conjunto \textit{m} de trajetórias que interceptam uma mesma região de raio \textit{R}, não necessariamente no mesmo momento.
+\end{itemize}
+
+Observe a diferença entre estes dois padrões de movimento, na figura 5 o padrão é de encontro, onde as trajetórias têm a mesma direção e velocidade e ficam dentro do raio um certo tempo. Já na figura 6 o padrão é de convergência, onde as trajetórias vêm de todos os sentidos na mesma direção, porém não ao mesmo tempo.
+
+\begin{figure}[ht]
+\center{\includegraphics[width=0.65\textwidth]{Figuras/encontro.png}}
+\caption{Exemplo de encontro.\cite{Bogorny2012}\label{fig:encontro}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=0.65\textwidth]{Figuras/convergencia.png}}
+\caption{Exemplo de convergência.\cite{Bogorny2012}\label{fig:convergencia}}
+\end{figure}
+
+\chapter{Trabalhos relacionados}
+Entre os últimos artigos publicados em 2015 sobre enriquecimento de trajetórias está o trabalho de \cite{sublime2015}, que tem características específicas que permitem a extração de informações semântica sobre dados geográficos de imagens de alta resolução, esse tipo de extração de semântica é muito usado quando os dados não são obtidos via objetos móveis, já que se obtêm a semântica a partir de dados. Porém com estes dados, são gerados mapas atualizados que são proveitosos para aplicar semântica em trajetórias brutas de objetos móveis. Os estudos em torno de trajetórias semânticas e enriquecimento semântico têm tido um grande avanço nos últimos anos.\\
+\indent No trabalho de \cite{alvares2007}, o enriquecimento de trajetórias é feito com informações geográficas para simplificar consultas que são complexas, então é proposto um pré-processamento de modelo de dados para adicionar informações semânticas as trajetórias.\\
+\indent Em \cite{laube2005finding}, é introduzido o estudo de comportamento de movimentos de trajetórias, onde o autor explica como se obtêm cada tipo de movimento o que vem a ser proveitoso para este trabalho, o padrão de encontro que é exemplificado no livro é o mais complexo de se calcular, por que temos que medir o intervalo de tempo de todas as trajetórias que passam em um determinado raio \textit{R}.\\
+\indent Em \cite{Bogorny2012} uma trajetória bruta pode ser enriquecida com diferentes informações semânticas de acordo com o contexto da aplicação e o problema que o usuário pretende resolver.\\
+\indent Neste trabalho é utilizado o método de enriquecimento de trajetórias onde usaremos informações geográficas para conflitar com as trajetórias e dizer se são pontos de \textit{stops} através do algoritmo de \textit{stops and moves}, tendo esses dados enriquecidos semanticamente vai ser implementado um algoritmo que detecta encontros em trajetórias a partir de um raio dado e um tempo de permanência mínimo em cada \textit{stop}.
+
+\chapter{Plano de atividades para o TCC II}
+Para a continuação deste trabalho o cronograma abaixo deve ser seguido.
+
+\begin{table}[!ht]
+	\centering
+		\caption{Plano de atividades para o TCC II}	\label{tab:plano}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline  \textbf{Atividades} &	\textbf{Março} &	\textbf{Abril} & \textbf{Maio} & \textbf{Junho} & \textbf{Julho} \\
+			\hline 1 & $\checkmark$ 	& & & & 	\\
+			\hline 2 & $\checkmark$	& & & & 	\\
+			\hline 3 & 	&$\checkmark$ &$\checkmark$ & & 	\\
+			\hline 4 & 	&$\checkmark$ &$\checkmark$ &$\checkmark$ & 	\\
+			\hline 5 & 	&$\checkmark$ &$\checkmark$ &$\checkmark$ & 	\\
+            \hline 6 &  & & & &$\checkmark$ 	\\
+			\hline 
+		\end{tabular}
+\end{table}
+\begin{enumerate}
+\item Busca de uma base de dados correta para a aplicação.
+\item Evidenciar o contexto semântico a ser aplicado.
+\item Implementar o algoritmo SMoT.
+\item Implementar o algoritmo que detecta encontros.
+\item Análise e comparação dos resultados.
+\item Documentação total do trabalho.
+\item Apresentação do trabalho.
+\end{enumerate}
+
+\chapter{Conclusão}
+A forma de enriquecer semânticas de objetos móveis, é uma área de pesquisa que cresce cada vez mais, e a produção de dispositivos móveis cresce de uma forma muito agressiva no mercado resultando em grandes volumes de dados geográficos, porém aonde aplicar todos os métodos que vimos neste trabalho e obter resultados significativos, isso ainda está em sua infância. \\
+\indent	Em aplicações onde se usam dados gerados por dispositivos móveis, deve ser feito um estudo muito bem-feito para enriquecer suas trajetórias, onde o contexto da aplicação depende muito na execução do algoritmo para obter excelentes resultados.\\
+\indent	A proposta deste trabalho é trabalhar com dados fornecidos de trajetórias brutas e aplicar o método SMoT para enriquecê-las semanticamente e posteriormente analisar essas rotas e indicar em quais pontos houve encontros, independente de qual objeto gerou tais rotas.
+
+%\begin{itemize}
+%\item Contextualização e Motivação; 
+%\item Definição do problema; 
+%\item Justificativas;
+%\item Objetivos:  Geral e específicos;
+%\item Metodologia e
+%\item Organização do documento.
+%\end{itemize}
+
+%\subsection{Sobre os Títulos e Capítulos}
+
+%As demais subdivisões do texto (seções, subseções, etc) ... 
+
+%\subsubsection{Título de Subseção}
+%Veja aqui um exemplo de citaçao direta \cite{memoir}.
+
+
+% ----------------------------------------------------------
+% Capitulo com exemplos de comandos inseridos de arquivo externo 
+% ----------------------------------------------------------
+
+% ---
+% Capitulo de revisão de literatura
+% ---
+%\chapter{Revisão Bibliográfica}
+
+% ---
+%\section{Introdução}
+% ---
+
+% ---
+% primeiro capitulo de Resultados
+% ---
+%\chapter{Resultados}
+
+% ---
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ---
+% Conclusão
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+%\postextual
+
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+%\bibliographystyle{plain}
+\bibliography{references}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+%\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+%\partapendices
+
+% ----------------------------------------------------------
+%\chapter{Título de Apêndice}
+% ----------------------------------------------------------
+
+
+% ----------------------------------------------------------
+%\chapter{Título do Apêndice}
+% ----------------------------------------------------------
+
+
+%\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+%\begin{anexosenv}
+
+% Imprime uma página indicando o início dos anexos
+%\partanexos
+
+% ---
+%\chapter{Título do Anexo}
+% ---
+
+%\end{anexosenv}
+
+\end{document}
