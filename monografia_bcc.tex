@@ -232,6 +232,7 @@ Minha jornada pela graduação foi marcada por muita persistencia, dificuldades 
     
  \noindent
  \textbf{Palavras-chaves}: Redes Neurais Artificiais. Previsão de demanda. Aprendizado de Máquina. Inteligência Artificial. Perceptron Múltiplas camadas. 
+ 
 \end{resumo}
 
 % resumo em inglês
@@ -267,11 +268,6 @@ Minha jornada pela graduação foi marcada por muita persistencia, dificuldades 
 % inserir lista de abreviaturas e siglas
 % ---
 \begin{siglas}
-\item[EPFL] Escola Politécnica Federal de Lausana
-\item[GPS] Global Positioning System
-\item[IB-SMoT] Intersection-Based Stops and Moves of Trajectories
-\item[SMoT] Stops and Moves of Trajectories
-\item[UFSC] Universidade Federal de Santa Catarina
 \item[ICT] Instituto Central de Tecnologia
 \item[UNIFESP] Universidade Federal de São Paulo
 \end{siglas}
@@ -351,9 +347,39 @@ Este trabalho está organizado da seguinte forma: o capítulo 2 apresenta os con
 % ----------------------------------------------------------
 \chapter{Fundamentação Teórica}
 \section{Introdução}
-Dados geométricos de uma trajetória bruta com características de tempo e espaço que permitem analisar onde e quando algum evento ocorreu podem ser gerados por objetos móveis, porém na forma como são originalmente gerados pelos dispositivos, não possuem muita utilidade, e necessita de novas técnicas, métodos e algoritmos para interpretar esses dados e extrair conhecimento útil e interessante. Grande volume de dados geralmente esconde conhecimento novo e interessante, que pode ser muito útil em processos de tomada de decisões em diversas áreas. Esses conhecimentos estão juntos com a ideia de agregar semântica a trajetória, onde é proposto um sentido mais real a este dado que o torna relevante para a aplicação e torna os resultados bem mais interessantes do que era sem essa informação. Neste capítulo o principal objetivo é definir todos os conceitos que serão necessários para o entendimento total deste trabalho, levando em conta seus artifícios em torno de dados de trajetória.
+A previsão da demanda é o fator principal da eficência de qualquer modelo de processamento do tipo entrada-saída, onde a sua saída deve atender uma demanda não determinística. É necessário prever a demanda para projetar e aperfeiçoar o processamento e a entrada deste modelo. 
+
+O modelo a ser analisado neste trabalho é a linha produtiva de um restaurante universitário, onde o mesmo precisa projetar sua compra de insumos e alocação de recursos na entrada de seu modelo de negócio, e projetar sua saída, que é a produção de refeições em quantidade numérica e inteira distribuída em função do tempo em dias, para atender um consumo humano que não se comporta de maneira determinística, já que este consumo é facultativo ao público do local.
+
+Logo é necessário entender e descobrir quais elementos influenciam este consumo humano, de que forma estes elementos exercem tal influência e em qual intensidade ela ocorre.
+
+E para explorar tais elementos, é necessário explorar como este consumo ocorreu historicamente a fim de se encontrar padrões de comportamento, que no cenário deste trabalho acontece com informações distribuídas através do tempo. 
+
+Neste capítulo o principal objetivo é definir todos os conceitos que serão necessários para o entendimento total deste trabalho, analisando a forma que os dados são entendidos, e as ferramentas com os quais possam ser trabalhados.
 
 \section{Dados}
+Abstraindo o histórico de vendas do restaurante, temos 2 tipos de dados principais. A venda podendo ser uma observação Y, e a data da venda sendo uma observação X. Se comportando de modo que uma função de 
+
+A observação principal a ser analisada neste trabalho é o numero de vendas do R.U do ICT - UNIFESP, em valor inteiro, obtido de um dia letivo, em um determinado período sendo este o almoço ou janta.
+
+A observação principal tem então 2 tipos, o almoço e a janta, tratados de maneira distinta e não correlacionada neste trabalho, sendo assim, cada um destes 2 tipos, podendo ser explorados com análises e métodos diferentes.
+
+O tempo, onde a informação principal se distribui, é em formato de data, e contém apenas
+
+As observações de influência sobre o comportamento da principal, serão exploradas pela 
+
+\section{Séries Temporais}
+De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo.
+
+Uma s´erie temporal ´e um conjunto de observa¸c˜oes ordenadas em intervalos de tempo, comumente
+iguais. Essas observa¸c˜oes apresentam uma dependˆencia serial entre elas, sendo um dos objetivos
+do estudo de s´eries temporais, analisar e modelar essa dependˆencia. Al´em disso, s´eries temporais
+s˜ao analisadas pelos seus principais movimentos, como tendˆencia, sazonalidade e a componente
+aleat´oria, sendo as duas primeiras componentes de interesse desse estudo.Geralmente as s´eries
+de energia s˜ao n˜ao estacionarias, e, para transform´a-las em estacionarias ´e necess´ario fazer
+diferencia¸c˜ao. De acordo com Morettin (1987), a transforma¸c˜ao mais comum consiste em tomar
+diferen¸cas sucessivas na s´erie original at´e obter uma s´erie estacion´aria
+
 Segundo \cite{Rezende2003}, o dado pode ser entendido como um elemento puro, quantificável, sobre um determinado evento onde este não tem um entendimento de uma determinada situação. Os dados estão na forma de números, textos, fatos ou qualquer forma de mídia que podem ser armazenados, recuperados, tratados e processados de diversas formas.
 
 \subsection{Dados espaço-temporais}
