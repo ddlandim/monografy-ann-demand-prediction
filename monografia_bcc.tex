@@ -369,7 +369,14 @@ A observação principal tem então 2 tipos, o almoço e a janta, tratados de ma
 O tempo, onde a informação principal se distribui, é em formato de data, e contém apenas 1 valor da venda total de almoços nesta data, e da venda total de jantas nesta data.
 
 \section{Séries Temporais}
-De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo, comumente iguais. Essas observações apresentam uma dependência serial entre elas, sendo um dos objetivos do estudo de séries temporais, analisar e modelar essa dependência. Além disso, séries temporais são analisadas pelos seus principais movimentos, como tendência, sazonalidade e a componente aleatória, sendo a tendencia e sazonalidade o principal foco deste estudo.
+De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo, comumente iguais. Essas observações apresentam uma dependência serial entre elas, sendo um dos objetivos do estudo de séries temporais, analisar e modelar essa dependência. Além disso, séries temporais são analisadas pelos seus principais movimentos, como tendência, sazonalidade e a componente aleatória, sendo a tendencia e sazonalidade as propriedades que mais ganham destaque em pesquisas de previsão de demanda. Os meios mais comuns de se analisar a componente sazonal são o Método de Regressão (paramétrico), Método de Médias Móveis (não paramétrico), e Método de Diferença Sazonal (sazonalidade determinística).  Neste trabalho, a distribuição dos dados do Restaurante se dá de forma paramétrica, ou seja, as vendas do restaurante se distribuem em função do tempo e com influências de parâmetros como o dia da semana por exemplo, sendo ideal as análises de regressão.
+\begin{figure}[!ht]
+\center{\includegraphics[width=0.65\textwidth]{Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png}}
+\caption{DADOS DE DEMANDA DE SAZONALIDADE DIÁRIA, EM FUNÇÃO DO HORÁRIO. Adaptado de \cite{RUAS2012}.\label{fig:seriesTemporais}}
+\end{figure}
+
+\subsection{Sazonalidade}
+A série temporal sazonal, ocorre com um padrão de mudança que  tem uma repetição por ano, podendo ser uma sazonalidade trimestral, semestral, entre outros. No cenário deste estudo a frequência de alunos dentro do ICT - UNIFESP e consequentemente dentro do R.U tem sazonalidade semestral. As técnicas de previsão para evidências sazonais usam métodos de regressão, que pode ser observados nos trabalhos de previsão de consumo de energia elétrica realizados por \cite{}
 
 \subsection{Dados espaço-temporais}
 Dados espaço-temporais chamados de trajetórias brutas, são coletados através de dispositivos móveis. Uma trajetória bruta é representada por um conjunto de pontos \textit{(tid,x,y,t)}, em que \textit{tid} é o identificador da trajetória e \textit{x, y}, são coordenadas geográficas correspondentes a um lugar no espaço em determinado tempo \textit{t}.
