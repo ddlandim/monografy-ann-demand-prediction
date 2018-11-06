@@ -226,7 +226,7 @@ Minha jornada pela graduação foi marcada por muita persistencia, dificuldades 
 
 % resumo em português
 \begin{resumo}
-\paragraph*{} O presente trabalho tem como objetivo a comparação com o método de análise da previsão de vendas do restaurante universitário da Unifesp, previamente feita pelo autor deste projeto com aplicação de métodos estatísticos, e atualmente com métodos de aprendizado de máquina. Tal análise por aprendizado de máquina foi apontado como relevante solução no fim da análise estatística do trabalho anterior. A temperatura da região onde se localiza o campus do restaurante foi analisada por recorrência via bootstrap como um fator que exerce impacto sobre as vendas do restaurante em certos períodos do semestre, e neste trabalho de conclusão de curso serão obtidas novas variáveis e um intervalo maior de amostragem na análise da previsão de demanda de refeições do restaurante em um novo modelo com aprendizado de máquina a fim de que seja obtido um modelo de previsão viável para evitar super-projeção de demanda com consequência de desperdício de alimentos, ou subprojeção com consequência de docentes ou discentes sem refeições.
+O presente trabalho tem como objetivo a comparação com o método de análise da previsão de vendas do restaurante universitário da Unifesp, previamente feita pelo autor deste projeto com aplicação de métodos estatísticos, e atualmente com métodos de aprendizado de máquina. Tal análise por aprendizado de máquina foi apontado como relevante solução no fim da análise estatística do trabalho anterior. A temperatura da região onde se localiza o campus do restaurante foi analisada por recorrência via bootstrap como um fator que exerce impacto sobre as vendas do restaurante em certos períodos do semestre, e neste trabalho de conclusão de curso serão obtidas novas variáveis e um intervalo maior de amostragem na análise da previsão de demanda de refeições do restaurante em um novo modelo com aprendizado de máquina a fim de que seja obtido um modelo de previsão viável para evitar super-projeção de demanda com consequência de desperdício de alimentos, ou subprojeção com consequência de docentes ou discentes sem refeições.
  
  \vspace{\onelineskip}
     
@@ -239,7 +239,7 @@ Minha jornada pela graduação foi marcada por muita persistencia, dificuldades 
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
 
-\paragraph*{} The present work has the objective of comparison with the static method of analysis of the demand prediction in UNIFESP university restaurant, previously done by the author of this project, and currently with machine learning methods. Such analysis by machine learning was pointed out as a relevant solution at the end of the statistical analysis of the previous work. The temperature of the region where the restaurant campus is located was analyzed by bootstrap recurrence as a factor impacting the restaurant sales in certain periods of the semester, and in this work of completion of the course will be obtained new variables and a greater range of sampling in the analysis of the forecast of restaurant meal demand in a new model with machine learning in order to obtain a viable prediction model to avoid overprojection of demand as a result of food waste or subprojection with the consequence of teachers or students without meals.
+The present work has the objective of comparison with the static method of analysis of the demand prediction in UNIFESP university restaurant, previously done by the author of this project, and currently with machine learning methods. Such analysis by machine learning was pointed out as a relevant solution at the end of the statistical analysis of the previous work. The temperature of the region where the restaurant campus is located was analyzed by bootstrap recurrence as a factor impacting the restaurant sales in certain periods of the semester, and in this work of completion of the course will be obtained new variables and a greater range of sampling in the analysis of the forecast of restaurant meal demand in a new model with machine learning in order to obtain a viable prediction model to avoid overprojection of demand as a result of food waste or subprojection with the consequence of teachers or students without meals.
 
    \vspace{\onelineskip}
  
@@ -347,7 +347,7 @@ Este trabalho está organizado da seguinte forma: o capítulo 2 apresenta os con
 % ----------------------------------------------------------
 \chapter{Fundamentação Teórica}
 \section{Introdução}
-A previsão da demanda é o fator principal da eficência de qualquer modelo de processamento do tipo entrada-saída, onde a sua saída deve atender uma demanda não determinística. É necessário prever a demanda para projetar e aperfeiçoar o processamento e a entrada deste modelo. 
+A previsão da demanda é o fator principal da eficiência de qualquer modelo de processamento do tipo entrada-saída, onde a sua saída deve atender uma demanda não determinística. É necessário prever a demanda para projetar e aperfeiçoar o processamento e a entrada deste modelo. 
 
 O modelo a ser analisado neste trabalho é a linha produtiva de um restaurante universitário, onde o mesmo precisa projetar sua compra de insumos e alocação de recursos na entrada de seu modelo de negócio, e projetar sua saída, que é a produção de refeições em quantidade numérica e inteira distribuída em função do tempo em dias, para atender um consumo humano que não se comporta de maneira determinística, já que este consumo é facultativo ao público do local.
 
@@ -358,29 +358,18 @@ E para explorar tais elementos, é necessário explorar como este consumo ocorre
 Neste capítulo o principal objetivo é definir todos os conceitos que serão necessários para o entendimento total deste trabalho, analisando a forma que os dados são entendidos, e as ferramentas com os quais possam ser trabalhados.
 
 \section{Dados}
-Abstraindo o histórico de vendas do restaurante, temos 2 tipos de dados principais. A venda podendo ser uma observação Y, e a data da venda sendo uma observação X. Se comportando de modo que uma função de 
+Abstraindo o histórico de vendas do restaurante, temos 2 tipos de dados principais. A venda podendo ser uma observação Y, e a data da venda sendo uma observação X. Se comportando de modo que a função de X implica em Y. 
+
+X,Y $\rightarrow Y \simeq f(X) $
 
 A observação principal a ser analisada neste trabalho é o numero de vendas do R.U do ICT - UNIFESP, em valor inteiro, obtido de um dia letivo, em um determinado período sendo este o almoço ou janta.
 
 A observação principal tem então 2 tipos, o almoço e a janta, tratados de maneira distinta e não correlacionada neste trabalho, sendo assim, cada um destes 2 tipos, podendo ser explorados com análises e métodos diferentes.
 
-O tempo, onde a informação principal se distribui, é em formato de data, e contém apenas
-
-As observações de influência sobre o comportamento da principal, serão exploradas pela 
+O tempo, onde a informação principal se distribui, é em formato de data, e contém apenas 1 valor da venda total de almoços nesta data, e da venda total de jantas nesta data.
 
 \section{Séries Temporais}
-De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo.
-
-Uma s´erie temporal ´e um conjunto de observa¸c˜oes ordenadas em intervalos de tempo, comumente
-iguais. Essas observa¸c˜oes apresentam uma dependˆencia serial entre elas, sendo um dos objetivos
-do estudo de s´eries temporais, analisar e modelar essa dependˆencia. Al´em disso, s´eries temporais
-s˜ao analisadas pelos seus principais movimentos, como tendˆencia, sazonalidade e a componente
-aleat´oria, sendo as duas primeiras componentes de interesse desse estudo.Geralmente as s´eries
-de energia s˜ao n˜ao estacionarias, e, para transform´a-las em estacionarias ´e necess´ario fazer
-diferencia¸c˜ao. De acordo com Morettin (1987), a transforma¸c˜ao mais comum consiste em tomar
-diferen¸cas sucessivas na s´erie original at´e obter uma s´erie estacion´aria
-
-Segundo \cite{Rezende2003}, o dado pode ser entendido como um elemento puro, quantificável, sobre um determinado evento onde este não tem um entendimento de uma determinada situação. Os dados estão na forma de números, textos, fatos ou qualquer forma de mídia que podem ser armazenados, recuperados, tratados e processados de diversas formas.
+De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo, comumente iguais. Essas observações apresentam uma dependência serial entre elas, sendo um dos objetivos do estudo de séries temporais, analisar e modelar essa dependência. Além disso, séries temporais são analisadas pelos seus principais movimentos, como tendência, sazonalidade e a componente aleatória, sendo a tendencia e sazonalidade o principal foco deste estudo.
 
 \subsection{Dados espaço-temporais}
 Dados espaço-temporais chamados de trajetórias brutas, são coletados através de dispositivos móveis. Uma trajetória bruta é representada por um conjunto de pontos \textit{(tid,x,y,t)}, em que \textit{tid} é o identificador da trajetória e \textit{x, y}, são coordenadas geográficas correspondentes a um lugar no espaço em determinado tempo \textit{t}.
