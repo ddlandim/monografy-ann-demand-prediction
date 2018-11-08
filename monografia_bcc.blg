@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: monografia_bcc.aux
+The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: abntex2-options.bib
+Database file #2: references.bib
+Warning--I didn't find a database entry for "Bogorny2012"
+Warning--I didn't find a database entry for "Spaccapietra2008"
+Warning--I didn't find a database entry for "Bogorny2014"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abnt-alf.bst versão v<VERSION>           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://abntex2.googlecode.com                           |
++---------------------------------------------------------+
+You've used 10 entries,
+            6642 wiz_defined-function locations,
+            1256 strings with 11425 characters,
+and the built_in function-call counts, 14426 in all, are:
+= -- 1785
+> -- 266
+< -- 290
++ -- 433
+- -- 81
+* -- 872
+:= -- 1765
+add.period$ -- 40
+call.type$ -- 10
+change.case$ -- 95
+chr.to.int$ -- 10
+cite$ -- 9
+duplicate$ -- 1348
+empty$ -- 654
+format.name$ -- 392
+if$ -- 3043
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 175
+newline$ -- 50
+num.names$ -- 45
+pop$ -- 264
+preamble$ -- 1
+purify$ -- 39
+quote$ -- 0
+skip$ -- 1435
+stack$ -- 1
+substring$ -- 615
+swap$ -- 462
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 74
+width$ -- 0
+write$ -- 152
+(There were 3 warnings)

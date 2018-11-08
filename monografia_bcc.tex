@@ -203,7 +203,7 @@
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-Minha jornada pela graduação foi marcada por muita persistencia, dificuldades e fracassos. Agradeço primeiramente a Deus por me dar fé e alimentar minha persistência e esperança. Apesar de todo o conteúdo técnico das mais de 40 disciplinas do meu curso, o que mais me agregou evolução foi o ambiente extremamente desafiador desta universidade; que somado à muitas dificuldades pessoais, acidentes, contra-tempos de saúde, profissão e família; constituiu a soma perfeita de desafios que me derrubaram muitas e muitas vezes e me fizeram ser uma pessoa melhor, mais convicta e mais perseverante a cada nova tentativa de conquistar minhas aprovações. Agradeço à minha família por sempre me apoiar dando tudo de si, a meu professor por me aceitar orientar, e me motivar sempre me dando atenção como um amigo nas conversas no fim da aula durante o caminho até o estacionamento da faculdade, nas reuniões e chats online até nos finais de semana, aos amigos universitários, e a todos os professores que me acompanharam e ofereceram desafios em todos esses anos na UNIFESP. 
+Minha jornada pela graduação foi marcada por muita persistência, dificuldades e fracassos. Agradeço primeiramente a Deus por me dar fé e alimentar minha persistência e esperança. Apesar de todo o conteúdo técnico das mais de 40 disciplinas do meu curso, o que mais me agregou evolução foi o ambiente extremamente desafiador desta universidade; que somado à muitas dificuldades pessoais, acidentes, contra-tempos de saúde, profissão e família; constituiu a soma perfeita de desafios que me derrubaram muitas e muitas vezes e me fizeram ser uma pessoa melhor, mais convicta e mais perseverante a cada nova tentativa de conquistar minhas aprovações. Agradeço à minha família por sempre me apoiar dando tudo de si, a meu professor por me aceitar orientar, e me motivar sempre me dando atenção como um amigo nas conversas no fim da aula durante o caminho até o estacionamento da faculdade, nas reuniões e chats online até nos finais de semana, aos amigos universitários, e a todos os professores que me acompanharam e ofereceram desafios em todos esses anos na UNIFESP. 
 
 \end{agradecimentos}
 % ---
@@ -269,7 +269,10 @@ The present work has the objective of comparison with the static method of analy
 % ---
 \begin{siglas}
 \item[ICT] Instituto Central de Tecnologia
+\item[R.U] Restaurante Universitário
 \item[UNIFESP] Universidade Federal de São Paulo
+\item[BDMEP] Banco de Dados Meteorológicos para Ensino e Pesquisa
+
 \end{siglas}
 % ---
 
@@ -335,9 +338,9 @@ refeições do restaurante universitário do ICT-UNIFESP com menos de 10% de err
 \end{itemize}
 
 \section{Metodologia}
-\paragraph*{} Por se tratar de um trabalho de previsão de demanda, a primeira atividade será o estudo da tarefa de análise de regressão com foco na previsão de demanda. Análises de regressão fundamentadas por BOCANEGRA (2002) e técnicas aplicadas de regressão propostas por SMOLA (1998), são as principais bases de fundamentação dos trabalhos de previsão de demanda de LOPES(2008) no restaurante universitário da Universidade Federal de Viçosa, e de RUAS et al. (2012) na previsão de demanda de energia elétrica utilizando redes neurais artificiais e regressão por máquinas de vetores de suporte, respectivamente. A partir destes trabalhos, serão estudados diferentes métodos de regressão e como a partir deles podem ser aplicadas técnicas de previsão de demanda por meios estatísticos e usando técnicas de aprendizado de máquina.
+\paragraph*{Estudo de análise de regressão} Por se tratar de um trabalho de previsão de demanda, a primeira atividade será o estudo da tarefa de análise de regressão com foco na previsão de demanda. Análises de regressão fundamentadas por BOCANEGRA (2002) e técnicas aplicadas de regressão propostas por SMOLA (1998), são as principais bases de fundamentação dos trabalhos de previsão de demanda de LOPES(2008) no restaurante universitário da Universidade Federal de Viçosa, e de RUAS et al. (2012) na previsão de demanda de energia elétrica utilizando redes neurais artificiais e regressão por máquinas de vetores de suporte, respectivamente. A partir destes trabalhos, serão estudados diferentes métodos de regressão e como a partir deles podem ser aplicadas técnicas de previsão de demanda por meios estatísticos e usando técnicas de aprendizado de máquina.
 
-\paragraph*{}
+\paragraph*{Estudo de Aprendizado de máquina}
 Após essa etapa, será então iniciado o estudo aprofundado sobre Redes Neurais Artificiais de acordo com BRAGA (2000), e o estudo específico da técnica de Perceptron Multi-Camadas fundamentado em HAYKIN (1994) que embasa o trabalho realizado na Universidade Federal de Viçosa.
 
 \section{Organização do documento}
@@ -349,9 +352,13 @@ Este trabalho está organizado da seguinte forma: o capítulo 2 apresenta os con
 \section{Introdução}
 A previsão da demanda é o fator principal da eficiência de qualquer modelo de processamento do tipo entrada-saída, onde a sua saída deve atender uma demanda não determinística. É necessário prever a demanda para projetar e aperfeiçoar o processamento e a entrada deste modelo. 
 
-O modelo a ser analisado neste trabalho é a linha produtiva de um restaurante universitário, onde o mesmo precisa projetar sua compra de insumos e alocação de recursos na entrada de seu modelo de negócio, e projetar sua saída, que é a produção de refeições em quantidade numérica e inteira distribuída em função do tempo em dias, para atender um consumo humano que não se comporta de maneira determinística, já que este consumo é facultativo ao público do local.
+O modelo a ser analisado neste trabalho é o comportamento dos consumidores de um restaurante universitário, onde o mesmo precisa projetar sua compra de insumos e alocação de recursos na entrada de seu modelo de negócio, e projetar sua saída, que é a produção de refeições em quantidade numérica e inteira distribuída em função do tempo em dias, para atender um consumo feito por alunos, que não se comporta de maneira determinística, já que este consumo é facultativo aos alunos.
 
-Logo é necessário entender e descobrir quais elementos influenciam este consumo humano, de que forma estes elementos exercem tal influência e em qual intensidade ela ocorre.
+De acordo com o contrato presente entre o restaurante e a universidade, o mesmo deve atender totalmente à demanda do público, sendo multado se caso algum consumidor fique sem alimentação, porém este mesmo contrato não trata refeições que não são consumidas, logo o restaurante deve lidar integralmente o prejuízo de refeições produzidas acima da demanda de consumo.
+
+Tais refeições fornecidas à alunos também são em parte subsidiadas, no atual ano de 2018 o aluno paga ao restaurante o valor de 2,50 e a Universidade paga a diferença de R\$2,50 reais do custo total da refeição que é R\$13,00 cobrado pelo restaurante, logo esta previsão de demanda corresponde também aos interesses da administração do campus local, que periodicamente deve realizar uma alocação de recursos financeiros para subsidiar todas estas refeições consumidas.
+
+É necessário então entender e descobrir quais elementos influenciam este consumo humano, de que forma estes elementos exercem tal influência e em qual intensidade ela ocorre.
 
 E para explorar tais elementos, é necessário explorar como este consumo ocorreu historicamente a fim de se encontrar padrões de comportamento, que no cenário deste trabalho acontece com informações distribuídas através do tempo. 
 
@@ -362,21 +369,154 @@ Abstraindo o histórico de vendas do restaurante, temos 2 tipos de dados princip
 
 X,Y $\rightarrow Y \simeq f(X) $
 
-A observação principal a ser analisada neste trabalho é o numero de vendas do R.U do ICT - UNIFESP, em valor inteiro, obtido de um dia letivo, em um determinado período sendo este o almoço ou janta.
-
-A observação principal tem então 2 tipos, o almoço e a janta, tratados de maneira distinta e não correlacionada neste trabalho, sendo assim, cada um destes 2 tipos, podendo ser explorados com análises e métodos diferentes.
+A observação principal a ser analisada neste trabalho é o numero de vendas do R.U do ICT - UNIFESP, em valor inteiro, obtido de um dia letivo, em um determinado período sendo este o almoço ou jantar.
 
 O tempo, onde a informação principal se distribui, é em formato de data, e contém apenas 1 valor da venda total de almoços nesta data, e da venda total de jantas nesta data.
 
-\section{Séries Temporais}
-De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo, comumente iguais. Essas observações apresentam uma dependência serial entre elas, sendo um dos objetivos do estudo de séries temporais, analisar e modelar essa dependência. Além disso, séries temporais são analisadas pelos seus principais movimentos, como tendência, sazonalidade e a componente aleatória, sendo a tendencia e sazonalidade as propriedades que mais ganham destaque em pesquisas de previsão de demanda. Os meios mais comuns de se analisar a componente sazonal são o Método de Regressão (paramétrico), Método de Médias Móveis (não paramétrico), e Método de Diferença Sazonal (sazonalidade determinística).  Neste trabalho, a distribuição dos dados do Restaurante se dá de forma paramétrica, ou seja, as vendas do restaurante se distribuem em função do tempo e com influências de parâmetros como o dia da semana por exemplo, sendo ideal as análises de regressão.
+\subsection{Dados de Consumo}
+Os dados históricos de consumo no restaurante foram retirados do atual sistema banco de dados de refeições subsidiadas do Hospital São Paulo, que gerencia os dados dos refeitórios de todos as unidades da Unifesp. É importante ressaltar que tais dados são apenas de funcionários, docentes e discentes da instituição. Eventuais compras de refeições realizadas por visitantes que não possuem vínculo com a instituição não são registradas pelo sistema. 
+
+Outro fato importante é que estes dados registrados no banco, são registrados no momento em que a refeição é realizada, pelos terminal da entrada do refeitório e não no momento que é vendida pelo caixa do refeitório. Caso fossem registrados no momento da venda no caixa, a análise estatística do consumo poderia sofrer um viés errôneo em relação à frequência de pessoas no refeitório. 
+
+Os alunos são os que realizam o maior volume de consumo, e são os que tem um padrão de frequência à universidade de modo estocástico, que tende a ter uma sazonalidade anual de frequência na universidade desde 2017, quando a instituição padronizou a grade horária de disciplinas.  Além de ser o objetivo principal da previsão por serem os únicos que têm as refeições subsidiadas, pagando um custo de apenas R\$2,50 por refeição, onde entende-se que este custo pode ter mais forte influência na decisão do aluno realizar uma refeição em comparação à outro discente ou pessoa com vínculo na instituição. Por isso os dados que serão analisados neste trabalho, serão somente da frequência de alunos, e terão como início o ano de 2017. 
+
+Apenas alguns funcionários autorizados tem acesso ao banco de dados do sistema de refeições da instituição, entre eles o fiscal de contrato do restaurante universitário. Para obter tais dados neste trabalho, foi necessário obter uma autorização com a direção do campus ICT - UNIFESP e em seguida solicitar a exportação dos dados ao fiscal. Os parâmetros dos quais o mesmo consegue realizar a exportação de dados são diversos, porém foi solicitado o formato de valores separados por vírgula que compreendem o ano de 2017 a 2018.
+
+O modelo exportado segue o seguinte da seguinte forma abaixo, contendo o exemplo de 2 datas: 
+\begin{algorithm}[H]
+"
+CONSULTA POR PERÍODO                    ",,,,,,,,,,
+"
+CAMPUS: SÃO JOSÉ DOS CAMPOS                    ",,,"
+RU: TODOS                    ",,,"
+VINCULO: ALUNO                    ",,"
+PERÍODO DE: 01/01/2017 A 31/10/2018                        ",,
+DATA,VENDAS CAFÉ,VENDAS ALMOÇO,VENDAS JANTAR,VENDAS REFEIÇÃO*,TOTAL VENDAS,ENTR. CAFÉ,ENTR. ALMOÇO,ENTR. JANTAR,TOTAL ENTR. REFEIÇÃO*,TOTAL ENTRADA
+(31/10/2018),0,395,0,395,395,0,362,0,362,362
+(30/10/2018),0,667,0,667,667,0,437,256,693,693
+\end{algorithm}
+
+Logo, no exemplo da segunda linha deste modelo de dados, serão analisados o primeiro valor "(30/10/2018)" como a primeira variável de entrada que corresponde à data, o oitavo valor "437" que corresponde à variável de saída do total de almoço, e ao nono valor "256" que corresponde à variável de saída do total de janta.
+
+Em todo os bancos de dados gerenciados pelo setor de tecnologia da informação da Unifesp, do campus ICT, o mesmo informou que foi constam 428620 refeições subsidiadas no banco de dados do sistema antigo, no período de 2011 à 2016, e 145464 refeições no período de 2017 a 31/10/2018, totalizando 574084 refeições subsidiadas. Generalizando para o valor médio atual de R\$13,00 por refeição recebido pelo restaurante, estima-se então que R\$7.463.092,00 já foram faturados pelos estabelecimentos contratados pelo ICT-UNIFESP, enquanto a mesma subsidiou R\$6.601.966 deste total.
+
+É importante observar que na implementação computacional das análises de predição, o campo de data deve ser convertido à um fator de formato não quantitativo, e a informação do ano /2017 por exemplo deve ser subtraída para a generalização de um modelo de previsão que se adeque à outros anos. Já os campos de número total de refeições consumidas, devem constar como formatos quantitativos nas estruturas de dados dos algoritmos a serem implementados.
+
+Informações derivadas da data não necessitam de coleta, como por exemplo dia da semana, pois podem ser obtidas por métodos de cálculos, sabendo-se apenas um dia da semana correspondente à um dia do ano, ou utilizando bibliotecas computacionais, no caso a biblioteca datetime para a linguagem python.
+
+Para a obtenção de feriados e recessos do calendário acadêmico de um ano determinado, a informação deve ser obtida através do link oficial da instituição, http://www.unifesp.br/reitoria/prograd/pro-reitoria-de-graduacao/informacoes-institucionais/calendario-academico. A única forma de exportação desta informação é em pdf e em formato não tratável facilmente por algoritmos. Então os dias de recesso respectivos ao campus ICT-UNIFESP devem ser carregados manualmente nos códigos a serem implementados.
+
+\subsection{Dados Climáticos}
+Também serão analisadas variáveis climáticas juntos com os dados de consumo, de forma a analisar a influência de fatores externos como temperatura média ambiente e precipitação. Tais dados podem ser obtidos de forma gratuita pelo BDMEP - Banco de Dados Meteorológicos para Ensino e Pesquisa, pertencente à instituição pública INMET - Instituto Nacional de Meteorologia, pertencente ao MINISTÉRIO DA AGRICULTURA, PECUÁRIA E ABASTECIMENTO do Governo Brasileiro. 
+
+É necessário um cadastro no site http://www.inmet.gov.br/portal/index.php?r=bdmep/bdmep para a obtenção dos dados. 
+
+A instituição contêm dados registrados de forma digital desde 1961 no país inteiro, os dados históricos referentes a períodos anteriores a 1961 ainda não estão em forma digital e, portanto, estão indisponíveis no BDMEP.
+
+O BDMEP pode fornecer os registros de Precipitação(mm), Temp Máxima(ºC), Temp Mínima(ºC), Insolação(horas)
+Evaporação do Piche(mm), Temperatura Compensada Média(ºC), Umidade Relativa Média(\%), Velocidade Vento Média(mps).
+
+Importante ressaltar que o BDMEP leva 90 dias para registrar cada nova data.
+Os dados utilizados para este trabalho foram da estação 83781 - São Paulo MIR de Santa - SP.
+Observa-se que para futuros trabalhos no atual campus ICT-UNIFESP, a estação TAUBATE - SP 83794, que no momento tem o banco de dados vazio, poderá ser utilizada.
+
+Serão analisadas a temperatura máxima do dia que tem registro em momento próximo à frequência de refeições no horário de almoço, a temperatura mínima do dia que está próxima à janta, e a umidade relativa média que pode indicar presença de chuva no dia, que por sua vez causa diversos impactos ao público da região como a própria frequência do mesmo na instituição, principalmente no fator logístico. 
+
+Os dados se apresentam da seguinte forma: 
+\begin{algorithm}[H]
+Estacao;Data;Hora;Precipitacao;TempMaxima;TempMinima;Insolacao;Evaporacao Piche;Temp Comp Media;Umidade Relativa Media;Velocidade do Vento Media;
+83781;01/01/2017;0000;;31.7;;8.5;6.1;25.2;66;3.466667;
+83781;01/01/2017;1200;0;;18.1;;;;;;
+83781;02/01/2017;0000;;31.3;;5.6;6.3;23.96;83;2.9;
+83781;02/01/2017;1200;16;;18.1;;;;;;
+83781;03/01/2017;0000;;31.3;;7;4.5;23.1;87;3;
+83781;03/01/2017;1200;3.7;;19.2;;;;;;
+\end{algorithm}
+
+Observa-se que cada data contem 2 linhas, sendo a primeira linha com o terceiro campo de valor "0000" apresentando a temperatura máxima do dia no quinto campo, e a segunda linha com o terceiro campo de valor "1200" contendo a temperatura mínima do dia no sexto campo.
+A umidade relativa media se encontra no décimo campo da primeira linha de cada data.
+Todas as datas apresentam sempre o mesmo padrão de 2 linhas.
+
+\section{Análises Estatísticas}
+\subsection{Análise Exploratória dos Dados}
+\cite{Junior2007} Cita que dados coletados em modelos de previsão possuem informações que quando são projetadas graficamente evidenciam comportamentos que em alguns casos podem ser visualizados e generalizados de forma subjetiva pelos gestores dos dados.  
+Em todos os casos, a análise exploratória é necessária para selecionar o melhor método de análise que se enquadra neste comportamento.
+
+COLOCAR AQUI O GRÁFICO DAS VENDAS DE 2017 / 2018 E AS TEMPERATURAS MEDIDAS.
+
+Somente a análise exploratória não é o suficiente e realizada nos intervalos ou critérios incorretos pode comprometer seriamente as conclusões do comportamento dos dados, e que por sua vez pode comprometer seriamente a decisão dos gestores responsáveis por estes dados, no cenário de uma previsão de demanda. 
+Isto ocorre atualmente no cenário de previsão da demanda de refeições do ICT-UNIFESP, onde a universidade e o estabelecimento que fornece as refeições não tem nenhum modelo de previsão de demanda. 
+
+De acordo com o gestor da atual empresa que fornece refeições no ICT, a análise utilizada para se prever as refeições é observar dentro da semana o dia anterior de consumo. Em variações de 300 para 450 refeições aproximadamente, isso tem provocado um desperdício médio de 150 refeições diárias. Em geral, de acordo com o restaurante, todos os dias o mesmo trabalha com um erro e um descarte de 50\% das refeições que são trazidas e consumidas ao campus. Um número estimado de 287.042 refeições descartadas, fornecendo um valor de R\$3.731.546,00 de prejuízo compreendido no período de 2011 a 2018.
+
+\subsection{Métodos de Previsão} 
+
+\cite{Junior2007} Realiza uma revisão bibliográfica extensa abordando principais métodos de previsão de consumo sazonais, no cenário de uma indústria cosmética. Tais métodos estatísticos de previsão se dividem em 2 ramificações, sendo quantitativos ou qualitativos.
+Métodos qualitativos fazem um julgamento dos dados expostos sem um sistema de processamento analítico para se produzir novos modelos ou dados, eles são úteis para sistemas de agrupamento, clusterização ou classificação de dados, sem fornecer novas informações numéricas ou modelos preditivos.
+
+Métodos quantitativos que é o foco deste trabalho, são analíticos e se baseiam em um modelo matemático para realizar previsões. 
+
+Para realizar tais previsões os métodos quantitativos necessitam de um histórico de dados, para analisar padrões em seu comportamento e predizer o futuro que irá agir dentro deste padrão.
+
+Estes métodos se ramificam em 2 tipos, as séries temporais e os modelos causais.
 \begin{figure}[!ht]
-\center{\includegraphics[width=0.65\textwidth]{Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png}}
-\caption{DADOS DE DEMANDA DE SAZONALIDADE DIÁRIA, EM FUNÇÃO DO HORÁRIO. Adaptado de \cite{RUAS2012}.\label{fig:seriesTemporais}}
+	\center{
+		\includegraphics[width=0.65\textwidth]
+		{Figuras/JUNIOR2007/metodos-quantitativos.png}
+	}
+	\caption{Tipos de métodos quantitativos Retirado de \cite{Junior2007}.\label{fig:metodosQuantitativos}}
 \end{figure}
 
-\subsection{Sazonalidade}
-A série temporal sazonal, ocorre com um padrão de mudança que  tem uma repetição por ano, podendo ser uma sazonalidade trimestral, semestral, entre outros. No cenário deste estudo a frequência de alunos dentro do ICT - UNIFESP e consequentemente dentro do R.U tem sazonalidade semestral. As técnicas de previsão para evidências sazonais usam métodos de regressão, que pode ser observados nos trabalhos de previsão de consumo de energia elétrica realizados por \cite{}
+\subsection{Métodos de previsão de Demanda}
+O autor supracitado também referencia métodos estatísticos especialmente selecionados para uma previsão de demanda, com a atenção de que alguns métodos qualitativos foram criteriosamente selecionados para prever uma demanda industrial, onde geralmente são previstas pelos métodos quantitativos.
+
+\begin{figure}[!ht]
+	\center{
+		\includegraphics[width=0.65\textwidth]
+		{Figuras/JUNIOR2007/metodos-previsao-demanda.png}
+	}
+	\caption{Tipos de métodos quantitativos Retirado de \cite{Junior2007}.\label{fig:metodosPrevisaoDemanda}}
+\end{figure}
+
+
+\subsection{Meta-análise}
+\cite{Flavia2014} cita em sua tese, que resultados e modelos obtidos a partir de análises experimentais em determinado trabalho científico tem a expectativa de confirmação em um padrão de repetição futura, mas que nem sempre tal expectativa é cumprida. Logo é interessante que seja realizado uma análise das análises, ou seja, a comparação de resultados de diferentes métodos obtendo conclusões mais confiáveis e informativas do que o uso único de uma análise.
+
+O comportamento dos dados deste trabalho, apesar de ter uma distribuição de datas, que são em função do tempo e se classificando em um modelo de série temporal, tem tal comportamento impactado por relações causais com outras variáveis como recesso acadêmico, feriados, eventos, precipitações intensas que causam trânsito local e impactam na logística e frequência do público, entre outras variáveis de causas menos aparentes. Portanto será tratado como um modelo de relação causal, implementando o método estatístico de regressão linear, e os métodos de inteligência artificial dos k-vizinhos mais próximos e redes neurais, que serão explicados nos capítulos a se seguir.
+
+\subsection{Séries Temporais}
+De acordo com  \cite{Morettin1987} uma série temporal é um conjunto de observações ordenadas em função do tempo, comumente iguais, apresentando uma dependência serial entre elas, sendo um dos objetivos do estudo de séries temporais, analisar e modelar essa dependência. Além disso, séries temporais são analisadas pelos seus principais movimentos, como tendência, sazonalidade e a componente aleatória, sendo a tendencia e sazonalidade as propriedades que mais ganham destaque em pesquisas de previsão de demanda de carga elétrica. Os meios mais comuns de se analisar a componente sazonal são o Método de Regressão (paramétrico), Método de Médias Móveis (não paramétrico), e Método de Diferença Sazonal (sazonalidade determinística).  Neste trabalho, a distribuição dos dados do Restaurante se dá de forma paramétrica, ou seja, as vendas do restaurante se distribuem em função do tempo e com influências de parâmetros como o dia da semana por exemplo, sendo ideal as análises de regressão. 
+
+\cite{Almeida2013} também cita que para realizar a previsão de uma determinada série temporal é possível utilizar diferentes métodos. Pode-se classificá-los basicamente entre métodos estatísticos e baseados em inteligência artificial.
+Dentre os métodos estatísticos destacam-se [4]:
+- Regressão Linear Múltipla;
+- Alisamento Exponencial;
+- Média Móvel Integrada Auto-Regressiva (ARIMA)
+Entre os métodos baseados em inteligência artificial tem-se:
+- Redes Neurais Artificiais;
+- Lógica Fuzzy.
+
+\subsection{Componentes Temporais}
+
+É importante observar que os métodos de previsão em séries temporais buscam uma redução da série temporal à um modelo estacionário e à decomposição da série em componentes de tendência, ciclo, sazonalidade e termo aleatório. A tendencia se entende pelo movimento persistente dos dados em uma direção, o ciclo indica o movimento oscilatório desta tendência, sazonalidade indica comportamento regular assumido de forma repetitiva e o termo aleatório se dá por movimentos irregulares presentes na série.
+ 
+As técnicas de previsão para evidências sazonais usam métodos de regressão, que pode ser observados nos trabalhos de previsão de consumo de energia elétrica realizados por \cite{Almeida2013}, \cite{Ruas2012}, \cite{Silva2010} e de previsão de demanda de produtos cosméticos em \cite{Junior2007}
+
+O cenário deste estudo a frequência de alunos dentro do ICT - UNIFESP e consequentemente dentro do R.U tem sazonalidade anual a partir do momento em que a grade de disciplinas foi fixada também com sazonalidade anual. 
+
+\begin{figure}[!ht]
+	\center{
+		\includegraphics[width=0.65\textwidth]
+		{Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png}
+	}
+	\caption{DADOS DE DEMANDA DE SAZONALIDADE DIÁRIA, EM FUNÇÃO DO HORÁRIO. Retirado de \cite{RUAS2012}.\label{fig:seriesTemporais}}
+\end{figure}
+
+\subsection{Regressão Linear Múltipla}
+A teoria da regressão se iniciou no século XIX com Galton, que analisou a altura dos pais e dos filhos (Xi e Yi) e buscou a influencia da altura do pai no filho, notando que a altura do filho tendia à media da altura do pai, e chamou esta técnica de regressão pois existe uma tendência dos dados regredirem à média.
+
+\cite{Clarice2011} informa que em estudos de regressão aplica-se o método relacionar uma variável aleatória Y com outras múltiplas variáveis X. e no caso da regressão simples com apenas uma variável X. 
+Ou seja, X,Y $\rightarrow Y \simeq f(X) $
 
 \subsection{Dados espaço-temporais}
 Dados espaço-temporais chamados de trajetórias brutas, são coletados através de dispositivos móveis. Uma trajetória bruta é representada por um conjunto de pontos \textit{(tid,x,y,t)}, em que \textit{tid} é o identificador da trajetória e \textit{x, y}, são coordenadas geográficas correspondentes a um lugar no espaço em determinado tempo \textit{t}.

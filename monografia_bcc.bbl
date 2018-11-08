@@ -1,0 +1,71 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v<VERSION> }
+
+\bibitem[Alvares et al. 2007]{alvares2007}
+\abntrefinfo{Alvares et al.}{ALVARES et al.}{2007}
+{ALVARES, L.~O. et al. A model for enriching trajectories with semantic
+  geographical information. In:  \emph{Proceedings of the 15th Annual ACM
+  International Symposium on Advances in Geographic Information Systems}. New
+  York, NY, USA: ACM, 2007.  (GIS '07), p. 22:1--22:8.
+ISBN 978-1-59593-914-2. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/1341012\-.1341041$>$}{http://doi.acm.org/10.1145/1341012.1341041}.}
+
+\bibitem[Furletti et al. 2013]{Furletti2013}
+\abntrefinfo{Furletti et al.}{FURLETTI et al.}{2013}
+{FURLETTI, B. et al. Inferring human activities from gps tracks. In:
+  \emph{Proceedings of the 2Nd ACM SIGKDD International Workshop on Urban
+  Computing}. New York, NY, USA: ACM, 2013.  (UrbComp '13), p. 5:1--5:8.
+ISBN 978-1-4503-2331-4. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/2505821\-.2505830$>$}{http://doi.acm.org/10.1145/2505821.2505830}.}
+
+\bibitem[Giannotti e Pedreschi 2008]{Giannotti2008}
+\abntrefinfo{Giannotti e Pedreschi}{GIANNOTTI; PEDRESCHI}{2008}
+{GIANNOTTI, F.; PEDRESCHI, D. \emph{Mobility, data mining and privacy:
+  Geographic knowledge discovery}. [S.l.]: Springer Science \& Business Media,
+  2008.}
+
+\bibitem[JUNIOR 2007]{Junior2007}
+\abntrefinfo{JUNIOR}{JUNIOR}{2007}
+{JUNIOR, A.~M.
+\emph{Análise de métodos de previsão de demanda baseados em séries
+  temporais em uma empresa do setor de perfumes e cosméticos.}
+Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade do Paraná.
+  Curitiba, 2007.}
+
+\bibitem[Laube, Kreveld e Imfeld 2005]{laube2005finding}
+\abntrefinfo{Laube, Kreveld e Imfeld}{LAUBE; KREVELD; IMFELD}{2005}
+{LAUBE, P.; KREVELD, M. van; IMFELD, S. Finding remo—detecting relative
+  motion patterns in geospatial lifelines. In:  \emph{Developments in spatial
+  data handling}. [S.l.]: Springer Berlin Heidelberg, 2005. p. 201--215.}
+
+\bibitem[MORETTIN 1987]{Morettin1987}
+\abntrefinfo{MORETTIN}{MORETTIN}{1987}
+{MORETTIN, P.~A. \emph{Análise de séries temporais}. [S.l.]: Editora Blucher,
+  1987.}
+
+\bibitem[Rezende 2003]{Rezende2003}
+\abntrefinfo{Rezende}{REZENDE}{2003}
+{REZENDE, S.~O. \emph{Sistemas inteligentes: fundamentos e aplicações}.
+  [S.l.]: Editora Manole Ltda, 2003.}
+
+\bibitem[RUAS 2012]{RUAS2012}
+\abntrefinfo{RUAS}{RUAS}{2012}
+{RUAS, G. I. e.~S. Utilização de redes neurais artificiais para a
+  determinação do números de refeições diárias de um restaurante
+  universitário.
+Universidade Federal do Paraná(UFPR), n.~1, p.~10, 2012.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.dcc\-.fc\-.up\-.pt\-/\~{}ines\-/enia07\underline{\
+  }html\-/pdf\-/27927\-.pdf$>$}{http://www.dcc.fc.up.pt/~ines/enia07_html/pdf/27927.pdf}.}
+
+\bibitem[Sublime et al. 2015]{sublime2015}
+\abntrefinfo{Sublime et al.}{SUBLIME et al.}{2015}
+{SUBLIME, J. et al. Semantic rich icm algorithm for vhr satellite images
+  segmentation. In:  \emph{Machine Vision Applications (MVA), 2015 14th IAPR
+  International Conference on}. [S.l.: s.n.], 2015. p. 45--48.}
+
+\end{thebibliography}
