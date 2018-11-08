@@ -515,8 +515,70 @@ O cenário deste estudo a frequência de alunos dentro do ICT - UNIFESP e conseq
 \subsection{Regressão Linear Múltipla}
 A teoria da regressão se iniciou no século XIX com Galton, que analisou a altura dos pais e dos filhos (Xi e Yi) e buscou a influencia da altura do pai no filho, notando que a altura do filho tendia à media da altura do pai, e chamou esta técnica de regressão pois existe uma tendência dos dados regredirem à média.
 
-\cite{Clarice2011} informa que em estudos de regressão aplica-se o método relacionar uma variável aleatória Y com outras múltiplas variáveis X. e no caso da regressão simples com apenas uma variável X. 
+\cite{Clarice2011} Informa que em estudos de regressão aplica-se o método relacionar uma variável aleatória Y com uma variável X, e no caso da regressão múltipla com múltiplas variáveis X, representando causas diferentes que se combinam para a ocorrência de um valor Y. 
+
+No exemplo abaixo de regressão linear simples, podemos analisar o total de venda Y de um dia X, sendo relacionado nas variações (B0, B1, ..., Bk) de datas de X.
+
 Ou seja, X,Y $\rightarrow Y \simeq f(X) $
+Na regressão simples Y depende apenas de uma variável X, isto é, $Y = \simeq f(X, B0, B1, ..., Bk) + Ey$, Sendo $Ey$ um erro aplicado à esta função para se chegar no valor Y. Logo a função $f(.)$ pode ser linear nos parâmetros (B0, B1, ..., Bk), se a derivada da função em relação às derivadas dos parâmetros, corresponderem à $h(X),i$, para i variando de 0 à k. Sendo $h(X),$ dependente apenas de X.
+
+Na regressão múltipla, onde temos múltiplas relações causais X1 à Xk, em ocorrências B0 à Bk, temos a função: $Y = \simeq f(X1, X2, ..., Xk, B0, B1, ..., Bk) + Ey$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,Xk)$, tendo $h(),$ dependente apenas de X1,X2,...,Xk. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
+
+Neste trabalho temos múltiplas relações causais, como dados climáticos e dados derivados da data. Logo será usado um algoritmo de regressão linear múltipla. Para realizar a regressão e realizar o teste das derivadas para conferir a linearidade, dos mesmos. Em caso de testes falhos, o modelo de parâmetros será reduzido ou adaptado, para a aprovação novamente no algoritmo, até a obtenção de um modelo final para validação.
+
+O modelo inicial de dados, para o exemplo das 2 primeiras datas letivas de 2018, seguem com os dados de entrada de consumo e em seguida os dados de entrada de clima: 
+\begin{algorithm}
+DATA,VENDAS CAFÉ,VENDAS ALMOÇO,VENDAS JANTAR,VENDAS REFEIÇÃO*,TOTAL VENDAS,ENTR. CAFÉ,ENTR. ALMOÇO,ENTR. JANTAR,TOTAL ENTR. REFEIÇÃO*,TOTAL ENTRADA;
+(26/02/2018),0,930,10,940,940,0,446,190,636,636;
+(27/02/2018),0,640,13,653,653,0,470,237,707,707;   
+\end{algorithm}
+
+\begin{algorithm}
+83781;26/02/2018;0000;;27.2;;1.1;2.9;22.2;88;1.6;
+83781;26/02/2018;1200;0;;19.6;;;;;;
+83781;27/02/2018;0000;;28.5;;3.6;1.1;22.92;84;2.5;
+83781;27/02/2018;1200;73.1;;19;;;;;;   
+\end{algorithm}
+
+Os dados de consumo no modelo reduzido de previsão de almoço, fica somente com a data da venda, e o total de refeições realizadas no almoço.
+
+\begin{algorithm}
+DATA,ENTR. ALMOÇO;
+(26/02/2018),446;
+(27/02/2018),470;   
+\end{algorithm}
+
+Na tabela de dados climáticos, a redução ocorre para o valor da data, na linha 0000, contendo o valor de temperatura máxima, e precipitação.
+
+\begin{algorithm}
+26/02/2018;27.2;88;
+27/02/2018;28.5;84;
+\end{algorithm}
+
+A informação de data, irá gerar informações derivadas como o valor em forma de fator do dia da semana (obtido através de métodos que retornam o dia da semana, dado uma data, numero do semestre sendo 1 para o primeiro, e 2 para o segundo, e distancia do feriado mais próximo.
+
+O dia da semana seguirá o modelo binário de acordo com os trabalho de previsão de demanda em R.U realizados por \cite{Lopes2008} e \cite{Rocha2011}.
+
+\begin{figure}[!ht]
+	\center{
+		\includegraphics[width=0.65\textwidth]
+		{Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png}
+	}
+	\caption{Entradas de dia da semana em cofatores. Retirado de \cite{Lopes2008}.\label{fig:entradasSemanais}}
+\end{figure}
+
+A tabela final resultará em:
+
+\begin{table}[!ht]
+	\centering
+		\caption{Tabela de dados para regressão múltipla.}	\label{tab:regressaoMultipla}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c}
+			\hline  \textbf{Data} &	\textbf{Vendas almoço} &\textbf{Temperatura(C)} &\textbf{Precipitação(\%)} &\textbf{Segunda} &\textbf{Terça} &\textbf{Quarta} &\textbf{Quinta} &\textbf{Sexta} &\textbf{Recesso Anterior} &\textbf{Recesso Posterior} &\textbf{1o Semestre} &\textbf{2o Semestre}\\
+			\hline 26/02/2018 & 446	& 27.2	& 88 & 1 & 0 & 0 & 0 & 0 & 1 & 5 & 1 & 0\\
+			\hline 27/02/2018 & 470	& 28.5	& 84 & 0 & 1 & 0 & 0 & 0 & 2 & 4 & 1 & 0\\
+			\hline 
+		\end{tabular}
+\end{table}
 
 \subsection{Dados espaço-temporais}
 Dados espaço-temporais chamados de trajetórias brutas, são coletados através de dispositivos móveis. Uma trajetória bruta é representada por um conjunto de pontos \textit{(tid,x,y,t)}, em que \textit{tid} é o identificador da trajetória e \textit{x, y}, são coordenadas geográficas correspondentes a um lugar no espaço em determinado tempo \textit{t}.
