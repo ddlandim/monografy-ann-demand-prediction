@@ -59,7 +59,7 @@
 \titulo{ANÁLISE DE DEMANDA VIA INTELIGÊNCIA ARTIFICIAL NO RESTAURANTE UNIVERSITÁRIO DO INSTITUTO CENTRAL DE TECNOLOGIA DA UNIFESP}
 \autor{Douglas Diniz Landim}
 \local{São José dos Campos, SP}
-\data{Outubro de 2018}
+\data{Março de 2018}
 \orientador{Prof. Dr. Vinicius Veloso}
 %\coorientador{Prof. Dr. }
 \instituicao{%
@@ -338,10 +338,23 @@ refeições do restaurante universitário do ICT-UNIFESP com menos de 10% de err
 \end{itemize}
 
 \section{Metodologia}
-\paragraph*{Estudo de análise de regressão} Por se tratar de um trabalho de previsão de demanda, a primeira atividade será o estudo da tarefa de análise de regressão com foco na previsão de demanda. Análises de regressão fundamentadas por BOCANEGRA (2002) e técnicas aplicadas de regressão propostas por SMOLA (1998), são as principais bases de fundamentação dos trabalhos de previsão de demanda de LOPES(2008) no restaurante universitário da Universidade Federal de Viçosa, e de RUAS et al. (2012) na previsão de demanda de energia elétrica utilizando redes neurais artificiais e regressão por máquinas de vetores de suporte, respectivamente. A partir destes trabalhos, serão estudados diferentes métodos de regressão e como a partir deles podem ser aplicadas técnicas de previsão de demanda por meios estatísticos e usando técnicas de aprendizado de máquina.
+\paragraph*{Análise de regressão}
+
+Por se tratar de um trabalho de previsão de demanda,  este trabalho irá realizar a coleta e tratamento dos dados de consumo do restaurante universitário da Unifesp, a coleta de dados climáticos que influenciam em tal demanda, calcular os dados de calendário derivados das datas de coleta, como por exemplo obter o dia da semana de acordo com a data, estação do ano, número do semestre (se par ou ímpar), entre outros.
+
+Após a estruturação dos dados é realizado uma análise exploratória fundamentada por \cite{Junior2007} no capítulo 3.3, para previsões de demanda em geral.
+O modelo de dados de venda estruturados receberá o acréscimo de dados de variáveis climáticas, como possíveis fatores de influencia no consumo, conforme ocorre no trabalho de previsão de demanda de energia elétrica fundamentado por \cite{Almeida2013} \cite{Ruas2012} e \cite{Silva2010}
+
+Os trabalhos de \cite{Junior2007} e \cite{Silva2010} fundamentam também uma classificação de análises e métodos de previsão de demanda, onde se conclui a utilização dos métodos de Regressão Linear Múltipla, Redes Neurais por Inteligência Artificial, e avaliação do método dos k-vizinhos.
+
+Será aplicado análises estatísticas de regressão linear múltipla fundamentadas por \cite{Clarice2011}
 
 \paragraph*{Estudo de Aprendizado de máquina}
-Após essa etapa, será então iniciado o estudo aprofundado sobre Redes Neurais Artificiais de acordo com BRAGA (2000), e o estudo específico da técnica de Perceptron Multi-Camadas fundamentado em HAYKIN (1994) que embasa o trabalho realizado na Universidade Federal de Viçosa.
+As análises de inteligência artificial, fundamentadas por trabalhos de previsão de demanda em R.U na Universidade Federal de Viçosa, de acordo \cite{Lopes2008} e na Universidade Estadual Paulista Júlio de Mesquita por \cite{Rocha2011}, concluem a aplicação da técnica de redes neurais artificiais com o método de perceptron de múltiplas camadas fundamentado em \cite{Haykin1994}, e o método dos k-vizinhos.
+
+\paragraph*{Meta-análise}
+
+De acordo com \cite{Flavia2014} que realiza um trabalho de previsão de consumo em aves, a técnica de meta-análise, a análise das análises, será ideal para a comparação e discussão dos resultados, com medidas de avaliação de erro absoluto médio (EAM), erro quadrado médio (EQM) e raiz do erro quadrado médio (REQM). Usando a verificação estatística das diferenças nas medidas obtidas com as técnicas por meio do teste de hipotese de Wilcoxon Rank Sum. 
 
 \section{Organização do documento}
 Este trabalho está organizado da seguinte forma: o capítulo 2 apresenta os conceitos básicos para o entendimento do trabalho. O capítulo 3 apresenta trabalhos relacionados. O capítulo 4 demonstra o plano de atividades para o TCC II. O capítulo 5 conclui este trabalho.
@@ -349,6 +362,9 @@ Este trabalho está organizado da seguinte forma: o capítulo 2 apresenta os con
 % Fundamentação Teórica
 % ----------------------------------------------------------
 \chapter{Fundamentação Teórica}
+    % ----------------------------------------------------------
+    % INTRODUÇÃO
+    % ----------------------------------------------------------
 \section{Introdução}
 A previsão da demanda é o fator principal da eficiência de qualquer modelo de processamento do tipo entrada-saída, onde a sua saída deve atender uma demanda não determinística. É necessário prever a demanda para projetar e aperfeiçoar o processamento e a entrada deste modelo. 
 
@@ -356,7 +372,9 @@ O modelo a ser analisado neste trabalho é o comportamento dos consumidores de u
 
 De acordo com o contrato presente entre o restaurante e a universidade, o mesmo deve atender totalmente à demanda do público, sendo multado se caso algum consumidor fique sem alimentação, porém este mesmo contrato não trata refeições que não são consumidas, logo o restaurante deve lidar integralmente o prejuízo de refeições produzidas acima da demanda de consumo.
 
-Tais refeições fornecidas à alunos também são em parte subsidiadas, no atual ano de 2018 o aluno paga ao restaurante o valor de 2,50 e a Universidade paga a diferença de R\$2,50 reais do custo total da refeição que é R\$13,00 cobrado pelo restaurante, logo esta previsão de demanda corresponde também aos interesses da administração do campus local, que periodicamente deve realizar uma alocação de recursos financeiros para subsidiar todas estas refeições consumidas.
+Tais refeições fornecidas à alunos também são em parte subsidiadas pela universidade. O periodo que se compreende à agosto de 2018 segue um modelo de contrato antigo no qual o restaurante recebe R\$2,50 do aluno e R\$9,14 da universidade compreendendo o total de R\$11,64 por refeição.
+
+De agosto em diante, iniciando no segundo semestre de 2018, a universidade subsidia R\$5,44 da refeição do aluno e o mesmo R\$2,50, o restaurante recebe o total de R\$7,94. Logo esta previsão de demanda corresponde também aos interesses da administração do campus local, que periodicamente deve realizar uma alocação de recursos financeiros para subsidiar todas estas refeições consumidas.
 
 É necessário então entender e descobrir quais elementos influenciam este consumo humano, de que forma estes elementos exercem tal influência e em qual intensidade ela ocorre.
 
@@ -373,7 +391,7 @@ A observação principal a ser analisada neste trabalho é o numero de vendas do
 
 O tempo, onde a informação principal se distribui, é em formato de data, e contém apenas 1 valor da venda total de almoços nesta data, e da venda total de jantas nesta data.
 
-\subsection{Dados de Consumo}
+\subsection{Dados de Consumo e de Data.}
 Os dados históricos de consumo no restaurante foram retirados do atual sistema banco de dados de refeições subsidiadas do Hospital São Paulo, que gerencia os dados dos refeitórios de todos as unidades da Unifesp. É importante ressaltar que tais dados são apenas de funcionários, docentes e discentes da instituição. Eventuais compras de refeições realizadas por visitantes que não possuem vínculo com a instituição não são registradas pelo sistema. 
 
 Outro fato importante é que estes dados registrados no banco, são registrados no momento em que a refeição é realizada, pelos terminal da entrada do refeitório e não no momento que é vendida pelo caixa do refeitório. Caso fossem registrados no momento da venda no caixa, a análise estatística do consumo poderia sofrer um viés errôneo em relação à frequência de pessoas no refeitório. 
@@ -398,9 +416,11 @@ DATA,VENDAS CAFÉ,VENDAS ALMOÇO,VENDAS JANTAR,VENDAS REFEIÇÃO*,TOTAL VENDAS,E
 
 Logo, no exemplo da segunda linha deste modelo de dados, serão analisados o primeiro valor "(30/10/2018)" como a primeira variável de entrada que corresponde à data, o oitavo valor "437" que corresponde à variável de saída do total de almoço, e ao nono valor "256" que corresponde à variável de saída do total de janta.
 
-Em todo os bancos de dados gerenciados pelo setor de tecnologia da informação da Unifesp, do campus ICT, o mesmo informou que foi constam 428620 refeições subsidiadas no banco de dados do sistema antigo, no período de 2011 à 2016, e 145464 refeições no período de 2017 a 31/10/2018, totalizando 574084 refeições subsidiadas. Generalizando para o valor médio atual de R\$13,00 por refeição recebido pelo restaurante, estima-se então que R\$7.463.092,00 já foram faturados pelos estabelecimentos contratados pelo ICT-UNIFESP, enquanto a mesma subsidiou R\$6.601.966 deste total.
+Em todo os bancos de dados gerenciados pelo setor de tecnologia da informação da Unifesp, do campus ICT, o mesmo informou que foi constam 428620 refeições subsidiadas no banco de dados do sistema antigo, no período de 2011 à 2016, e 111454 refeições no período de 2017 a 01/08/2018 que fecham o modelo de contrato antigo. O calculo do custos médios cobrados pelo restaurante de R\$9,14 e R\$2,50 pelo aluno, estima que ambos gastaram respectivamente R\$4.936.276,36 e R\$1.350.185,00 enquanto os restaurantes que estivem em contrato nesse período com a universidade, tiveram um faturamento bruto acumulado de R\$6286461,36
 
-É importante observar que na implementação computacional das análises de predição, o campo de data deve ser convertido à um fator de formato não quantitativo, e a informação do ano /2017 por exemplo deve ser subtraída para a generalização de um modelo de previsão que se adeque à outros anos. Já os campos de número total de refeições consumidas, devem constar como formatos quantitativos nas estruturas de dados dos algoritmos a serem implementados.
+Já neste atual 2º semestre de 2018, iniciando em 01/08/2018 à 31/10/2018, o valor total subsidiado pela universidade é de R\$179019,52, R\$82270,00 pelos alunos e o faturamento bruto acumulado pelo restaurante é de R\$261289,52
+
+É importante observar que na implementação computacional das análises de predição, o campo de data é utilizado para o controle da informação e união dos registros climáticos e de consumo, além ser utilizado para obtenção de dados derivados do tempo como o dia da semana, o período do semestre e a estação do ano. Já os campos de número total de refeições consumidas, devem constar como formatos quantitativos nas estruturas de dados dos algoritmos a serem implementados.
 
 Informações derivadas da data não necessitam de coleta, como por exemplo dia da semana, pois podem ser obtidas por métodos de cálculos, sabendo-se apenas um dia da semana correspondente à um dia do ano, ou utilizando bibliotecas computacionais, no caso a biblioteca datetime para a linguagem python.
 
@@ -436,7 +456,9 @@ Estacao;Data;Hora;Precipitacao;TempMaxima;TempMinima;Insolacao;Evaporacao Piche;
 Observa-se que cada data contem 2 linhas, sendo a primeira linha com o terceiro campo de valor "0000" apresentando a temperatura máxima do dia no quinto campo, e a segunda linha com o terceiro campo de valor "1200" contendo a temperatura mínima do dia no sexto campo.
 A umidade relativa media se encontra no décimo campo da primeira linha de cada data.
 Todas as datas apresentam sempre o mesmo padrão de 2 linhas.
-
+    % ----------------------------------------------------------
+    % ESTATÍSTICA
+    % ----------------------------------------------------------
 \section{Análises Estatísticas}
 \subsection{Análise Exploratória dos Dados}
 \cite{Junior2007} Cita que dados coletados em modelos de previsão possuem informações que quando são projetadas graficamente evidenciam comportamentos que em alguns casos podem ser visualizados e generalizados de forma subjetiva pelos gestores dos dados.  
@@ -447,12 +469,11 @@ COLOCAR AQUI O GRÁFICO DAS VENDAS DE 2017 / 2018 E AS TEMPERATURAS MEDIDAS.
 Somente a análise exploratória não é o suficiente e realizada nos intervalos ou critérios incorretos pode comprometer seriamente as conclusões do comportamento dos dados, e que por sua vez pode comprometer seriamente a decisão dos gestores responsáveis por estes dados, no cenário de uma previsão de demanda. 
 Isto ocorre atualmente no cenário de previsão da demanda de refeições do ICT-UNIFESP, onde a universidade e o estabelecimento que fornece as refeições não tem nenhum modelo de previsão de demanda. 
 
-De acordo com o gestor da atual empresa que fornece refeições no ICT, a análise utilizada para se prever as refeições é observar dentro da semana o dia anterior de consumo. Em variações de 300 para 450 refeições aproximadamente, isso tem provocado um desperdício médio de 150 refeições diárias. Em geral, de acordo com o restaurante, todos os dias o mesmo trabalha com um erro e um descarte de 50\% das refeições que são trazidas e consumidas ao campus. Um número estimado de 287.042 refeições descartadas, fornecendo um valor de R\$3.731.546,00 de prejuízo compreendido no período de 2011 a 2018.
+De acordo com o gestor da atual empresa que fornece refeições no ICT, a análise utilizada para se prever as refeições é observar dentro da semana o dia anterior de consumo. Em variações de 300 para 450 refeições aproximadamente, isso tem provocado um desperdício médio de 150 refeições diárias. Em geral, de acordo com o restaurante, todos os dias o mesmo trabalha com um erro e um descarte de 30\% das refeições que são trazidas e consumidas ao campus. Estima-se então que no período de 2011 - 01/08/2018 os estabelecimentos tenham tido um prejuízo de R\$1.885.938,40, e de 30\% de R\$78.386,85 no atual período de 01/08/2018 - 31/10/2018 totalizando o montante  R\$1.964.325,25. Aproximadamente 2 milhões de reais em prejuízo acumulado desde 2011.
 
 \subsection{Métodos de Previsão} 
 
-\cite{Junior2007} Realiza uma revisão bibliográfica extensa abordando principais métodos de previsão de consumo sazonais, no cenário de uma indústria cosmética. Tais métodos estatísticos de previsão se dividem em 2 ramificações, sendo quantitativos ou qualitativos.
-Métodos qualitativos fazem um julgamento dos dados expostos sem um sistema de processamento analítico para se produzir novos modelos ou dados, eles são úteis para sistemas de agrupamento, clusterização ou classificação de dados, sem fornecer novas informações numéricas ou modelos preditivos.
+\cite{Junior2007} Realiza uma revisão bibliográfica extensa abordando principais métodos de previsão de consumo sazonais, no cenário de uma indústria cosmética. Tais métodos estatísticos de previsão se dividem em 2 ramificações, sendo quantitativos ou qualitativos. Métodos qualitativos fazem um julgamento dos dados expostos sem um sistema de processamento analítico para se produzir novos modelos ou dados, eles são úteis para sistemas de agrupamento, clusterização ou classificação de dados, sem fornecer novas informações numéricas ou modelos preditivos.
 
 Métodos quantitativos que é o foco deste trabalho, são analíticos e se baseiam em um modelo matemático para realizar previsões. 
 
@@ -520,9 +541,9 @@ A teoria da regressão se iniciou no século XIX com Galton, que analisou a altu
 No exemplo abaixo de regressão linear simples, podemos analisar o total de venda Y de um dia X, sendo relacionado nas variações (B0, B1, ..., Bk) de datas de X.
 
 Ou seja, X,Y $\rightarrow Y \simeq f(X) $
-Na regressão simples Y depende apenas de uma variável X, isto é, $Y = \simeq f(X, B0, B1, ..., Bk) + Ey$, Sendo $Ey$ um erro aplicado à esta função para se chegar no valor Y. Logo a função $f(.)$ pode ser linear nos parâmetros (B0, B1, ..., Bk), se a derivada da função em relação às derivadas dos parâmetros, corresponderem à $h(X),i$, para i variando de 0 à k. Sendo $h(X),$ dependente apenas de X.
+Na regressão simples Y depende apenas de uma variável X, isto é, $Y \simeq f(X, B0, B1, ..., Bk) + Ey$, Sendo $Ey$ um erro aplicado à esta função para se chegar no valor Y. Logo a função $f(.)$ pode ser linear nos parâmetros (B0, B1, ..., Bk), se a derivada da função em relação às derivadas dos parâmetros, corresponderem à $h(X),i$, para i variando de 0 à k. Sendo $h(X),$ dependente apenas de X.
 
-Na regressão múltipla, onde temos múltiplas relações causais X1 à Xk, em ocorrências B0 à Bk, temos a função: $Y = \simeq f(X1, X2, ..., Xk, B0, B1, ..., Bk) + Ey$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,Xk)$, tendo $h(),$ dependente apenas de X1,X2,...,Xk. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
+Na regressão múltipla, onde temos múltiplas relações causais X1 à Xk, em ocorrências B0 à Bk, temos a função: $Y \simeq f(X1, X2, ..., Xk, B0, B1, ..., Bk) + Ey$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,Xk)$, tendo $h(.),$ dependente apenas de X1,X2,...,Xk. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
 
 Neste trabalho temos múltiplas relações causais, como dados climáticos e dados derivados da data. Logo será usado um algoritmo de regressão linear múltipla. Para realizar a regressão e realizar o teste das derivadas para conferir a linearidade, dos mesmos. Em caso de testes falhos, o modelo de parâmetros será reduzido ou adaptado, para a aprovação novamente no algoritmo, até a obtenção de um modelo final para validação.
 
@@ -555,7 +576,7 @@ Na tabela de dados climáticos, a redução ocorre para o valor da data, na linh
 27/02/2018;28.5;84;
 \end{algorithm}
 
-A informação de data, irá gerar informações derivadas como o valor em forma de fator do dia da semana (obtido através de métodos que retornam o dia da semana, dado uma data, numero do semestre sendo 1 para o primeiro, e 2 para o segundo, e distancia do feriado mais próximo.
+A informação de data, irá gerar informações derivadas como o valor em forma de fator do dia da semana (obtido através de métodos que retornam o dia da semana, dado uma data, numero do semestre sendo 1 para o primeiro, e 2 para o segundo.
 
 O dia da semana seguirá o modelo binário de acordo com os trabalho de previsão de demanda em R.U realizados por \cite{Lopes2008} e \cite{Rocha2011}.
 
@@ -568,110 +589,19 @@ O dia da semana seguirá o modelo binário de acordo com os trabalho de previsã
 \end{figure}
 
 A tabela final resultará em:
+A informação de data constará no primeiro campo da estrutura mas será ignorada pelo código, que iniciará a leitura da primeira variável Xi no campo de Vendas almoço neste exemplo.
 
 \begin{table}[!ht]
 	\centering
 		\caption{Tabela de dados para regressão múltipla.}	\label{tab:regressaoMultipla}
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c}
-			\hline  \textbf{Data} &	\textbf{Vendas almoço} &\textbf{Temperatura(C)} &\textbf{Precipitação(\%)} &\textbf{Segunda} &\textbf{Terça} &\textbf{Quarta} &\textbf{Quinta} &\textbf{Sexta} &\textbf{Recesso Anterior} &\textbf{Recesso Posterior} &\textbf{1o Semestre} &\textbf{2o Semestre}\\
-			\hline 26/02/2018 & 446	& 27.2	& 88 & 1 & 0 & 0 & 0 & 0 & 1 & 5 & 1 & 0\\
-			\hline 27/02/2018 & 470	& 28.5	& 84 & 0 & 1 & 0 & 0 & 0 & 2 & 4 & 1 & 0\\
-			\hline 
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+			\hline  \textbf{Data} &	\textbf{Vendas almoço} & \textbf{Temperatura(C)} & \textbf{Precipitação(\%)} & \textbf{Segunda} & \textbf{Terça} & \textbf{Quarta} &\textbf{Quinta} & \textbf{Sexta} & \textbf{Primavera} & \textbf{Verão} & \textbf{Outono} & \textbf{Inverno} & \textbf{1o Semestre} & \textbf{2o Semestre}\\
+			\hline 26/02/2018 & 446	& 27.2	& 88 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0\\
+			\hline 27/02/2018 & 470	& 28.5	& 84 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0\\
 		\end{tabular}
 \end{table}
 
-\subsection{Dados espaço-temporais}
-Dados espaço-temporais chamados de trajetórias brutas, são coletados através de dispositivos móveis. Uma trajetória bruta é representada por um conjunto de pontos \textit{(tid,x,y,t)}, em que \textit{tid} é o identificador da trajetória e \textit{x, y}, são coordenadas geográficas correspondentes a um lugar no espaço em determinado tempo \textit{t}.
-
-\subsection{Informação}
-A informação é o dado analisado e seu contexto ser bem definido compreendendo seus padrões, onde deve-se ter um conjunto de dados a ser processado que podem gerar um valor adicional além dos próprios fatos obtidos.
-
-\subsection{Conhecimento}
-Em \cite{Rezende2003}, o conhecimento refere-se à habilidade de se criar um modelo mental que descreva o objeto e indique as ações a serem implementadas e as decisões a tomar. A compreensão e análise se tornam necessárias para a tomada de decisões inteligentes, onde são realizadas a partir do nível do conhecimento obtido através das etapas de obtenção dos dados e sua compreensão, retirar informações e obter conhecimento.\\
-
-\begin{figure}[htb]
-\center{\includegraphics[width=0.65\textwidth]{Figuras/figura1.png}}
-\caption{Relação entre dados, informação e conhecimento. Retirada de \cite{Rezende2003}.\label{fig:relação}}
-\end{figure}
-
-\section{Trajetória}
-Trajetórias podem ser geradas por qualquer objeto que carregue um dispositivo, seja um pedestre, um carro ou até um animal. Cada trajetória tem um conjunto de propriedades que descrevem o movimento de um objeto. Segundo \cite{Giannotti2008}, tais propriedades podem ser divididas em características momentâneas e gerais. As momentâneas são o objeto em um determinado tempo t ou determinado momento de um tempo t. As características gerais referem-se a trajetória como um todo, como a forma geométrica, o tamanho total da trajetória, a duração e velocidade média e etc. Podemos definir então trajetória como um segmento espaço-temporal do caminho percorrido por um objeto como definido por \cite{Spaccapietra2008}.\\
-\indent Na figura 2 demonstra exemplos de trajetórias brutas, de apenas um objeto e de vários objetos gerados por um dispositivo móvel, já na tabela 1 mostra como é a forma destes dados gerados.
-\begin{figure}[!ht]
-\center{\includegraphics[width=0.65\textwidth]{Figuras/trajetorias.png}}
-\caption{Uma trajetória e um conjunto de trajetórias. Adaptado de \cite{Giannotti2008}.\label{fig:trajetorias}}
-\end{figure}
-
-\begin{table}[!ht]
-	\centering
-		\caption{Tabela de trajetórias. Fonte:\cite{Bogorny2012}}	\label{tab:exemplo}
-		\begin{tabular}{|c|c|c|}
-			\hline  \textbf{Tid} &	\textbf{Posição(x,y)} &	\textbf{Tempo(t)} \\
-			\hline 1 & 48.890018	2.246100	& 10:18	\\
-			\hline 1 & 48.890020	2.246102	& 10:19	\\
-			\hline 1 & 48.888880	2.248208	& 10:20	\\
-			\hline 1 & 48.885732	2.255031	& 10:21	\\
-			\hline 1 & 48.878433	2.283517	& 10:22	\\
-            \hline 1 & 48.863214	2.279415	& 10:23	\\
-			\hline 
-		\end{tabular}
-\end{table}
-
-\subsection{Trajetória de objetos móveis}
-Em \cite{Bogorny2012}, um aparelho de GPS pode ser configurado para gravar novos dados e consegue, por exemplo, gravar um ponto a cada segundo em que o objeto se move, um ponto a cada uma determinada distância em que o objeto se move ou ainda gravar pontos em determinado tempo \textit{t}, portanto a sequência dos pontos registrados para cada indivíduo é chamada de trajetória do objeto móvel.
-
-\subsection{Ponto}
-É um registro \textit{(x, y, t)}, no qual \textit{x} e \textit{y} são as coordenadas geográficas e \textit{t} é a identificação de tempo em que a coordenada foi coletada \cite{Bogorny2014}.
-
-\subsection{Objeto}
-É o objeto em movimento e que transporta um dispositivo móvel. Pode
-ser uma pessoa, um carro, um animal, um robô etc \cite{Bogorny2014}.
-
-\subsection{Dados semânticos}
-São dados que buscam complementar as informações referentes às trajetórias, agregando valor, por exemplo, meio de transporte, velocidade, informações climáticas, entre outras \cite{Bogorny2014}.
-
-\subsection{Enriquecimento semântico}
-Em \cite{Furletti2013} é definido que o processo de agregar informações semânticas às trajetórias brutas é chamado enriquecimento semântico e, gera como saída uma trajetória semântica. Por exemplo, eventos, comportamento, objetivo, ambiente e atividade são formas de enriquecer uma trajetória bruta.
-
-\subsection{Semântica em trajetórias}
-Em trajetória bruta onde os dados são gerados por dispositivos móveis como GPS, é difícil extrair conhecimento interessante, entretanto se enriquecermos essas trajetórias com informações que agregam valor aos dados coletados pelos dispositivos de localização então a aplicação de extração de dados poderá ser mais eficiente em seus objetivos. Os benefícios de dados semanticamente enriquecidos podem alcançar resultados onde trajetórias brutas não permitiriam ter essa potencial visibilidade de prever ou tomar alguma decisão, por exemplo, se uma pessoa parou em um local por um determinado período de tempo (e.g. shopping, hotel, supermercado), permite observar qual o deslocamento de certas trajetórias como pessoas que estão hospedadas em um hotel e percorrem a cidade buscando por pontos turísticos e então a partir destes pontos quais restaurantes são mais visitados por essas pessoas.\\
-\indent A idéia de agregar semântica às trajetórias de objetos móveis para facilitar a análise deste tipo de dado foi introduzida pela professora Vânia Bogorny e professor Luís Otávio Alvares ambos da UFSC em conjunto com o grupo da universidade de Hasselt, um pesquisador da Universidade de Buenos Aires e pesquisadores da EPFL. Foi criado um modelo para adicionar semântica às trajetórias, a fim de facilitar e otimizar consultas espaço-temporais \cite{alvares2007}, com o algoritmo SMoT. Os autores teve como base de seu trabalho o modelo conceitual para trajetórias elaborado pelo grupo de pesquisas do professor Spaccapietra, \cite{Spaccapietra2008}, chamado \textit{stop and moves} como \cite{Bogorny2012} diz em seu livro, uma trajetória bruta pode ser enriquecida com diferentes informações semânticas, de acordo com o contexto da aplicação e o problema que o usuário pretende resolver, ao tentarmos analisar uma trajetória bruta, será muito difícil encontrar algum padrão novo e interessante. Os padrões semânticos podem ser independentes de localização geográfica (se tiverem em lugares esparsos ou com poucos pontos ou trajetórias, em vez de locais densos, com muitos pontos ou trajetórias) e não apresentar nenhuma similaridade. Então padrões semânticos dificilmente serão extraídos de trajetórias brutas, depois de uma análise dos dados não se pode enriquecer semanticamente as trajetórias.\\
-\indent	A área de pesquisa que considera contexto ou semântica em trajetórias ainda está na sua infância \cite{Bogorny2012}. 
-
-\subsubsection{O modelo \textit{stops and moves}}
-Até 2006 os estudos de trajetórias consideravam basicamente a geometria das trajetórias. No fim de 2006, publicado oficialmente em 2008, o trabalho de \cite{Spaccapietra2008}, criou um modelo conceitual para trajetórias chamado \textit{stops and moves}.\\
-\indent Este modelo proposto define os \textit{stops} como as partes importantes da trajetória do ponto de vista da aplicação, ou seja, nas paradas de uma trajetória onde a mesma permaneceu por um determinado intervalo de tempo em lugar específico é onde o \textit{stop} tem mais importância, já que certas informações de semânticas podem dizer a qual lugar esta parada indica. Um \textit{move} é definido como a parte da trajetória (ou a subtrajetória) onde liga um \textit{stop} qualquer ate o seu próximo \textit{stop} consecutivo, e ainda a parte da trajetória até encontrar um \textit{stop} e a outra parte quando após o último \textit{stop} da trajetória, ou seja, entre o instante inicial e final da trajetória caso não exista nenhum \textit{stop}. Nesse modelo, todas as partes da trajetória que não são \textit{stops} representam \textit{moves}.\\
-\indent Ao considerarmos, por exemplo, um hotel como um \textit{stop}, onde o objeto móvel é uma pessoa que ficou um determinado tempo \textit{t} neste hotel, no ponto de vista da aplicação o objeto ficou parado no \textit{stop}, pois se mostra relevante a permanência da pessoa no hotel por um determinado tempo.\\
-\indent O processo de \textit{stops and moves} é muito similar à engenharia reversa de banco de dados, neste processo precisamos dos dados para que o modelo \textit{stops and moves} seja gerado a partir desses dados.\\
-\indent \cite{Spaccapietra2008} define \textit{stops and moves} como a seguir: 
-
-\begin{itemize}
-\item \textit{Stop}:
-	\begin{itemize}
-    \item O usuário explicitamente define parte do percurso em início e término para representar um \textit{stop}.
-    \item O tempo de um percurso de início e término é um intervalo de tempo não nulo.
-    \item O tempo de todas as paradas são separados, ou seja, o tempo de duas paradas são sempre disjuntas.
-    \end{itemize}
-\item \textit{Move:}
-	\begin{itemize}
-    \item Uma parte é delimitada por duas extremidades que representam dois \textit{stops} consecutivos, ou o início e o primeiro \textit{stop}, ou o último \textit{stop} e término, ou [início, término] (sem \textit{stops}).
-    \item O tempo de um percurso de início e término é um intervalo de tempo não nulo.
-    \item O alcance espacial da trajetória de início e término de um intervalo é o espaço-temporal de uma linha (não um ponto) definido pela função da trajetória.
-    \end{itemize}
-\end{itemize}
-
-\subsubsection{Trajetória semântica}
-Trajetória bruta tem suas limitações citadas ao longo de deste trabalho, trabalhar com trajetória semântica tem vantagem por ser mais receptivas e compreendidas, onde são fáceis de perceber a diferença entre essas trajetórias, pois semânticas são carregadas com informações ao longo da trajetória, abaixo na figura 3 existem 3 trajetórias (1) Bruta e (2) e (3) semânticas, é fácil diferenciá-las, porém na trajetória 2 se trata de uma aplicação de turismo, pois os pontos de interesse são lugares onde faz parte do contexto da aplicação. Já na trajetória 3 a semântica faz parte de uma aplicação de trânsito e as partes mais interessantes são partes onde se tem o maior movimento de veículos parados. Pontos importantes da trajetória que identificamos na figura 3 onde nas trajetórias (2) e (3) são lugares marcados com cores, significa pontos de \textit{stops}, e o restante dessas trajetórias são \textit{moves}.  
-
-\begin{figure}[!ht]
-\center{\includegraphics[width=0.65\textwidth]{Figuras/trajetorias2.jpg}}
-\caption{Exemplos de trajetórias:(1) bruta, (2) e (3) semânticas. Retirada de \cite{Bogorny2012}.\label{fig:figura}}
-\end{figure}
-
-\section{O algoritmo SMoT}
-A tarefa desempenhada por este algoritmo é verificar se cada ponto de uma trajetória bruta \textit{T} tem uma intersecção com a área geométrica de um candidato a \textit{stop}, ou seja, essa área geométrica são objetos geográficos relevantes para a aplicação. Se existe a validação de intersecção em algum ponto da trajetória, então o algoritmo verifica a duração da intersecção, que deve ser igual ou superior que o tempo mínimo estabelecido para aquele tipo de objeto geográfico, então o objeto será considerado um \textit{stop}, em caso de o tempo não ter o seu mínimo atingido aquele objeto geográfico não pode ser considerado um \textit{stop} então não é adicionado aos \textit{stops} encontrados. Este algoritmo possui como entrada um conjunto de trajetórias e um conjunto de candidatos à \textit{stop}, tendo como saída uma tabela de \textit{stops} e uma tabela de \textit{moves}.
-No Algoritmo 1 é apresentado um pseudocódigo de extração de \textit{stops and moves}, proposto por \cite{alvares2007}. \\
-
+\paragraph{Algoritmo de Regressão Linear Multipla}
 \begin{algorithm}[H]
    \SetAlgoLined
    \Entrada{$T, A$} 
@@ -718,32 +648,63 @@ No Algoritmo 1 é apresentado um pseudocódigo de extração de \textit{stops an
    \caption{\textsc{Pseudocódigo SMoT}}
 \end{algorithm}
 
-O algoritmo verifica para cada ponto de uma trajetória t se cruza com a geometria de um candidato a\textit{ stop Rc} (linha 8). Em caso afirmativo, o algoritmo avalia a duração da intersecção tem, pelo menos, um limite igual a \textit{$\Delta$c} (linha 15). Se esse é o caso esse \textit{stop} é gravado. Note que quando usamos \textit{t} e \textit{Rc} como parâmetros (por exemplo, linha 16), usamos e atribuímos na realidade um identificador de chave estrangeira e não toda uma estrutura de dados. \\
-\indent Esse método de \textit{stops and moves} tem um nome mais específico chamado IB-SMoT \textit{(Intersection-Based Stops and Moves of Trajectories)} que por meio de sobreposição dos principais pontos de uma trajetória bruta, respeitando o tempo limite mínimo de intersecção do ponto, se obtêm a partir de locais preestabelecidos pelo usuário candidatos de \textit{stops} na trajetória. Na figura 4 o algoritmo IB-SMoT encontrou três candidatos a \textit{stop} na trajetória.
+    % ----------------------------------------------------------
+    % INTELIGENCIA ARTIFICIAL
+    % ----------------------------------------------------------
+\section{Inteligencia Artificial}
+*MOTIVAÇÃO DOS ESTUDOS DE INTELIGÊNCIA ARTIFICIAL* - texto a se completar.
+A inteligência artificial surgiu então com o objetivo de reproduzir o comportamento de aprendizado humano e sua capacidade de aprendizado por meio de percepção do ambiente real, generalização e tomada de decisões em novos ambientes de ações que se diferenciam no contexto do ambiente aprendizado porém se assemelham aos parâmetros do ambiente de aprendizado. 
 
-\begin{figure}[!ht]
-\center{\includegraphics[width=0.65\textwidth]{Figuras/IB-SMOT.jpg}}
-\caption{Exemplo de IB-SMOT com \textit{stops} encontrados.\cite{alvares2007}\label{fig:IB-SMOT}}
-\end{figure}
+\subsection{Neurônio Artificial}
+*bioinspiração do neurônio artificial e abstração para modelo matemático.
+O neurônio artificial é a estrutura computacional modelada com inspiração no cérebro humano, que usa elementos de processamento  e calculo semelhante à regressão, interconectados em infinitos modelos e combinações de conexões possíveis.
+\cite{Haykin1994} demonstra que este modelo matemático de processador foi desenvolvido com estrutura semelhante do neurônio biológico e de funcionamento baseado no comportamento do sistema nervoso.
+Logo para 
 
-\subsection{Padrões de movimentos em trajetórias}
-Um movimento relativo de várias trajetórias de objetos móveis pode auxiliar a encontrar certos padrões em trajetórias como recorrências e encontros que é o principal foco deste trabalho, em \cite{laube2005finding} descreve esses padrões de movimentos como a seguir:
+Entende-se então que o neurônio artificial é uma função matemática que processa as informações provenientes de variáveis preditivas com suas respectivas ponderações. 
+
+De acordo com a figura , o neurônio tem em sua composição: 
 \begin{itemize}
-\item Encontro é um determinado número de trajetórias dentro de um raio \textit{R}, onde um conjunto \textit{m} de trajetórias em um determinado intervalo \textit{i} se move em uma mesma direção, passando por uma determinada área fazendo intersecção com o intervalo de raio \textit{R} tendo uma mesma velocidade.
-\item Convergência é um conjunto \textit{m} de trajetórias que interceptam uma mesma região de raio \textit{R}, não necessariamente no mesmo momento.
+\item  Um conjunto de n conexões de entrada $ (x1,x2,...,xn)$ que correspondem aos dendritos, cujas ligações que simulam as conexões nervosas entre neurônios são realizadas por meio de elementos chamados de peso $(w1,w2,...,wn)$ simulando as sinapses.
+\item Uma função soma $\sum $ que processa as sinapses captadas pelas entradas;
+\item uma função de ativação $ \delta $ que limita o intervalo do sinal de saída $(y)$ a um valor normalizado.]
 \end{itemize}
 
-Observe a diferença entre estes dois padrões de movimento, na figura 5 o padrão é de encontro, onde as trajetórias têm a mesma direção e velocidade e ficam dentro do raio um certo tempo. Já na figura 6 o padrão é de convergência, onde as trajetórias vêm de todos os sentidos na mesma direção, porém não ao mesmo tempo.
+Neste trabalho então, a estrutura do neurônio artificial irá receber o conjunto de valores de entrada da tabela de dados de predição como entradas $ (x1,x2,...,xn)$ para a produção de uma saída única $ y(.)$ que será o dado predito de venda de almoço, ou de janta.
 
-\begin{figure}[ht]
-\center{\includegraphics[width=0.65\textwidth]{Figuras/encontro.png}}
-\caption{Exemplo de encontro.\cite{Bogorny2012}\label{fig:encontro}}
+(inserir equação da soma) / flavia página 29.
+
+\section{Redes Neurais Artificiais}
+As RNA são sistemas bioinspirados que utilizam neurônios artificiais em modelos computacionais para a classificações de padrões, simulação de atividades humanas, agrupamento de dados, previsões temporais, entre outras aplicações. As redes neurais devem formar um modelo de agente inteligente que conforme \cite{Haykin1994} devem ser capazes de realizar a tarefa de aprendizado e generalização de um problema. 
+
+O aprendizado é realizado através de um caso real conhecido, no caso deste trabalho o conjunto de dados de venda coletados.
+Assim como nas análises estatísticas, as redes neurais podem realizar trabalhos de modo quantitativo e qualitativo, e de acordo com a seção de análise exploratória dos dados, as redes neurais analisadas serão de métodos qualitativos.
+
+
+\subsection{Previsão de demanda de R.U com rede perceptron múltiplas camadas com back-propagation}
+* As RNA de múltiplas camadas resolve o problema de linearidade que o perceptron de única camada e a regressão linear de múltiplas variáveis não consegue realizar. 
+*Mais detalhes sobre multiplas camadas.
+
+Em \cite{Lopes2008} a rede neural perceptron de múltiplas camadas é utilizada para tratar a previsão de demanda do R.U da UFV, utilizando apenas como variáveis quantitativas as 5 ultimas observações anteriores ao dia a se analisar, e como variáveis de qualitativas o dia da semana variando de segunda a sexta, conforme modelo já detalhado no método de regressão múltipla.
+\begin{figure}[!ht]
+	\center{
+		\includegraphics[width=0.65\textwidth]
+		{Figuras/LOPES/rnaLopes.png}
+	}
+	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de \cite{Lopes2008}.\label{fig:Rna-Perceptron-MultiLayer}}
 \end{figure}
 
-\begin{figure}[ht]
-\centering{\includegraphics[width=0.65\textwidth]{Figuras/convergencia.png}}
-\caption{Exemplo de convergência.\cite{Bogorny2012}\label{fig:convergencia}}
+Em \cite{Rocha2011} o trabalho realizado com neurônios artificiais para prever a demanda do R.U da Unesp, envolve apenas uma única camada de entrada e uma segunda camada para saída. 
+\begin{figure}[!ht]
+	\center{
+		\includegraphics[width=0.65\textwidth]
+		{Figuras/ROCHA/modeloRnaRocha.png}
+	}
+	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de  \cite{Rocha2011} \label{fig:rnaRocha}}
 \end{figure}
+Algorit
+O método deste trabalho
+
 
 \chapter{Trabalhos relacionados}
 Entre os últimos artigos publicados em 2015 sobre enriquecimento de trajetórias está o trabalho de \cite{sublime2015}, que tem características específicas que permitem a extração de informações semântica sobre dados geográficos de imagens de alta resolução, esse tipo de extração de semântica é muito usado quando os dados não são obtidos via objetos móveis, já que se obtêm a semântica a partir de dados. Porém com estes dados, são gerados mapas atualizados que são proveitosos para aplicar semântica em trajetórias brutas de objetos móveis. Os estudos em torno de trajetórias semânticas e enriquecimento semântico têm tido um grande avanço nos últimos anos.\\

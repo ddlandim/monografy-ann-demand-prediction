@@ -5,6 +5,14 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v<VERSION> }
 
+\bibitem[ALMEIDA 2013]{Almeida2013}
+\abntrefinfo{ALMEIDA}{ALMEIDA}{2013}
+{ALMEIDA, V. A.~d.
+\emph{Previsão De Carga Através De Modelos Neuro-fuzzy.}
+91~p. Tese (Doutorado) --- Universidade Federal do Rio de Janeiro, 2013.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/monografias\-.poli\-.ufrj\-.br\-/monografias\-/monopoli10007620\-.pdf$>$}{http://monografias.poli.ufrj.br/monografias/monopoli10007620.pdf}.}
+
 \bibitem[Alvares et al. 2007]{alvares2007}
 \abntrefinfo{Alvares et al.}{ALVARES et al.}{2007}
 {ALVARES, L.~O. et al. A model for enriching trajectories with semantic
@@ -14,19 +22,22 @@
 ISBN 978-1-59593-914-2. Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/1341012\-.1341041$>$}{http://doi.acm.org/10.1145/1341012.1341041}.}
 
-\bibitem[Furletti et al. 2013]{Furletti2013}
-\abntrefinfo{Furletti et al.}{FURLETTI et al.}{2013}
-{FURLETTI, B. et al. Inferring human activities from gps tracks. In:
-  \emph{Proceedings of the 2Nd ACM SIGKDD International Workshop on Urban
-  Computing}. New York, NY, USA: ACM, 2013.  (UrbComp '13), p. 5:1--5:8.
-ISBN 978-1-4503-2331-4. Dispon{\'\i}vel em:
-  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/2505821\-.2505830$>$}{http://doi.acm.org/10.1145/2505821.2505830}.}
+\bibitem[Clarice G.B. Demétrio;~Zocchi 2011]{Clarice2011}
+\abntrefinfo{Clarice G.B. Demétrio;~Zocchi}{CLARICE G.B.
+  DEMéTRIO;~ZOCCHI}{2011}
+{CLARICE G.B. DEMéTRIO;~ZOCCHI, S.~S. \emph{Modelos de Regressão}. [S.l.]:
+  Departamento de Ciências Exatas, ESALQ, USP, 2011.}
 
 \bibitem[Giannotti e Pedreschi 2008]{Giannotti2008}
 \abntrefinfo{Giannotti e Pedreschi}{GIANNOTTI; PEDRESCHI}{2008}
 {GIANNOTTI, F.; PEDRESCHI, D. \emph{Mobility, data mining and privacy:
   Geographic knowledge discovery}. [S.l.]: Springer Science \& Business Media,
   2008.}
+
+\bibitem[HAYKIN 1994]{Haykin1994}
+\abntrefinfo{HAYKIN}{HAYKIN}{1994}
+{HAYKIN, S. \emph{Neural networks, a comprehensive foundation.} [S.l.]:
+  Macmilan, 1994.}
 
 \bibitem[JUNIOR 2007]{Junior2007}
 \abntrefinfo{JUNIOR}{JUNIOR}{2007}
@@ -42,6 +53,22 @@ Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade do Paraná.
   motion patterns in geospatial lifelines. In:  \emph{Developments in spatial
   data handling}. [S.l.]: Springer Berlin Heidelberg, 2005. p. 201--215.}
 
+\bibitem[LOPES 2008]{Lopes2008}
+\abntrefinfo{LOPES}{LOPES}{2008}
+{LOPES, L. Modelos para previsão de demanda no restaurante universitário
+  utilizando técnicas de redes neurais.
+\emph{Congresso Nacional De Excelência Em Gestão.Universidade Federal De
+  Viçosa.}, Universidade Federal De Viçosa, IV, n.~1, p.~14, 2008.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.novoscursos\-.ufv\-.br\-/projetos\-/ufv\-/gesep\-/www\-/wp-content\-/uploads\-/5\-.$>$}{http://www.novoscursos.ufv.br/projetos/ufv/gesep/www/wp-content/uploads/5.}}
+
+\bibitem[Mariano 2014]{Flavia2014}
+\abntrefinfo{Mariano}{MARIANO}{2014}
+{MARIANO, F. C. M.~Q.
+\emph{REdes Neurais na predição de valores energéticos de alimentos para
+  aves}.
+130~p. Tese (Doutorado) --- Universidade Federal de Lavras, 2014.}
+
 \bibitem[MORETTIN 1987]{Morettin1987}
 \abntrefinfo{MORETTIN}{MORETTIN}{1987}
 {MORETTIN, P.~A. \emph{Análise de séries temporais}. [S.l.]: Editora Blucher,
@@ -52,15 +79,37 @@ Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade do Paraná.
 {REZENDE, S.~O. \emph{Sistemas inteligentes: fundamentos e aplicações}.
   [S.l.]: Editora Manole Ltda, 2003.}
 
+\bibitem[ROCHA JOSÉ CELSO;~MATOS 2011]{Rocha2011}
+\abntrefinfo{ROCHA JOSÉ CELSO;~MATOS}{ROCHA JOSÉ CELSO;~MATOS}{2011}
+{ROCHA JOSÉ CELSO;~MATOS, F. D.~F. Utilização de redes neurais artificiais
+  para a determinação do números de refeições diárias de um restaurante
+  universitário.
+\emph{Rev. Nutr., Campinas}, Universidade Estadual Paulista Júlio de Mesquita
+  Filho., n.~1, p.~8, 2011.
+Disponvel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.scielo\-.br\-/scielo\-.php?pid=S1415-52732011000500007&script=sci\underline{\
+  }arttext&tlng=pt$>$}{http://www.scielo.br/scielo.php?pid=S1415-52732011000500007&script=sci_arttext&tlng=pt}.}
+
 \bibitem[RUAS 2012]{RUAS2012}
 \abntrefinfo{RUAS}{RUAS}{2012}
-{RUAS, G. I. e.~S. Utilização de redes neurais artificiais para a
-  determinação do números de refeições diárias de um restaurante
-  universitário.
-Universidade Federal do Paraná(UFPR), n.~1, p.~10, 2012.
+{RUAS, G. I. e.~S. Previsão de demanda de energia elétrica utilizando redes
+  neurais artificiais e support vector regression.
+\emph{Copel Distribuição S/A (COPEL)}, Universidade Federal do Paraná(UFPR),
+  v.~1, n.~1, p.~10, 2012.
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/www\-.dcc\-.fc\-.up\-.pt\-/\~{}ines\-/enia07\underline{\
   }html\-/pdf\-/27927\-.pdf$>$}{http://www.dcc.fc.up.pt/~ines/enia07_html/pdf/27927.pdf}.}
+
+\bibitem[SILVA 2010]{Silva2010}
+\abntrefinfo{SILVA}{SILVA}{2010}
+{SILVA, C. e.~a. Metodologia para previsão de demanda de energia elétrica em
+  curtíssimo prazo baseada em um modelo probabilístico discreto.
+\emph{Desenvolvimento de Algoritmos e Software para Previsão de Carga na Área
+  de Concessão da MuxEnergia - Horizonte de Curtíssimo Prazo}, Universidade
+  Federal do Pampa - UNIPAMPA, v.~1, n.~1, p.~4, 2010.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/alegrete\-.unipampa\-.edu\-.br\-/gesep\-/wp-content\-/uploads\-/2010\-/05\-/Previs\%C3\%A3o-dedemanda-utiilizando-m\%C3\%A9todo-de-Markov\underline{\
+  }Final\-.pdf$>$}{http://alegrete.unipampa.edu.br/gesep/wp-content/uploads/2010/05/Previs\%C3\%A3o-dedemanda-utiilizando-m\%C3\%A9todo-de-Markov_Final.pdf}.}
 
 \bibitem[Sublime et al. 2015]{sublime2015}
 \abntrefinfo{Sublime et al.}{SUBLIME et al.}{2015}
