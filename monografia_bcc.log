@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.23)  9 NOV 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.23)  9 NOV 2018 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1226,12 +1226,10 @@ File: Figuras/JUNIOR2007/metodos-previsao-demanda.png Graphic file (type png)
 Package pdftex.def Info: Figuras/JUNIOR2007/metodos-previsao-demanda.png  used 
 on input line 497.
 (pdftex.def)             Requested size: 295.74722pt x 196.65926pt.
- [30 <./Figuras/JUNIOR2007/metodos-quantitativos.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [30 <./Figuras/JUNIOR2007/metodos-quantitativos.png>] [31 <./Figuras/JUNIOR200
+7/metodos-previsao-demanda.png>]
 
- [31 <./Figuras/JUNIOR2007/metodos-previsao-demanda.png>]
-
-LaTeX Warning: Citation `Ruas2012' on page 32 undefined on input line 524.
+LaTeX Warning: Citation `Ruas2012' on page 32 undefined on input line 525.
 
 <Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png, id=344, 885.307
 5pt x 654.94687pt>
@@ -1239,17 +1237,20 @@ File: Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png Graphic fil
 e (type png)
 <use Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png>
 Package pdftex.def Info: Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORA
-RIO.png  used on input line 531.
+RIO.png  used on input line 532.
 (pdftex.def)             Requested size: 295.74722pt x 218.79146pt.
-[32 <./Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png>] [33]
-<Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png, id=370, 335.00156pt x 255.95625pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <./Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png>] [33]
+<Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png, id=368, 335.00156pt x 255.95625pt>
 File: Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png Graphic file (type png)
 <use Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png>
 Package pdftex.def Info: Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png  used on inpu
-t line 586.
+t line 587.
 (pdftex.def)             Requested size: 295.74722pt x 225.9608pt.
 
-Overfull \hbox (489.88602pt too wide) in paragraph at lines 597--603
+Overfull \hbox (489.88602pt too wide) in paragraph at lines 598--603
  [][] 
  []
 
@@ -1263,39 +1264,43 @@ Overfull \hbox (216.63586pt too wide) in paragraph at lines 606--650
  []
 
 
-Underfull \vbox (badness 6078) has occurred while \output is active []
+Underfull \vbox (badness 3690) has occurred while \output is active []
 
  [34 <./Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-[36]
-<Figuras/LOPES/rnaLopes.png, id=438, 685.05937pt x 432.86719pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+[37]
+<Figuras/LOPES/rnaLopes.png, id=442, 685.05937pt x 432.86719pt>
 File: Figuras/LOPES/rnaLopes.png Graphic file (type png)
 <use Figuras/LOPES/rnaLopes.png>
 Package pdftex.def Info: Figuras/LOPES/rnaLopes.png  used on input line 693.
 (pdftex.def)             Requested size: 295.74722pt x 186.87563pt.
-<Figuras/ROCHA/modeloRnaRocha.png, id=445, 488.57532pt x 495.35063pt>
+<Figuras/ROCHA/modeloRnaRocha.png, id=449, 488.57532pt x 495.35063pt>
 File: Figuras/ROCHA/modeloRnaRocha.png Graphic file (type png)
 <use Figuras/ROCHA/modeloRnaRocha.png>
 Package pdftex.def Info: Figuras/ROCHA/modeloRnaRocha.png  used on input line 7
 02.
 (pdftex.def)             Requested size: 295.74722pt x 299.85057pt.
- [37 <./Figuras/LOPES/rnaLopes.png>] [38 <./Figuras/ROCHA/modeloRnaRocha.png>]
+ [38 <./Figuras/LOPES/rnaLopes.png>] [39 <./Figuras/ROCHA/modeloRnaRocha.png>] 
+[40
 
-LaTeX Warning: Citation `Bogorny2012' on page 39 undefined on input line 714.
+]
 
-[39
+LaTeX Warning: Citation `Bogorny2012' on page 41 undefined on input line 714.
 
-] [40
+[41] [42
 
-] [41] [42
+] [43] [44
 
 ] (./monografia_bcc.bbl (./monografia_bcc.brf)
 \tf@brf=\write5
 \openout5 = `monografia_bcc.brf'.
 
- [43] [44
+ [45] [46
 
 ]
 bibitemlist
@@ -1323,9 +1328,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[45]) 
+[47]) 
 AED: lastpage setting LastPage
-[46]
+[48]
 \tf@lof=\write6
 \openout6 = `monografia_bcc.lof'.
 
@@ -1341,7 +1346,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 858.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 858.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 858.
 Package rerunfilecheck Info: File `monografia_bcc.brf' has not changed.
-(rerunfilecheck)             Checksum: 5DE5EE5ED7B7D26749181760CBD3F8B6;2093.
+(rerunfilecheck)             Checksum: 90D956D5A3D77149CC02AA41A1D94628;2093.
 
 
 LaTeX Warning: There were undefined references.
@@ -1356,13 +1361,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 858.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12970 strings out of 492982
- 186376 string characters out of 6136225
- 338643 words of memory out of 5000000
+ 12972 strings out of 492982
+ 186390 string characters out of 6136225
+ 339643 words of memory out of 5000000
  16109 multiletter control sequences out of 15000+600000
  58146 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,24n,45p,1166b,3315s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,24n,45p,1166b,3316s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-di
@@ -1373,10 +1378,10 @@ etic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 ><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2017/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on monografia_bcc.pdf (48 pages, 687001 bytes).
+Output written on monografia_bcc.pdf (50 pages, 687619 bytes).
 PDF statistics:
- 760 PDF objects out of 1000 (max. 8388607)
- 665 compressed objects within 7 object streams
- 189 named destinations out of 1000 (max. 500000)
+ 769 PDF objects out of 1000 (max. 8388607)
+ 672 compressed objects within 7 object streams
+ 191 named destinations out of 1000 (max. 500000)
  392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
