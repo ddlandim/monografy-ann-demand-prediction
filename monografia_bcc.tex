@@ -497,7 +497,7 @@
         \subsection{Métodos de previsão de Demanda}
           O autor supracitado também referencia métodos estatísticos especialmente selecionados para uma previsão de demanda, com a atenção de que alguns métodos qualitativos foram criteriosamente selecionados para prever uma demanda industrial, onde geralmente são previstas pelos métodos quantitativos.
 
-          \\O comportamento dos dados deste trabalho, apesar de ter uma distribuição de datas, que são em função do tempo e se classificando em um modelo de série temporal, tem tal comportamento impactado por relações causais com outras variáveis como recesso acadêmico, feriados, eventos, precipitações intensas que causam trânsito local e impactam na logística e frequência do público, entre outras variáveis de causas menos aparentes.
+          O comportamento dos dados deste trabalho, apesar de ter uma distribuição de datas, que são em função do tempo e se classificando em um modelo de série temporal, tem tal comportamento impactado por relações causais com outras variáveis como recesso acadêmico, feriados, eventos, precipitações intensas que causam trânsito local e impactam na logística e frequência do público, entre outras variáveis de causas menos aparentes.
 
           \begin{figure}[!ht]
           	\center{
@@ -555,7 +555,7 @@
           Na regressão simples $Y$ depende apenas de uma variável $X$, isto é, $Y \simeq f(\beta0, \beta1, ..., \beta k) + Ey$, Sendo $Ey$ um erro aplicado à esta função para se chegar no valor $Y$. Logo a função $f(.)$ pode ser linear nos parâmetros $(\beta0, \beta1, ..., \beta k)$, se a derivada da função em relação às derivadas dos parâmetros, corresponderem à $h(X),i$, para $i$ variando de $0$ à $k$. Sendo $h(X),$ dependente apenas de $X$.
           $\frac {\partial f}{\partial \beta i} = h (X),i = 0,1,...,k $
 
-          Na regressão múltipla, onde temos múltiplas relações causais $X1$ à $X k$, em ocorrências $\beta0$ à $\betak$, temos a função: $Y \simeq f(X1, X2, ..., X k, \beta0, \beta1, ..., \betak) + E y$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,X k)$, tendo $h(.),$ dependente apenas de $X1,X2,...,X k$. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
+          Na regressão múltipla, onde temos múltiplas relações causais $X1$ à $X k$, em ocorrências $\beta 0$ à $\beta k$, temos a função: $Y \simeq f(X1, X2, ..., X k, \beta0, \beta1, ..., \beta k) + E y$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,X k)$, tendo $h(.),$ dependente apenas de $X1,X2,...,X k$. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
 
           Logo, $Y=f(X1,X2,...,X k,\beta0,\beta1,...,\beta k)+E y$ é linear nos parâmetros se:
           $\frac {\partial f}{\partial \beta i} = h(X1,X2,...,X k)$
@@ -634,7 +634,6 @@
           			\hline 2o Semestre         & 1          		& 0\\
           		\end{tabular}
           \end{table}
-          \tex
 
         \subsection{N CONCLUIDO - Algoritmo de Regressão Linear Multipla}
 
@@ -763,7 +762,7 @@
             Para utilizar um modelo de neurônio artificial a fim da solução de um problema era necessário conhecer o ajuste dos pesos das entradas, e em uma tarefa de um cenário complexo e com muitas variáveis, ou pesos não perceptíveis ao valor esperado de saída, este ajuste não é trivial.
             
             Em 1958, o cientista da computação Frank Rosemblatt desenvolveu o modelo de neurônio artificial Perceptron para solucionar este problema de ajuste de pesos.
-            Basicamente neste novo modelo, os pesos das conexões são ajustados de forma autônoma com a introdução de pessoas associados e uma função bias, a fim de buscar um reconhecimento autônomo de padrões. Tarefas de reconhecimento de padrões simples com separações lineares os seres humanos conseguem realizar de forma trivial mas ainda era um desafio para tal problema se resolvido por uma máquina.
+            Basicamente neste novo modelo, os pesos das conexões são ajustados de forma autônoma com a introdução de pessoas associados e uma valor bias, a fim de buscar um reconhecimento autônomo de padrões. Tarefas de reconhecimento de padrões simples com separações lineares os seres humanos conseguem realizar de forma trivial mas ainda era um desafio para tal problema se resolvido por uma máquina.
 
             O perceptron \cite{Flavia2014} possui apenas uma camada de entrada e saída, a saída utiliza como função de ativação a função degrau $u$ que define quando o neurônio emitirá o sinal lógico 1 ou quando emitirá o sinal lógico 0.
 
@@ -785,9 +784,9 @@
             \caption{Neuronio Artificial Perceptron\label{fig:perceptron}}
             \end{figure}
 			
-			Em algumas literaturas o bias pode ser reduzido a uma entrada w0 com peso fixo 1, no neurônio, a representação gráfica da topologia pode mudar, mas no somatório de saída, o calculo continua o mesmo.
+			Em algumas literaturas o bias pode ser reduzido a um peso $W0$ com entrada $X0$ fixo em 1 no neurônio, a representação gráfica da topologia pode mudar, mas no somatório de saída, o calculo continua o mesmo.
 			
-			A função de ativação se apresenta de forma linear ou não linear, determinando a saída de um neurônio a partir do seu potencial de ativação. 
+			A função de ativação $\delta$ se apresenta de forma linear ou não linear, determinando a saída de um neurônio a partir do seu potencial de ativação. 
 			As funções de ativação podem ser observadas na figura 09, sendo a de maior popularidade de utilização, a sigmoide.
 			
 			\begin{figure}[!ht]
@@ -798,18 +797,33 @@
 				\caption{Funções de Ativação retirado de \cite{Flavia2014} \label{fig:perceptron}}
 			\end{figure}
 			
-			As funções de ativação dá a capacidade do perceptron quando conectado em rede (explicado no próximo capítulo) de resolver problemas lineares e não lineares, agregando adaptação e improviso ao resolver programas que não estão contidos em seus dados de alimentação.
+				As funções de ativação dá a capacidade do perceptron quando conectado em rede (explicado no próximo capítulo) de resolver problemas lineares e não lineares, agregando adaptação e improviso ao resolver programas que não estão contidos em seus dados de alimentação.
 			
-            O processo de aprendizado do perceptron ocorre nos seguintes passos: 
+		  \paragraph*{Perceptron - Treino Supervisionado}
+            \cite{Braga2000} cita que o processo de aprendizado do perceptron pode ocorrer de forma supervisionada quando o neurônio deve aprender a relacionar um conjunto observado de variáveis à um valor observado de saída deste mesmo conjunto. O neurônio recebe os sinais de entrada $Xi$ e produz uma saída $Yi$ através do combinador linear e função $\delta$ de ativação; compara essa saída $Yi$ com a observação $i$ obtida do conjunto de dados (ponto chave do processo de treino supervisionado) e por fim essa comparação irá gerar um erro $e$.
+            
+           Critério de parada
+            De acordo com algum critério adotado em cada contexto de aplicação do perceptron, este erro pode ser aceitado e o neurônio mantém o valor de seus pesos $Wi$ que impactam na saída $Yi$ desejada. Se o erro não for aceitado, uma nova época (ou repetição) de interação dos mesmos valores $Xi$ passados é reiniciada, com valores de pesos $Wi$ reajustados com o objetivo de se obter um erro menor.
+            
+            Esse reajuste de pesos $Wi$ denomina-se taxa de aprendizagem, $\alpha$ que pode ter critérios de escolha livre ao contexto de aplicação do perceptron, para reajustar estes pesos $Wi$.
+            
+            A decisão pela repetição, que denomina-se critério de parada do treinamento, também pode adotar diversos critérios de aplicação, sendo eles baseados em uma aceitação do erro, em um número limite de treinamento, ou na combinação desses 2 critérios.
+            
+            De forma procedural, o processo do treino supervisionado do perceptron, para $j$ entradas, em uma interação de aprendizado $n$ ocorre da seguinte maneira: 
             \begin{enumerate}
-              \item Inicialização de todos os pesos sinápticos $wi$ com valores aleatoriamente pequenos.
-              \item Definição de taxa de aprendizado $n$ com valor determinado, e  .
-              \item Implementar o algoritmo SMoT.
-              \item Implementar o algoritmo que detecta encontros.
-              \item Análise e comparação dos resultados.
-              \item Documentação total do trabalho.
-              \item Apresentação do trabalho.
+              \item Coleta do valor supervisionado $Y_i$, que é a observação histórica do conjunto de dados.
+              \item Coleta do vetor de variáveis $(X_i, X_i+1, ..., X_j)$ relacionados à saída supervisionada $Y_i$.
+              \item Inicialização de todos os pesos sinápticos $(W_i, W_i+1, ..., Wj)$ com valores aleatoriamente pequenos.
+              \item Definição de um valor real entre 0 e 1 para a taxa de aprendizado $\alpha$.
+              \item Definição do valor de bias $b$.
+              \item Definição da função de ativação $\delta$ 
+              \item Cálculo do sinal $U_n = \delta(\sum_{i=1}^{j}X_i*W_i+b)$
+              \item Aplicação de valor de $U_n$ na função de ativação $\delta$ obtendo $Y_n$, $Y_n = \delta(U_n)$
+              \item Obtenção do erro $e_n = Y_i-Y_n$
+              \item Aplicação do critério de parada $CP$ em relação ao erro $e_n$ E/OU em relação ao número $n$ de interação.
+              \item SE $CP$ for Reprovado, repete-se os 4 últimos passos, a partir do cálculo do sinal $U_n$ novamente. 
             \end{enumerate}
+            
             
         \subsection{Previsão de demanda de R.U com rede perceptron múltiplas camadas com back-propagation}
           * As RNA de múltiplas camadas resolve o problema de linearidade que o perceptron de única camada e a regressão linear de múltiplas variáveis não consegue realizar. 

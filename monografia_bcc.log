@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.23)  9 NOV 2018 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.23)  10 NOV 2018 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,7 +1003,11 @@ Writing index file monografia_bcc.idx
 LaTeX Warning: Unused global option(s):
     [Times].
 
-(./monografia_bcc.aux)
+(./monografia_bcc.aux
+
+LaTeX Warning: Label `fig:perceptron' multiply defined.
+
+)
 \openout1 = `monografia_bcc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
@@ -1118,8 +1122,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \end{folhadeaprovacao}
-                             [2
+l.188     \end{folhadeaprovacao}
+                                 [2
 
 ] [3
 
@@ -1136,10 +1140,16 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 234.
  [9] [10
 
-] [11] [12
+] [11]
+[12
 
-]
-(./monografia_bcc.lof) [13] [14
+] (./monografia_bcc.lof
+Overfull \hbox (38.70059pt too wide) in paragraph at lines 8--8
+ [][] [][][]\T1/ptm/m/n/12 Neuronio Bi-o-ló-gico, re-ti-rado de https://pt.khan
+academy.org/science/biology/human- 
+ []
+
+) [13] [14
 
 ] (./monografia_bcc.lot) [15] [16
 
@@ -1147,29 +1157,25 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 
 ] [18
 
-]
-(./monografia_bcc.toc) [19] [20
+] (./monografia_bcc.toc)
+[19] [20
 
 ] [21
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 336.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 337.
 
-
-(c:/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
+ (c:/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 336.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 337.
  [22]
 
-LaTeX Warning: Citation `Ruas2012' on page 23 undefined on input line 346.
+LaTeX Warning: Citation `Ruas2012' on page 23 undefined on input line 347.
 
 
-Overfull \hbox (1.1796pt too wide) in paragraph at lines 350--351
-[]\T1/ptm/m/n/12 Será apli-cado aná-li-ses es-ta-tís-ti-cas de re-gres-são li-n
-ear múl-ti-pla fun-da-men-ta-das por ([][]CLA-
- []
+LaTeX Warning: Citation `Ruas2012' on page 23 undefined on input line 354.
 
 [23] [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1179,14 +1185,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 [26]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 406.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 411.
 
-Overfull \hbox (38.55554pt too wide) in paragraph at lines 403--415
+Overfull \hbox (38.55554pt too wide) in paragraph at lines 408--420
 \T1/ptm/m/n/12 2 da-tas: []$[]$ 
  []
 
 
-Overfull \hbox (62.15869pt too wide) in paragraph at lines 427--428
+Overfull \hbox (62.15869pt too wide) in paragraph at lines 432--433
 \T1/ptm/m/n/12 a in-for-ma-ção deve ser ob-tida atra-vés do link ofi-cial da in
 s-ti-tui-ção, http://www.unifesp.br/reitoria/prograd/pro-
  []
@@ -1195,112 +1201,143 @@ s-ti-tui-ção, http://www.unifesp.br/reitoria/prograd/pro-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-Overfull \hbox (21.13596pt too wide) in paragraph at lines 432--433
+Overfull \hbox (21.13596pt too wide) in paragraph at lines 437--438
 []\T1/ptm/m/n/12 É ne-ces-sá-rio um ca-das-tro no site http://www.inmet.gov.br/
 portal/index.php?r=bdmep/bdmep
  []
 
 
-Overfull \hbox (3.70786pt too wide) in paragraph at lines 436--438
+Overfull \hbox (3.70786pt too wide) in paragraph at lines 441--443
 \T1/ptm/m/n/12 Mínima($[]$C), In-so-la-ção(horas) Eva-po-ra-ção do Pi-che(mm), 
 Tem-pe-ra-tura Com-pen-sada Média($[]$C),
  []
 
 
-Overfull \hbox (242.05472pt too wide) in paragraph at lines 445--454
+Overfull \hbox (242.05472pt too wide) in paragraph at lines 450--459
 []\T1/ptm/m/n/12 Os da-dos se apre-sen-tam da se-guinte forma: []$[]$ 
  []
 
 [28] [29]
-<Figuras/JUNIOR2007/metodos-quantitativos.png, id=310, 493.845pt x 261.22594pt>
+<01-junior-metodos-quantitativos.png, id=332, 387.69844pt x 192.72pt>
+File: 01-junior-metodos-quantitativos.png Graphic file (type png)
+<use 01-junior-metodos-quantitativos.png>
+Package pdftex.def Info: 01-junior-metodos-quantitativos.png  used on input lin
+e 492.
+(pdftex.def)             Requested size: 295.74722pt x 147.01567pt.
+<02-junior-metodos-previsao-demanda.png, id=338, 577.40718pt x 323.70938pt>
+File: 02-junior-metodos-previsao-demanda.png Graphic file (type png)
+<use 02-junior-metodos-previsao-demanda.png>
+Package pdftex.def Info: 02-junior-metodos-previsao-demanda.png  used on input 
+line 505.
+(pdftex.def)             Requested size: 295.74722pt x 165.81075pt.
+ [30 <./01-junior-metodos-quantitativos.png>] [31 <./02-junior-metodos-previsao
+-demanda.png>]
 
-File: Figuras/JUNIOR2007/metodos-quantitativos.png Graphic file (type png)
-<use Figuras/JUNIOR2007/metodos-quantitativos.png>
-Package pdftex.def Info: Figuras/JUNIOR2007/metodos-quantitativos.png  used on 
-input line 486.
-(pdftex.def)             Requested size: 295.74722pt x 156.4378pt.
-<Figuras/JUNIOR2007/metodos-previsao-demanda.png, id=316, 577.40718pt x 383.934
-37pt>
-File: Figuras/JUNIOR2007/metodos-previsao-demanda.png Graphic file (type png)
-<use Figuras/JUNIOR2007/metodos-previsao-demanda.png>
-Package pdftex.def Info: Figuras/JUNIOR2007/metodos-previsao-demanda.png  used 
-on input line 497.
-(pdftex.def)             Requested size: 295.74722pt x 196.65926pt.
- [30 <./Figuras/JUNIOR2007/metodos-quantitativos.png>] [31 <./Figuras/JUNIOR200
-7/metodos-previsao-demanda.png>]
+LaTeX Warning: Citation `Ruas2012' on page 32 undefined on input line 535.
 
-LaTeX Warning: Citation `Ruas2012' on page 32 undefined on input line 525.
-
-<Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png, id=344, 885.307
-5pt x 654.94687pt>
-File: Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png Graphic fil
-e (type png)
-<use Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png>
-Package pdftex.def Info: Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORA
-RIO.png  used on input line 532.
-(pdftex.def)             Requested size: 295.74722pt x 218.79146pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32 <./Figuras/RUAS2012/01-DADOS-DE-DEMANDA-EM-FUNCAO-DO-HORARIO.png>] [33]
-<Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png, id=368, 335.00156pt x 255.95625pt>
-File: Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png Graphic file (type png)
-<use Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png>
-Package pdftex.def Info: Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png  used on inpu
-t line 587.
-(pdftex.def)             Requested size: 295.74722pt x 225.9608pt.
-
-Overfull \hbox (489.88602pt too wide) in paragraph at lines 598--603
- [][] 
- []
+<03-ruas-serie-temporal-sazonal.png, id=366, 861.2175pt x 474.27188pt>
+File: 03-ruas-serie-temporal-sazonal.png Graphic file (type png)
+<use 03-ruas-serie-temporal-sazonal.png>
+Package pdftex.def Info: 03-ruas-serie-temporal-sazonal.png  used on input line
+ 542.
+(pdftex.def)             Requested size: 295.74722pt x 162.87134pt.
+[32 <./03-ruas-serie-temporal-sazonal.png>] [33]
+<04-lopes-entradas-dia-semana.png, id=390, 335.00156pt x 225.09094pt>
+File: 04-lopes-entradas-dia-semana.png Graphic file (type png)
+<use 04-lopes-entradas-dia-semana.png>
+Package pdftex.def Info: 04-lopes-entradas-dia-semana.png  used on input line 6
+04.
+(pdftex.def)             Requested size: 295.74722pt x 198.71259pt.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 648.
+LaTeX Warning: Command \' invalid in math mode on input line 682.
 
 Missing character: There is no ó in font cmr12!
-
-Overfull \hbox (216.63586pt too wide) in paragraph at lines 606--650
-[]\T1/ptm/b/n/12 Algoritmo de Re-gres-são Li-near Mul-ti-pla[] $[]$ 
- []
-
-
-Underfull \vbox (badness 3690) has occurred while \output is active []
-
- [34 <./Figuras/LOPES/01-ENTRADAS-DIA-SEMANA.png>]
+[34 <./04-lopes-entradas-dia-semana.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (40.5135pt too high) has occurred while \output is active []
 
- [36]
+
+[36]
+
+LaTeX Warning: Citation `Luger2004' on page 37 undefined on input line 690.
+
+
+LaTeX Warning: Citation `Muhammad2014' on page 37 undefined on input line 704.
+
+
+LaTeX Warning: Citation `Fapesp192' on page 37 undefined on input line 706.
+
 [37]
-<Figuras/LOPES/rnaLopes.png, id=442, 685.05937pt x 432.86719pt>
+<05-neuronio.jpg, id=459, 602.25pt x 268.75406pt>
+File: 05-neuronio.jpg Graphic file (type jpg)
+<use 05-neuronio.jpg>
+Package pdftex.def Info: 05-neuronio.jpg  used on input line 713.
+(pdftex.def)             Requested size: 295.74722pt x 131.9818pt.
+<06-neuronio-artificial.png, id=460, 413.545pt x 192.72pt>
+File: 06-neuronio-artificial.png Graphic file (type png)
+<use 06-neuronio-artificial.png>
+Package pdftex.def Info: 06-neuronio-artificial.png  used on input line 726.
+(pdftex.def)             Requested size: 295.74722pt x 137.82608pt.
+
+Overfull \hbox (25.48563pt too wide) in paragraph at lines 731--733
+[]\T1/ptm/m/n/12 Assim como no neurô-nio bi-o-ló-gico, este mo-delo re-age à um
+ ve-tor de en-tra-das $\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; X\
+OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; :::; Xn$
+ []
+
+[38 <./05-neuronio.jpg>]
+<07-neuronio-operacao-and.png, id=467, 438.63875pt x 249.93375pt>
+File: 07-neuronio-operacao-and.png Graphic file (type png)
+<use 07-neuronio-operacao-and.png>
+Package pdftex.def Info: 07-neuronio-operacao-and.png  used on input line 739.
+(pdftex.def)             Requested size: 295.74722pt x 168.51875pt.
+ [39 <./06-neuronio-artificial.png (PNG copy)> <./07-neuronio-operacao-and.png 
+(PNG copy)>]
+<08-perceptron.png, id=474, 452.4403pt x 266.49562pt>
+File: 08-perceptron.png Graphic file (type png)
+<use 08-perceptron.png>
+Package pdftex.def Info: 08-perceptron.png  used on input line 782.
+(pdftex.def)             Requested size: 295.74722pt x 174.20009pt.
+<09-funcoes-ativacao.png, id=475, 490.83376pt x 287.57437pt>
+File: 09-funcoes-ativacao.png Graphic file (type png)
+<use 09-funcoes-ativacao.png>
+Package pdftex.def Info: 09-funcoes-ativacao.png  used on input line 795.
+(pdftex.def)             Requested size: 295.74722pt x 173.27875pt.
+
+
+LaTeX Warning: Citation `Braga2000' on page 40 undefined on input line 803.
+
+[40] [41 <./08-perceptron.png> <./09-funcoes-ativacao.png>]
+<Figuras/LOPES/rnaLopes.png, id=497, 685.05937pt x 432.86719pt>
 File: Figuras/LOPES/rnaLopes.png Graphic file (type png)
 <use Figuras/LOPES/rnaLopes.png>
-Package pdftex.def Info: Figuras/LOPES/rnaLopes.png  used on input line 693.
+Package pdftex.def Info: Figuras/LOPES/rnaLopes.png  used on input line 834.
 (pdftex.def)             Requested size: 295.74722pt x 186.87563pt.
-<Figuras/ROCHA/modeloRnaRocha.png, id=449, 488.57532pt x 495.35063pt>
+<Figuras/ROCHA/modeloRnaRocha.png, id=504, 488.57532pt x 495.35063pt>
 File: Figuras/ROCHA/modeloRnaRocha.png Graphic file (type png)
 <use Figuras/ROCHA/modeloRnaRocha.png>
-Package pdftex.def Info: Figuras/ROCHA/modeloRnaRocha.png  used on input line 7
-02.
+Package pdftex.def Info: Figuras/ROCHA/modeloRnaRocha.png  used on input line 8
+43.
 (pdftex.def)             Requested size: 295.74722pt x 299.85057pt.
- [38 <./Figuras/LOPES/rnaLopes.png>] [39 <./Figuras/ROCHA/modeloRnaRocha.png>] 
-[40
+ [42] [43 <./Figuras/LOPES/rnaLopes.png> <./Figuras/ROCHA/modeloRnaRocha.png>] 
+[44
 
 ]
 
-LaTeX Warning: Citation `Bogorny2012' on page 41 undefined on input line 714.
+LaTeX Warning: Citation `Bogorny2012' on page 45 undefined on input line 857.
 
-[41] [42
+[45] [46
 
-] [43] [44
+] [47] [48
 
 ] (./monografia_bcc.bbl (./monografia_bcc.brf)
 \tf@brf=\write5
 \openout5 = `monografia_bcc.brf'.
 
- [45] [46
+ [49] [50
 
 ]
 bibitemlist
@@ -1328,9 +1365,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[47]) 
+[51]) 
 AED: lastpage setting LastPage
-[48]
+[52]
 \tf@lof=\write6
 \openout6 = `monografia_bcc.lof'.
 
@@ -1340,48 +1377,51 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `monografia_bcc.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 858.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 858.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1007.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1007.
  (./monografia_bcc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 858.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 858.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1007.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1007.
+
 Package rerunfilecheck Info: File `monografia_bcc.brf' has not changed.
-(rerunfilecheck)             Checksum: 90D956D5A3D77149CC02AA41A1D94628;2093.
+(rerunfilecheck)             Checksum: E18FAEF552C9E501E2166F387629AFCE;2520.
 
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 858.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1007.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12972 strings out of 492982
- 186390 string characters out of 6136225
- 339643 words of memory out of 5000000
- 16109 multiletter control sequences out of 15000+600000
+ 13060 strings out of 492982
+ 187641 string characters out of 6136225
+ 341843 words of memory out of 5000000
+ 16167 multiletter control sequences out of 15000+600000
  58146 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,24n,45p,1166b,3316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,24n,45p,1174b,3322s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2017/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msam10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helv
-etic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
-><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2017/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on monografia_bcc.pdf (50 pages, 687619 bytes).
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sam10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/t
+exlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2017/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on monografia_bcc.pdf (54 pages, 826177 bytes).
 PDF statistics:
- 769 PDF objects out of 1000 (max. 8388607)
- 672 compressed objects within 7 object streams
- 191 named destinations out of 1000 (max. 500000)
- 392 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 850 PDF objects out of 1000 (max. 8388607)
+ 736 compressed objects within 8 object streams
+ 217 named destinations out of 1000 (max. 500000)
+ 417 words of extra memory for PDF output out of 10000 (max. 10000000)
 

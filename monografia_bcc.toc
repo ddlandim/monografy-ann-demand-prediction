@@ -21,13 +21,13 @@
 \contentsline {subsection}{\numberline {2.3.4}Meta-an\IeC {\'a}lise}{30}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}S\IeC {\'e}ries Temporais}{31}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}Componentes Temporais}{32}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}Regress\IeC {\~a}o Linear M\IeC {\'u}ltipla}{33}{subsection.2.3.7}
-\contentsline {paragraph}{Algoritmo de Regress\IeC {\~a}o Linear Multipla}{36}{algocfline.7}
+\contentsline {subsection}{\numberline {2.3.7}Previs\IeC {\~a}o com Regress\IeC {\~a}o Linear M\IeC {\'u}ltipla}{32}{subsection.2.3.7}
+\contentsline {subsection}{\numberline {2.3.8}N CONCLUIDO - Algoritmo de Regress\IeC {\~a}o Linear Multipla}{36}{subsection.2.3.8}
 \contentsline {section}{\numberline {2.4}Inteligencia Artificial}{37}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Neur\IeC {\^o}nio Artificial}{37}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}Redes Neurais Artificiais}{37}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Previs\IeC {\~a}o de demanda de R.U com rede perceptron m\IeC {\'u}ltiplas camadas com back-propagation}{38}{subsection.2.5.1}
-\contentsline {chapter}{\chapternumberline {3}Trabalhos relacionados}{41}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Plano de atividades para o TCC II}{43}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Conclus\IeC {\~a}o}{45}{chapter.5}
-\contentsline {chapter}{Refer\^encias}{47}{section*.22}
+\contentsline {subsection}{\numberline {2.4.1}Neuronio Artificial}{37}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Redes Neurais Artificiais}{40}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Previs\IeC {\~a}o de demanda de R.U com rede perceptron m\IeC {\'u}ltiplas camadas com back-propagation}{42}{subsection.2.4.3}
+\contentsline {chapter}{\chapternumberline {3}Trabalhos relacionados}{45}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Plano de atividades para o TCC II}{47}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Conclus\IeC {\~a}o}{49}{chapter.5}
+\contentsline {chapter}{Refer\^encias}{51}{section*.27}
