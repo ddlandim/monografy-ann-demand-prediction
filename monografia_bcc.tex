@@ -800,16 +800,20 @@
 				As funções de ativação dá a capacidade do perceptron quando conectado em rede (explicado no próximo capítulo) de resolver problemas lineares e não lineares, agregando adaptação e improviso ao resolver programas que não estão contidos em seus dados de alimentação.
 			
 		  \paragraph*{Perceptron - Treino Supervisionado}
-            \cite{Braga2000} cita que o processo de aprendizado do perceptron pode ocorrer de forma supervisionada quando o neurônio deve aprender a relacionar um conjunto observado de variáveis à um valor observado de saída deste mesmo conjunto. O neurônio recebe os sinais de entrada $Xi$ e produz uma saída $Yi$ através do combinador linear e função $\delta$ de ativação; compara essa saída $Yi$ com a observação $i$ obtida do conjunto de dados (ponto chave do processo de treino supervisionado) e por fim essa comparação irá gerar um erro $e$.
+            \cite{Almeida2013} cita que o processo de aprendizado do perceptron pode ocorrer de forma supervisionada quando o neurônio deve aprender a relacionar um conjunto observado de variáveis à um valor observado de saída deste mesmo conjunto. O neurônio recebe os sinais de entrada $Xi$ e produz uma saída $Yi$ através do combinador linear e função $\delta$ de ativação; compara essa saída $Yi$ com a observação $i$ obtida do conjunto de dados (ponto chave do processo de treino supervisionado) e por fim essa comparação irá gerar um erro $e$.
             
-           Critério de parada
-            De acordo com algum critério adotado em cada contexto de aplicação do perceptron, este erro pode ser aceitado e o neurônio mantém o valor de seus pesos $Wi$ que impactam na saída $Yi$ desejada. Se o erro não for aceitado, uma nova época (ou repetição) de interação dos mesmos valores $Xi$ passados é reiniciada, com valores de pesos $Wi$ reajustados com o objetivo de se obter um erro menor.
-            
-            Esse reajuste de pesos $Wi$ denomina-se taxa de aprendizagem, $\alpha$ que pode ter critérios de escolha livre ao contexto de aplicação do perceptron, para reajustar estes pesos $Wi$.
-            
-            A decisão pela repetição, que denomina-se critério de parada do treinamento, também pode adotar diversos critérios de aplicação, sendo eles baseados em uma aceitação do erro, em um número limite de treinamento, ou na combinação desses 2 critérios.
-            
+            \subparagraph* {Critério de parada}
+            	De acordo com algum critério adotado em cada contexto de aplicação do perceptron, este erro pode ser aceitado e o neurônio mantém o valor de seus pesos $Wi$ que impactam na saída $Yi$ desejada. A aprendizagem do neurônio também pode atingir um critério de parada após N épocas de treinamento, diversos critérios de paradas  podem ser combinados.  
+            	
+            \subparagraph* {Época de treinamento}
+            	Se o critério de parada não for aprovado, uma nova época de treinamento (ou repetição de interação) é iniciada mesmos valores $X_i$ e $Y_i$ passados, os valores de pesos $Wi$ são reajustados com a taxa de aprendizagem, buscando o objetivo de se obter um erro menor.
+            	
+            \subparagraph* {Taxa de aprendizagem}
+            	Esse reajuste de pesos $Wi$ denomina-se taxa de aprendizagem, $\alpha$ que pode ter valores de escolha livre ao contexto de aplicação do perceptron, para reajustar estes pesos $Wi$. Assim que a taxa de aprendizagem ajusta os pesos, uma nova época N+1 de treinamento está se iniciando buscando novamente um erro menor. Ressaltando então que o critério de parada pode ser acionado e interromper o reinicio do processo, se for estipulado um limite para o valor de N combinado ou não com um limite para o erro. 
+            	
+          \paragraph* {Algoritmo de modelagem e treino do perceptron}
             De forma procedural, o processo do treino supervisionado do perceptron, para $j$ entradas, em uma interação de aprendizado $n$ ocorre da seguinte maneira: 
+            
             \begin{enumerate}
               \item Coleta do valor supervisionado $Y_i$, que é a observação histórica do conjunto de dados.
               \item Coleta do vetor de variáveis $(X_i, X_i+1, ..., X_j)$ relacionados à saída supervisionada $Y_i$.
@@ -817,19 +821,238 @@
               \item Definição de um valor real entre 0 e 1 para a taxa de aprendizado $\alpha$.
               \item Definição do valor de bias $b$.
               \item Definição da função de ativação $\delta$ 
-              \item Cálculo do sinal $U_n = \delta(\sum_{i=1}^{j}X_i*W_i+b)$
-              \item Aplicação de valor de $U_n$ na função de ativação $\delta$ obtendo $Y_n$, $Y_n = \delta(U_n)$
-              \item Obtenção do erro $e_n = Y_i-Y_n$
-              \item Aplicação do critério de parada $CP$ em relação ao erro $e_n$ E/OU em relação ao número $n$ de interação.
-              \item SE $CP$ for Reprovado, repete-se os 4 últimos passos, a partir do cálculo do sinal $U_n$ novamente. 
+              \item Cálculo do sinal $U = \delta(\sum_{i=1}^{j}X_i*W_i+b)$
+              \item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(U)$
+              \item Obtenção do erro $e = Y_i-Y_u$
+              \item Aplicação do critério de parada $CP$ em relação ao erro $e$ E/OU em relação ao número $n$ de interação.
+              \item SE $CP$ for Aprovado, o algoritmo se encerra, se Reprovado, repete-se o processo para n+1, com $b=b(anterior)+(\alpha*(e))$ e $W_i = W_i(anterior)+(\alpha*e*X_i(próximo))$ e repete-se os 4 últimos passos, a partir do cálculo do sinal $U_n$ novamente. 
             \end{enumerate}
             
+            \subparagraph* {Exemplo de aplicação do algoritmo de treino do perceptron}
+            	Vamos aplicar o treino do perceptron, à aplicação do exemplo-problema do neurônio de Warren McCulloch e Walter Pitts, o aprendizado para a tabela AND, que busca fornecer uma resposta verdadeira apenas se a primeira E todas as demais entradas forem verdadeiras.
+            	
+            	 A utilização do perceptron com o modelo de aprendizado supervisionado, busca então conseguir de forma autônoma os valores de pesos $W_i$ e desta forma aprender o funcionamento da logica E, sem que seja necessário a tarefa humana de ajustar o modelo.
+  				 
+  				  \begin{tabular}{|c|c|c|}
+  				 	\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	\hline 0 & 0 & 0\\
+  				  \end{tabular}
+  			 
+  			 	Para este aprendizado vamos definir o parâmetro de 0 para o erro, 0 para o $bias$, 1 para $\alpha$ e função $\delta$ degrau (1, se $u>=0$, 0 se $u<0$).
+  			 	
+	  			 \begin{enumerate}
+	  			 	\item Coleta do valor supervisionado: $Y_i$ = 0.
+	  			 	\item Coleta do vetor de variáveis $(X_1 = 0, X_2=0)$.
+	  			 	\item Inicialização dos todos os pesos com valores aleatoriamente pequenos: $W_0=3,W_1=3$
+	  			 	\item Definição da taxa de aprendizado $\alpha = 1$.
+	  			 	\item Definição do valor de bias $b=3$.
+	  			 	\item Definição da função de ativação $\delta = degrau$  
+	  			 	\item Cálculo do sinal $U_n = \delta(x_0*w_0 + x_1*w_1 +b) = (0*3+0*3+0) = 0$
+	  			 	\item Aplicação de valor de $U_n$ na função de ativação $\delta$ obtendo $Y_n$, $Y_n = \delta(0) = 1$
+	  			 	\item Obtenção do erro $e_n = Y_i-Y_n = 0 - 1 = -1$
+	  			 	\item Aplicação do critério de parada $CP$ em relação ao erro $e_n$ reprovado, pois o erro esperado é 0.
+	  			 	\item Como $CP$ foi reprovado, então n=2, e inicia-se uma nova repetição, com $b=b(anterior)+(\alpha*e)$ e $W_i=W_i(anterior) + (\alpha*e)*X_i$
+	  			 \end{enumerate}		
+  				
+  				Aprendizagem:
+  				\begin{enumerate}
+  					\item $b=b(anterior)+(\alpha*e) = 0 + 1*(-1) = -1 $  					
+  					\item $W_1=W_1(anterior) + (\alpha*e)*X_1 = 3 + 1*(-1)*0 = 3$
+  					\item $W_2=W_2(anterior) + (\alpha*e)*X_2 = 3 + 1*(-1)*0 = 3$
+  				\end{enumerate}	
+  				
+  				Reinicio dos pesos reajustados pela aprendizagem e apresentação da linha 2 ao neurônio:
+  				
+  				\begin{tabular}{|c|c|c|}
+  					\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  					\hline 0 & 1 & 0\\
+  				\end{tabular}
+  				
+  				
+  				\begin{enumerate}
+  					\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (0*3 + 1*3 -1) = 0$
+  					\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(0) = 1$
+  					\item Obtenção do erro $e_n = Y_i-Y_u = 0 - 1 = -1$
+  					\item Aplicação do critério de parada $CP$ em relação ao erro $e_n$ reprovado, pois o erro esperado é 0.
+  					\item Como $CP$ foi reprovado, então n=2, e inicia-se uma nova repetição, com $b=b(anterior)+(\alpha*e)$ e $W_i=W_i(anterior) + (\alpha*e)*X_i$
+  				\end{enumerate}
+  				
+  				Aprendizagem:
+  				\begin{enumerate}
+  					\item $b=b(anterior)+(\alpha*e) = -1 + 1*(-1) = -2 $  					
+  					\item $W_1=W_1(anterior) + (\alpha*e)*X_1 = 3 + 1*(-1)*0 = 3$ 
+  					\item $W_2=W_2(anterior) + (\alpha*e)*X_2 = 3 + 1*(-1)*1 = 2$
+  				\end{enumerate}	
+  				
+  				Reinicio dos pesos reajustados pela aprendizagem e apresentação da linha 3 ao neurônio:
+  				
+  				\begin{tabular}{|c|c|c|}
+  					\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  					\hline 1 & 0 & 0\\
+  				\end{tabular}
+            	
+            	
+            	\begin{enumerate}
+            		\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (1*3 + 0*2 -2) = 1$
+            		\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(0) = 1$
+            		\item Obtenção do erro $e = Y_i-Y_u = 0 - 1 = -1$
+            		\item Aplicação do critério de parada $CP$ em relação ao erro $e_n$ reprovado, pois o erro esperado é 0.
+            		\item Como $CP$ foi reprovado, então n=3, e inicia-se uma nova repetição, com $b=b(anterior)+(\alpha*e)$ e $W_i=W_i(anterior) + (\alpha*e)*X_i$
+            	\end{enumerate}
             
-        \subsection{Previsão de demanda de R.U com rede perceptron múltiplas camadas com back-propagation}
-          * As RNA de múltiplas camadas resolve o problema de linearidade que o perceptron de única camada e a regressão linear de múltiplas variáveis não consegue realizar. 
-          *Mais detalhes sobre multiplas camadas.
-
-          Em \cite{Lopes2008} a rede neural perceptron de múltiplas camadas é utilizada para tratar a previsão de demanda do R.U da UFV, utilizando apenas como variáveis quantitativas as 5 ultimas observações anteriores ao dia a se analisar, e como variáveis de qualitativas o dia da semana variando de segunda a sexta, conforme modelo já detalhado no método de regressão múltipla.
+            	
+            	Aprendizagem:
+            	\begin{enumerate}
+            		\item $b=b(anterior)+(\alpha*e) = -2 + 1*(-1) = -3 $  					
+            		\item $W_1=W_1(anterior) + (\alpha*e)*X_1 = 3 + 1*(-1)*1 = 2$ 
+            		\item $W_2=W_2(anterior) + (\alpha*e)*X_2 = 2 + 1*(-1)*0 = 2$
+            	\end{enumerate}	
+            	
+            	Reinicio dos pesos reajustados pela aprendizagem e apresentação da linha 4 ao neurônio:
+            	\begin{tabular}{|c|c|c|}
+            		\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+            		\hline 1 & 1 & 1\\
+            	\end{tabular}
+            	
+            	\begin{enumerate}
+            		\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (1*2 + 0*2 -3) = 1$
+            		\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(1) = 1$
+            		\item Obtenção do erro $e = Y_i-Y_u = 1 - 1 = 0$
+            		\item Aplicação do critério de parada $CP$ em relação ao erro $e_n$ APROVADO, então conclui-se que os pesos sinápticos estão corretos.
+            	\end{enumerate}
+            
+            	Pesos finais e bias aprovados pelo processo de treino:
+            	\begin{enumerate}
+            		\item $b=  -3$  					
+            		\item $W_1= 2$ 
+            		\item $W_2= 2$
+            	\end{enumerate}	
+            	
+            	Fim do processo de treino.
+            
+            \subparagraph* {Validação do treino}
+            	Após todo o processo de treino e apresentação dos conjuntos, é necessário realizar um novo ciclo no perceptron, para ver se o neurônio responde corretamente ao modelo de dados inicial.
+            	
+            	Pesos finais e bias aprovados pelo processo de treino:
+            	\begin{enumerate}
+            		\item $b=  -3$  					
+            		\item $W_1= 2$ 
+            		\item $W_2= 2$
+            	\end{enumerate}
+            	
+            	1ª Linha:
+            	\begin{tabular}{|c|c|c|}
+            		\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+            		\hline 0 & 0 & 0\\
+            	\end{tabular}
+            	\begin{enumerate}
+            		\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (0*2 + 0*2 -3) = -3$
+            		\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(-3) = 0$
+            		\item Obtenção do erro $e = Y_i-Y_u = 0 - 0 = 0$
+            		\item Aplicação do critério de parada $CP$ em relação ao erro $e$ APROVADO, então o neurônio respondeu corretamente às entradas.
+            	\end{enumerate}
+            	
+            	2ª Linha:
+            	\begin{tabular}{|c|c|c|}
+            		\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+            		\hline 0 & 1 & 0\\
+            	\end{tabular}
+            	\begin{enumerate}
+            		\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (0*2 + 1*2 -3) = -1$
+            		\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(-1) = 0$
+            		\item Obtenção do erro $e = Y_i-Y_u = 0 - 0 = 0$
+            		\item Aplicação do critério de parada $CP$ em relação ao erro $e$ APROVADO, então o neurônio respondeu corretamente às entradas.
+            	\end{enumerate}
+            
+            	3ª Linha:
+            	\begin{tabular}{|c|c|c|}
+            		\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+            		\hline 1 & 0 & 0\\
+            	\end{tabular}
+            	\begin{enumerate}
+            		\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (1*2 + 0*2 -3) = -1$
+            		\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(-1) = 0$
+            		\item Obtenção do erro $e = Y_i-Y_u = 0 - 0 = 0$
+            		\item Aplicação do critério de parada $CP$ em relação ao erro $e$ APROVADO, então o neurônio respondeu corretamente às entradas.
+            	\end{enumerate}
+            
+            	4ª Linha:
+            	\begin{tabular}{|c|c|c|}
+            		\hline  \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+            		\hline 1 & 0 & 0\\
+            	\end{tabular}
+            	\begin{enumerate}
+            		\item Cálculo do sinal $U = \delta(x_0*w_0 + x_1*w_1 +b) = (1*2 + 0*2 -3) = -1$
+            		\item Aplicação de valor de $U$ na função de ativação $\delta$ obtendo $Y_u$, $Y_u = \delta(-1) = 0$
+            		\item Obtenção do erro $e = Y_i-Y_u = 0 - 0 = 0$
+            		\item Aplicação do critério de parada $CP$ em relação ao erro $e$ APROVADO, então o neurônio respondeu corretamente às entradas.
+            	\end{enumerate}
+           
+           		Como o neurônio não teve nenhum critério de parada REPROVADO em todas as interações de todas as linhas, podemos dizer que o mesmo está devidamente treinado para a solução do problema.
+            
+        \subsection{Rede de perceptrons}
+          É possível reparar que o processo de aprendizagem de um perceptron, se forma por uma combinação linear que é o valor $ u $ dos pesos e entradas xi. Essa combinação pode ser aprovada ou reprovadas no processo repetitivo de treino controlado pela função $\delta$, e pela aprovação do erro medido entre o valor da combinação linear e o valor esperado.
+          
+          Então em 1969, Marvin Mjinsky e Seymour Papert realizaram uma publicação comprovando essa limitação de aprendizado à uma combinação linear, e provaram que o perceptron é limitado à resolução de problemas que são resolvidos ou classificados por apenas 1 linha, ou seja, problemas linearmente separáveis que consiste na mesma limitação do processo de regressão linear múltipla.
+          Na figura 10, abaixo, o perceptron não pode solucionar o problema (b). E essa limitação desmotivou e parou os estudos com perceptrons.
+		  \begin{figure}[!ht]
+		  	\center{
+		  		\includegraphics[width=0.65\textwidth]
+		  		{10-problemas-lineares.png}
+		  	}
+		  	\caption{Problemas Linearmente Separáveis e Não Separáveis. Retirado de \cite{Flavia2014}.\label{fig:problemasLineares}}
+		  \end{figure}
+	  	
+	  	  Em 1986 James McClelland e David Rumelhart proporam o método de desenvolvimento de uma rede neural de perceptrons, tangindo mais ainda a inspiração da solução no cérebro humano. O processo resume o treinamento do perceptron simples aplicado à um conjunto de perceptrons interligados, e assim solucionando problemas complexos que podem ser resolvidos com uma combinação linear de soluções.
+	  	  
+	  	  \begin{figure}[!ht]
+	  	  	\center{
+	  	  		\includegraphics[width=0.65\textwidth]
+	  	  		{11-solucao-mlp.png}
+	  	  	}
+	  	  	\caption{Problemas Linearmente Não Separáveis Multiplas Soluções. \label{fig:doisPerceptrons}}
+	  	  \end{figure}
+  	       
+  	       \paragraph*{Perceptrons Múltiplas Camadas}
+  	       
+  	       A solução base para se combinar 2 ou mais perceptrons a fim de se resolver um problema com a combinação de 2 ou mais soluções lineares, é a utilização de um perceptron combinador de sinal de saída, já que cada perceptron pode ter múltiplas entradas e somente uma saída. Dessa forma as redes neurais vão formando colunas de perceptrons interconectados.
+  	       Cada coluna é denominada uma cada da rede neural. A ultima camada deve ter o número de perceptrons correspondente ao número de saídas desejadas.
+  	       No exemplo abaixo, eocntra-se uma rede neural com duas camadas intermediárias, representando vários neurônios por camada.
+  	       
+  	       
+  	       \begin{figure}[!ht]
+  	       	\center{
+  	       		\includegraphics[width=0.65\textwidth]
+  	       		{12-mlp.png}
+  	       	}
+  	       	\caption{Rede de perceptrons com múltiplas camadas. Retirado de \cite{Almeida2013}\label{fig:MLP}}
+  	       \end{figure}
+         
+  	       Esta rede denominada MLP (Multilayer Perceptron) possui uma camada de entrada, nela contendo cada neurônio representando uma variável a ser considerada ao problema a ser analisado, pelo menos uma camada intermediária.
+  	      
+  	       Nesta camada intermediária os neurônios possuem geralmente uma função de ativação sigmoidal logística ou tangente hiperbólica.
+  	       E uma camada de saída, na borda à direita, com o número de neurônios correspondente ao número de soluções buscadas. 
+  	       
+  	       Para o treinamento desta rede MLP o algoritmo indicado em previsões de demanda de restaurantes universitários é a retro-propagação de erro \cite{Lopes2008} e \cite{Rocha2011}.
+  	       
+  	       Neste processo o ajuste dos pesos se dá através de duas fases:
+  	       Feed-forward onde os sinais $X_1,X_2,...,X_j$ são apresentados à todos os neurônios da primeira camada. O processo de aprendizagem apresentado na seção anterior, de um perceptron simples, é executado e cada neurônio obtém um cálculo de saída e um erro. Este erro será propagado aos neurônios seguintes, até a camada de saída, que irá resultar um vetor de saídas de tamanho igual ao número de neurônios desta camada de saídas.
+  	       
+  	       Feed-backward onde o erro da camada de saída é propagado no sentido contrário em direção à camada de entrada. Isto permite que os pesos de todas as camadas de intermediárias neste processo tenham seus pesos ajustados
+  	       
+  	       \cite{Cybenko1988} demonstra que uma função matemática contínua pode ser aproximada por uma camada intermediária e uma função não contínua pode ser aproximada por 2 camadas intermediárias.
+  	       
+  	       Logo redes MLP com 2 camadas ocultas são suficientes para trabalhar com problemas de aproximação e predição, uma vez que pretende-se estabelecer uma relação entre variáveis influenciadoras $Xi_1,Xi_2,...,Xi_j$ à um único valor predito $Yi$, em modelos supervisionados.
+  	         	       
+  	       \begin{figure}[!ht]
+  	       	\center{
+  	       		\includegraphics[width=0.65\textwidth]
+  	       		{13-mlp-fases.png}
+  	       	}
+  	       	\caption{Fases de treino da MLP-Back-Propagation. Retirado de \cite{Almeida2013}\label{fig:MLP}}
+  	       \end{figure}
+  	       
+  	       Em \cite{Lopes2008} a rede neural perceptron de múltiplas camadas é utilizada para tratar a previsão de demanda do R.U da UFV, utilizando apenas como variáveis quantitativas as 5 ultimas observações anteriores ao dia a se analisar, e como variáveis de cofatores o dia da semana variando de segunda a sexta, conforme modelo já detalhado no método de regressão múltipla.
           \begin{figure}[!ht]
           	\center{
           		\includegraphics[width=0.65\textwidth]
@@ -846,8 +1069,45 @@
           	}
           	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de  \cite{Rocha2011} \label{fig:rnaRocha}}
           \end{figure}
-          Algorit
-          O método deste trabalho
+         
+          Ambos os modelos possuem topologia de uma camada de entrada, e uma camada de saída, que de acordo com \cite{Cybenko1988} é o suficiente para um modelo preditivo.
+          \cite{Flavia2014} cita alguns que o número de neurônios por camada é proporcional à dimensão do espaço de observação. Logo em modelos preditivos de demanda, supracitados, observa-se que no mínimo deve ser utilizado um número de neurônios igual ao número de variáveis de entrada do modelo preditivo.
+          
+          A definição da função $\delta$ de ativação interfere na linearidade  do modelo a ser analisado, sendo a função sigmoide a mais popular na literatura. 
+          
+          A taxa de aprendizadem, define a velocidade de reajuste dos pesos, podendo variar de 0 a 1. Ressalta-se que uma taxa próxima de 1 provoca picos oscilatórios na taxa de aprendizado, e taxa próxima de 0 provoca lentidão da convergência de aprendizagem. Valores comuns de utilização ficam entre 0,2 e 0,8.
+          
+          \subparagraph{Validação e teste MLP}
+          	O conjunto de dados de entrada na rede MLP supervisionada, deve ser dividido em 2 partes principais, Treinamento e Validação.
+          	É importante salientar que as observações de ambos os conjuntos devem contar a mesma estrutura, ou seja, as observações $Yi$ relacionadas aos vetores i de variáveis $Xi_1,Xi_2,...,Xi_j$ do conjunto de treino, devem ter a mesma estrutura, mesmo número j de variáveis X por vetor de entrada e devem representar o mesmo problema que as observações $Yi$ do cojunto de validação.
+          	
+          	Os dados de treino e dados de validação, podem ser separados de forma aleatória, sendo os dados de treino os responsáveis pelos reajustes de pesos e capacidade de generalização da rede, e os dados de validação responsáveis pelo processo de validação pós-treino.
+          	
+          	É importante adotar um bom critério de parada de treino, pois um treino prolongado tende a convergir em ajustes de pesos memorizados dos valores observados nos dados de treino e isso causa o fenômeno de overfitting na rede neural, que é a perda da capacidade de generalização. Pesos sinápticos que sofrem processo prolongado de reajustes acaba "viciando" a rede neural para reconhecer apenas os dados de treino.
+          	
+          	Parada do erro mínimo:
+          	O critério de parada do erro mínimo encerra o treinamento da RNA quando a mesma obtem um erro menor que o mínimo estipulado para o valor observado, este é o critério mais simples, adotado nos casos onde existe um limiar de erro já determinado pelo problema, entre o valor observado e o valor a se predizer.
+          	
+          	Parada por número de épocas:
+          	Um critério de parada pode ser limitado também ao número de épocas de treino. A determinação  deste número de épocas pode ocorrer por tentativa e erro, visto que haverá a convergência de um número pequeno para uma baixa capacidade de aprendizado, e a convergência de um número grande para o processo de overfitting. Logo é necessário realizar experimentos que validem número de épocas fora desses intervalos de convergência.
+          	
+          	Parada por validação cruzada:
+          	Por fim a validação cruzada é a tecnica que se utiliza os dados dos conjuntos de validação e treino de forma cruzada, neste processo então, os dados de treino são utilizados no processo interativo de aprendizagem, e no fim deste processo o conjunto é validado com os dados de validação, obtendo-se um novo erro de validação.
+          	A medição do erro de validação passa por um processo de avaliação em função do número de épocas, a fim de se detectar um ponto de número de épocas onde o erro quadrático médio da amostra de validação sofre uma curva de crescimento após um limiar de decréscimo.
+          	
+          	É notório observar que o erro quadrático médio das amostras de treinamento sofrerá um decréscimo em função do aumento do número de épocas de treinamento, convergindo ao processo de overfitting, ou memorização da rede.
+          	
+          	O ponto de parada no limite inferior do erro quadrático médio da amostra de validação, será o ponto ótimo de parada de treinamento.
+          	
+          	\begin{figure}[!ht]
+          		\center{
+          			\includegraphics[width=0.65\textwidth]
+          			{Figuras/ROCHA/modeloRnaRocha.png}
+          		}
+          		\caption{Ponto ótimo de parada da validação cruzada. Retirado de \cite{Flavia2014} \label{fig:validacaoCruzada}}
+          	\end{figure}
+          	
+          	
 
   % ----------------------------------------------------------
   % Trabalhos relacionados
