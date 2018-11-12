@@ -555,7 +555,7 @@
           Na regressão simples $Y$ depende apenas de uma variável $X$, isto é, $Y \simeq f(\beta0, \beta1, ..., \beta k) + Ey$, Sendo $Ey$ um erro aplicado à esta função para se chegar no valor $Y$. Logo a função $f(.)$ pode ser linear nos parâmetros $(\beta0, \beta1, ..., \beta k)$, se a derivada da função em relação às derivadas dos parâmetros, corresponderem à $h(X),i$, para $i$ variando de $0$ à $k$. Sendo $h(X),$ dependente apenas de $X$.
           $\frac {\partial f}{\partial \beta i} = h (X),i = 0,1,...,k $
 
-          Na regressão múltipla, onde temos múltiplas relações causais $X1$ à $X k$, em ocorrências $\beta 0$ à $\beta k$, temos a função: $Y \simeq f(X1, X2, ..., X k, \beta0, \beta1, ..., \beta k) + E y$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,X k)$, tendo $h(.),$ dependente apenas de $X1,X2,...,X k$. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
+          Na regressão múltipla, onde temos múltiplas relações causais $X1$ à $X k$, em ocorrências $\beta_0$ à $\beta_k$, temos a função: $Y \simeq f(X1, X2, ..., X k, \beta0, \beta1, ..., \beta k) + E y$. Também sendo linear nos parâmetros se a derivada da função em relação às múltiplas derivadas dos parâmetros, corresponderem à $h(X1,X2,...,X k)$, tendo $h(.),$ dependente apenas de $X1,X2,...,X k$. Em caso contrário, $f(.)$ é uma função não linear dos parâmetros.
 
           Logo, $Y=f(X1,X2,...,X k,\beta0,\beta1,...,\beta k)+E y$ é linear nos parâmetros se:
           $\frac {\partial f}{\partial \beta i} = h(X1,X2,...,X k)$
@@ -614,8 +614,9 @@
           		\caption{Tabela de dados para regressão múltipla.}	\label{tab:regressaoMultipla}
                   
           				\begin{tabular}{|c|c|c|}
+          			\hline \textbf{ }   &\textbf{26/02/2018} &\textbf{27/02/2018}\\
           			\hline \textbf{VENDAS - $Yi$}   &\textbf{446} &\textbf{470}\\
-          			\hline \textbf{PARÂMETROS $Xi$}   &\textbf{26/02/2018} &\textbf{27/02/2018}\\
+          			\hline \textbf{PARÂMETROS $Xi$}   &\textbf{ } &\textbf{ }\\
           			\hline Temperatura(C)      &27.2 	 			& 28.5\\
           			\hline Precipitação(\%)    & 88         		& 84\\
 
@@ -635,54 +636,32 @@
           		\end{tabular}
           \end{table}
 
-        \subsection{N CONCLUIDO - Algoritmo de Regressão Linear Multipla}
-
-          \begin{algorithm}[H]
-             \SetAlgoLined
-             \Entrada{Dataset,VetorPesos} 
-             \Saida{Vetor de coeficientes da função $h(x)$}
-             \Inicio{
-              $S \leftarrow new  Stops()$\ \\
-              $M \leftarrow new  Moves()$\ \\
-              \Para{$cada \,\, trajetória \,\, t \in T$}{
-             	 $i \leftarrow 0$\ \\
-               $previousStop \leftarrow null$\ \\
-                \Enqto{$i \le size(t)$}{
-                	\Se{$\exists\,\,(Rc,\Delta c) \in A \mid geometria(t[i]) \cap Rc$}{
-                  	$enterTime \leftarrow time(t[i])$\ \\
-                      $i++$\ \\
-                  \Enqto{$geometria(t[i]) \cap Rc)$}{
-                  	$i++$\
-                  }
-                  $i--$\ \,\, , \,\,
-                  $leaveTime \leftarrow time(t[i])$\ \\
-                  \Se{$leaveTime - enterTime \ge \Delta c$}{
-                  	$stop \leftarrow (t,Rc,enterTime,leaveTime)$\ \\
-                      $S.add(stop)$\ \\
-                      $move \leftarrow (t,previousStop,stop,previousStop.leaveTime,enterTime)$\ \\
-                      $M.add(move)$\ \\
-                      $previousStop \leftarrow stop$\
-                   }
-                  }
-                  $i++$\ \,\, ,\,\,
-                  $j \leftarrow 1$\ \\
-                  \Enqto{$(i+j \le size(t))\,\, and\,\, (t[i+j]-t[i] < min\,\, \Delta c\, (A))$}{
-                  	$j++$\
-                  }
-                  \Se{$\not\exists \,\,(Rc,\Delta c) \in A \mid geometria(t[i+j-1]) \,\, \cap Rc$}{
-                  $i \leftarrow i+j$\
-                  }
-             	  }
-                \Se{$ t[i-1]\,\, not \in previousStop$}{
-                $move \leftarrow (t,previousStop,null,previousStop.leaveTime,time(t[i-1]))$\ \\
-                $M.add(move)$\
-                }
-              }
-             }
-             \label{algoritmo1}
-             \caption{\textsc{Regressão Linear Multipla}}
-          \end{algorithm}
-
+        \subsection{Algoritmo de Regressão Linear Multipla}
+            \paragraph{Modelo de Ressão Linear Múltipla}\\
+                O modelo desejado será:\\
+                $Yi$ = $\beta_0 + \beta_1*X_1 + ... + \beta_j*X_j + e$ 
+            Onde $e$ representa o erro experimental.
+             \paragraph{Verificação de linearidade}
+                $Y=f(X1,X2,...,X k,\beta0,\beta1,...,\beta k)+E y$ é linear nos parâmetros se:
+                $\frac {\partial f}{\partial \beta i} = h(X1,X2,...,X k)$
+                Se não for linear, regressão é interrompida
+             \paragraph{Parâmetros de regressão}
+                Inicialmente adota-se as suposições: 
+                $e$ = 0 , não se tem erro e que o modelo obtido será ideal.
+             \paragraph{Método dos quadrados Mínimos}
+                Este método procura encontrar o ajuste de toda observação $Y_i$ minimizando o quadrado da diferença entre esse valor e o dado observado.
+                Para a aplicação deste método, iremos ter 3 vetores e uma matriz: 
+                Vetor $Yi$ = Matriz $X_{ij}$ sendo toda a 1ª coluna $j$ tendo valor 1, vetor de tamanho $j$ de coeficientes, vetor de tamanho $i$ de erros.
+                
+                A solução de mínimos quadrados é alcançada através da minimização da soma dos quadrados dos residuos $e$, dada por $\sum_{i=1}^{n} e_i^2$ algebricamente representado por $e^t*e_i$,ou seja a multiplicação do erro pela sua transposta.
+                A solução a se buscar, é um de coeficientes $\beta$ que são atribuídos às variaveis X, que após uma combinação linear podem predizer o valor $Y_i$
+                Vetor $(\beta) = (y-X*\beta)'(y-X\beta)$.
+                Derivando o vetor de coeficientes em relação à $\beta$ e igualando a 0, temos:
+                $\beta = (X'X)^-1 X'y$
+                
+                Ao final da multiplicação das matrizes, obteremos o vetor $\beta$ que contêm todos os coeficientes para o modelo de regressão.
+                
+                Logo, ao entrarmos com o valor de $\beta$ no modelo $\beta_0 + \beta_1*X_1 + ... + \beta_j*X_j$ obteremos a variável $Yi$ predita.
       % ----------------------------------------------------------
       % INTELIGENCIA ARTIFICIAL
       % ----------------------------------------------------------
@@ -777,7 +756,7 @@
             \end{itemize}
 			
             \begin{figure}[!ht]
-            	center{
+            	\center{
               \includegraphics[width=0.65\textwidth]
               {08-perceptron.png}
             }
@@ -790,9 +769,9 @@
 			     As funções de ativação podem ser observadas na figura 09, sendo a de maior popularidade de utilização, a sigmoide.
 			
 			     \begin{figure}[!ht]
-    				center{
+    				\center{
     					\includegraphics[width=0.65\textwidth]
-    					{09-funcoes-ativacao.png}
+    					{09-delta.png}
     				}
     				\caption{Funções de Ativação retirado de \cite{Flavia2014} \label{fig:perceptron}}
 			     \end{figure}
@@ -811,7 +790,7 @@
             \subparagraph* {Taxa de aprendizagem}
             	Esse reajuste de pesos $Wi$ denomina-se taxa de aprendizagem, $\alpha$ que pode ter valores de escolha livre ao contexto de aplicação do perceptron, para reajustar estes pesos $Wi$. Assim que a taxa de aprendizagem ajusta os pesos, uma nova época N+1 de treinamento está se iniciando buscando novamente um erro menor. Ressaltando então que o critério de parada pode ser acionado e interromper o reinicio do processo, se for estipulado um limite para o valor de N combinado ou não com um limite para o erro. 
             	
-          \paragraph* {Funcionamento e treino do neurônio perceptron}
+          \subsection {Funcionamento e treino do neurônio perceptron}
             Em \cite{Almeida2013} verifica-se de forma procedural, o processo do treino supervisionado do perceptron, com $m$ observações $Y$ = $(Y_{i},Y_{i+1}...,Y_{m})$ com $n$ entradas $X$ relacionadas à cada $Y_m$, ocorre da seguinte maneira: 
             Matematicamente o neurônio é representado por um vetor global de $n$ pesos sinápticos $(W_0, W_{1}, ..., W{n})$ , e um valor de bias $b$. O processo do algoritmo abaixo ajustará esses pesos e bias.
             \begin{enumerate}
@@ -831,25 +810,23 @@
               \item Aplicação do critério de parada $CP$ em relação ao erro $e$; $CP(e)$
               \item SE $CP(e)$ for APROVADO, o algoritmo continua, SE REPROVADO, a aprendizagem é feita ajustando $b_{}=b_{}+(\alpha*(e))$, e ajustando o vetor $W_{i} = W_{i}+(\alpha*e*X_{di})$. 
             \end{enumerate}
-            
-            \subparagraph* {Funcionamento do perceptron para logica AND}
-            	Vamos aplicar o treino do perceptron, à aplicação do exemplo-problema do neurônio de Warren McCulloch e Walter Pitts, o aprendizado para a tabela AND, que busca fornecer uma resposta verdadeira apenas se a primeira E todas as demais entradas forem verdadeiras.
-            	
-            	 A utilização do perceptron com o modelo de aprendizado supervisionado, busca então conseguir de forma autônoma os valores de pesos $W_i$ e desta forma aprender o funcionamento da logica E, sem que seja necessário a tarefa humana de ajustar o modelo.
-  				 
+ 
+ \paragraph* {Funcionamento do perceptron para logica AND}.\\
+		 Vamos aplicar o treino do perceptron, à aplicação do exemplo-problema do neurônio de Warren McCulloch e Walter Pitts, o aprendizado para a tabela AND, que busca fornecer uma resposta verdadeira apenas se a primeira E todas as demais entradas forem verdadeiras.\\            	
+       A utilização do perceptron com o modelo de aprendizado supervisionado, busca então conseguir de forma autônoma os valores de pesos $W_i$ e desta forma aprender o funcionamento da logica E, sem que seja necessário a tarefa humana de ajustar o mesmo.\\\\
   				  \begin{tabular}{|c|c|c|c|}
-  				 	\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	\hline 0_ & 0 & 0 & 0\\
-  				 	\hline 1_ & 0 & 1 & 0\\
-  				 	\hline 2_ & 1 & 0 & 0\\
-  				 	\hline 3_ & 1 & 1 & 1\\
-  				  \end{tabular}
-  			 
-  			 	 Para este aprendizado vamos definir o critério de parada de 0 para o erro. 
-                 Definir o valor 0 para o $bias$. 
-                 1 para $\alpha$ e 
-                 função $\delta(u)$ = $degrau$ (1, se $u>=0$, 0 se $u<0$).
-                 O número de épocas terá o mesmo número de valores supervisionado, então o treino executará 1 vez para cada observação.
+  				 	\hline  \textbf{linha} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	\hline 0 & 0 & 0 & 0\\
+  				 	\hline 1 & 0 & 1 & 0\\
+  				 	\hline 2 & 1 & 0 & 0\\
+  				 	\hline 3 & 1 & 1 & 1\\
+  				  \end{tabular}\\
+					
+  Para este aprendizado vamos definir o critério de parada de 0 para o erro. 
+  Definir o valor 0 para o $bias$. 
+  1 para $\alpha$ e 
+  função $\delta(u)$ = $degrau$ (1, se $u>=0$, 0 se $u<0$).
+  O número de épocas terá o mesmo número de valores supervisionado, então o treino executará 1 vez para cada observação.
   			 	   
   			 	 linha $d$ = 0
 	  			 \begin{enumerate}
@@ -876,9 +853,9 @@
     				
     				Reinicio dos pesos reajustados pela aprendizagem e apresentação da próxima linha ao neurônio:
     				linha $d$ = 1
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 1_ & 0 & 1 & 0\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 1 & 0 & 1 & 0\\
     				\end{tabular}
     				
     				\begin{enumerate}
@@ -899,9 +876,9 @@
     				
     				Reinicio dos pesos reajustados pela aprendizagem e apresentação da próxima linha ao neurônio:
     				linha $d$ = 2
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 2_ & 1 & 0 & 0\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 2 & 1 & 0 & 0\\
     				\end{tabular}
             	
             	
@@ -924,9 +901,9 @@
             	
             	Reinicio dos pesos reajustados pela aprendizagem e apresentação da próxima linha ao neurônio:
     				linha $d$ = 3
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 3_ & 1 & 1 & 1\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 3 & 1 & 1 & 1\\
     				\end{tabular}
             	
             	\begin{enumerate}
@@ -957,9 +934,9 @@
             	\end{enumerate}
             	
                 linha $d$ = 0
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 0_ & 0 & 0 & 0\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 0 & 0 & 0 & 0\\
     				\end{tabular}
             	\begin{enumerate}
             	    \item Coleta do valor supervisionado $Y_d$ = $Y_0$ = 0.
@@ -970,9 +947,9 @@
             	\end{enumerate}
             	
                 linha $d$ = 1
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 1_ & 0 & 1 & 0\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha d} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 1 & 0 & 1 & 0\\
     				\end{tabular}
             	\begin{enumerate}
             	    \item Coleta do valor supervisionado $Y_d$ = $Y_1$ = 0.
@@ -983,9 +960,9 @@
             	\end{enumerate}
             
             	linha $d$ = 2
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 2_ & 1 & 0 & 0\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha d} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 2 & 1 & 0 & 0\\
     				\end{tabular}
             	\begin{enumerate}
             	    \item Coleta do valor supervisionado $Y_d$ = $Y_2$ = 0.
@@ -996,9 +973,9 @@
             	\end{enumerate}
             
             	linha $d$ = 3
-    				\begin{tabular}{|c|c|c|}
-    					\hline  \textbf{linha d} \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
-  				 	    \hline 3_ & 1 & 1 & 1\\
+    				\begin{tabular}{|c|c|c|c|}
+    					\hline  \textbf{linha d} & \textbf{$X_0$} & \textbf{$X_1$} &  \textbf{$Y$}\\
+  				 	    \hline 3 & 1 & 1 & 1\\
     				\end{tabular}
             	\begin{enumerate}
             	    \item Coleta do valor supervisionado $Y_d$ = $Y_3$ = 0.
@@ -1010,7 +987,7 @@
            
            		Como o neurônio não teve nenhum critério de parada REPROVADO em todas as interações de todas as linhas, podemos dizer que o mesmo está devidamente treinado e validado para a solução do problema.
             
-        \subsection{Rede de Perceptrons}
+        \subsection{Limite de um Perceptron}
           É possível reparar que o processo de aprendizagem de um perceptron, se forma por uma combinação linear que é o valor $ u $ dos pesos e entradas xi. Essa combinação pode ser aprovada ou reprovadas no processo repetitivo de treino controlado pela função $\delta$, e pela aprovação do erro medido entre o valor da combinação linear e o valor esperado.
           
           Então em 1969, Marvin Mjinsky e Seymour Papert realizaram uma publicação comprovando essa limitação de aprendizado à uma combinação linear, e provaram que o perceptron é limitado à resolução de problemas que são resolvidos ou classificados por apenas 1 linha, ou seja, problemas linearmente separáveis que consiste na mesma limitação do processo de regressão linear múltipla.
@@ -1018,27 +995,30 @@
     		  \begin{figure}[!ht]
     		  	\center{
     		  		\includegraphics[width=0.65\textwidth]
-    		  		{10-problemas-lineares.png}
+    		  		{10-limite-perceptron.png}
     		  	}
     		  	\caption{Problemas Linearmente Separáveis e Não Separáveis. Retirado de \cite{Flavia2014}.\label{fig:problemasLineares}}
     		  \end{figure}
 	  	
-	  	    Em 1986 James McClelland e David Rumelhart proporam o método de desenvolvimento de uma rede neural de perceptrons, tangindo mais ainda a inspiração da solução no cérebro humano. O processo resume o treinamento do perceptron simples aplicado à um conjunto de perceptrons interligados, e assim solucionando problemas complexos que podem ser resolvidos com uma combinação linear de soluções.
+	  	 Em 1986 James McClelland e David Rumelhart proporam o método de desenvolvimento de uma rede neural de perceptrons, tangindo mais ainda a inspiração da solução no cérebro humano. O processo resume o treinamento do perceptron simples aplicado à um conjunto de perceptrons interligados, e assim solucionando problemas complexos que podem ser resolvidos com uma combinação de soluções.
 	  	  
   	  	  \begin{figure}[!ht]
   	  	  	\center{
-  	  	  		\includegraphics[width=0.65\textwidth]
+  	  	  		\includegraphics[width=0.30\textwidth]
   	  	  		{11-solucao-mlp.png}
   	  	  	}
   	  	  \caption{Problemas Linearmente Não Separáveis Multiplas Soluções. \label{fig:doisPerceptrons}}
   	  	   \end{figure}
   	       
-  	    \subsection{Rede Perceptrons Múltiplas Camadas}
+  	    \subsection{Rede Perceptrons Múltiplas Camadas - MLP}
   	       
   	       A solução base para se combinar 2 ou mais perceptrons a fim de se resolver um problema com a combinação de 2 ou mais soluções lineares, é a utilização de um perceptron combinador de sinal de saída, já que cada perceptron pode ter múltiplas entradas e somente uma saída. Dessa forma as redes neurais vão formando colunas de perceptrons interconectados.
   	       Cada coluna é denominada uma camada da rede neural. A ultima camada deve ter o número de perceptrons correspondente ao número de saídas desejadas.
   	       No exemplo abaixo, eocntra-se uma rede neural com duas camadas intermediárias, representando vários neurônios por camada.
   	       
+  	       \cite{Cybenko1988} demonstra que uma função matemática contínua pode ser aproximada por 1 camada intermediária e uma função não contínua pode ser aproximada por 2 camadas intermediárias.
+  	       
+  	       Logo redes MLP com 2 camadas ocultas são suficientes para trabalhar com problemas de aproximação e predição, uma vez que pretende-se estabelecer uma relação entre variáveis influenciadoras $X_{m1},X_{m2},...,X_{mn}$ à um único valor predito $Y_{m}$, em modelos supervisionados.
   	       
   	       \begin{figure}[!ht]
   	       	\center{
@@ -1053,54 +1033,7 @@
   	       Nesta camada intermediária os neurônios possuem geralmente uma função de ativação sigmoidal logística ou tangente hiperbólica.
   	       E uma camada de saída, na borda à direita, com o número de neurônios correspondente ao número de soluções buscadas. 
   	       
-  	       Para o treinamento desta rede MLP o algoritmo indicado em previsões de demanda de restaurantes universitários é a retro-propagação de erro \cite{Lopes2008} e \cite{Rocha2011}.
-  	       
-  	       \paragraph*{Perceptron Múltiplas Camadas - Retro-propagação}
-  	       
-  	       A rede Perceptron Múltiplas Camadas com Retro-propagação de erro (MLP - Backpropagation), faz o ajuste dos pesos se dá através de duas fases:
-  	       Feed-forward onde os sinais $X_{m0},X_{m0},...,X_{mn}$ com sua respectiva saída $Y_m$ são apresentados à todos os neurônios da primeira camada. O processo de aprendizagem apresentado na seção anterior, de um perceptron simples, é executado e cada neurônio obtém um cálculo de saída e um erro. Este erro será propagado aos neurônios seguintes, até a camada de saída, que irá resultar um vetor de saídas de tamanho igual ao número de neurônios desta camada de saídas. No caso do problema de predição, este vetor tem tamanho 1, pois um único valor de venda está relacionando à um conjunto de tamanho n de variáveis.
-  	       
-  	       Na fase Feed-backward o erro da camada de saída é propagado no sentido contrário em direção à camada de entrada. Isto permite que os pesos de todas as camadas de intermediárias neste processo tenham seus pesos ajustados
-  	       
-  	       \cite{Cybenko1988} demonstra que uma função matemática contínua pode ser aproximada por 1 camada intermediária e uma função não contínua pode ser aproximada por 2 camadas intermediárias.
-  	       
-  	       Logo redes MLP com 2 camadas ocultas são suficientes para trabalhar com problemas de aproximação e predição, uma vez que pretende-se estabelecer uma relação entre variáveis influenciadoras $X_{m1},X_{m2},...,X_{mn}$ à um único valor predito $Y_{m}$, em modelos supervisionados.
-  	         	       
-  	       \begin{figure}[!ht]
-  	       	\center{
-  	       		\includegraphics[width=0.65\textwidth]
-  	       		{13-mlp-fases.png}
-  	       	}
-  	       	\caption{Fases de treino da MLP-Back-Propagation. Retirado de \cite{Almeida2013}\label{fig:MLP}}
-  	       \end{figure}
-  	       
-  	       \subparagraph*{Perceptron Múltiplas Camadas - Retro-propagação}
-  	       Em \cite{Lopes2008} a rede neural perceptron de múltiplas camadas é utilizada para tratar a previsão de demanda do R.U da UFV, utilizando apenas como variáveis quantitativas as 5 ultimas observações anteriores ao dia a se analisar, e como variáveis de cofatores o dia da semana variando de segunda a sexta, conforme modelo já detalhado no método de regressão múltipla.
-           \begin{figure}[!ht]
-          	\center{
-          		\includegraphics[width=0.65\textwidth]
-          		{Figuras/LOPES/rnaLopes.png}
-          	}
-          	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de \cite{Lopes2008}.\label{fig:Rna-Perceptron-MultiLayer}}
-           \end{figure}
-
-           Em \cite{Rocha2011} o trabalho realizado com neurônios artificiais para prever a demanda do R.U da Unesp, envolve apenas uma única camada de entrada e uma segunda camada para saída. 
-           \begin{figure}[!ht]
-          	\center{
-          		\includegraphics[width=0.65\textwidth]
-          		{Figuras/ROCHA/modeloRnaRocha.png}
-          	}
-          	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de  \cite{Rocha2011} \label{fig:rnaRocha}}
-           \end{figure}
-         
-            Ambos os modelos possuem topologia de uma camada de entrada, e uma camada de saída, que de acordo com \cite{Cybenko1988} é o suficiente para um modelo preditivo.
-            \cite{Flavia2014} cita alguns que o número de neurônios por camada é proporcional à dimensão do espaço de observação. Logo em modelos preditivos de demanda, supracitados, observa-se que no mínimo deve ser utilizado um número de neurônios igual ao número de variáveis de entrada do modelo preditivo.
-            
-            A definição da função $\delta$ de ativação interfere na linearidade  do modelo a ser analisado, sendo a função sigmoide a mais popular na literatura. 
-            
-            A taxa de aprendizadem, define a velocidade de reajuste dos pesos, podendo variar de 0 a 1. Ressalta-se que uma taxa próxima de 1 provoca picos oscilatórios na taxa de aprendizado, e taxa próxima de 0 provoca lentidão da convergência de aprendizagem. Valores comuns de utilização ficam entre 0,2 e 0,8.
-          
-            \paragraph{Validação e teste MLP}
+            \paragraph{Treino e Validação da MLP}
             	O conjunto de dados de entrada na rede MLP supervisionada, deve ser dividido em 2 partes principais, Treinamento e Validação.
             	É importante salientar que as observações de ambos os conjuntos devem contar a mesma estrutura, ou seja, as observações $Yi$ relacionadas aos vetores i de variáveis $Xi_1,Xi_2,...,Xi_j$ do conjunto de treino, devem ter a mesma estrutura, mesmo número j de variáveis X por vetor de entrada e devem representar o mesmo problema que as observações $Yi$ do cojunto de validação.
             	
@@ -1125,48 +1058,130 @@
           	\begin{figure}[!ht]
           		\center{
           			\includegraphics[width=0.65\textwidth]
-          			{Figuras/ROCHA/modeloRnaRocha.png}
+          			{14-validacaocruzada.png}
           		}
           		\caption{Ponto ótimo de parada da validação cruzada. Retirado de \cite{Flavia2014} \label{fig:validacaoCruzada}}
           	\end{figure}
         
+        O treinamento de uma rede MLP para previsões de demanda de restaurantes universitários que obteve sucesso em \cite{Lopes2008} e \cite{Rocha2011} é a retro-propagação de erro.
+        
         \subsection{Perceptrons Múltiplas Camadas com RetroPropagação}
-          O processo inicial do algoritmo do perceptron com retropagation seguirá os principios de treino do um perceptron simples, aplicado à rede de perceptrons:
-
-          O sinal de saída de cada perceptron dentro da rede se manterá o mesmo:
-            $y= \delta(\sum_{i=1}^{n}XiWi+b)$
-            \begin{itemize}
-              \item $ Xi $ - sinais de entrada do neurônio;
-              \item $ Wi $ - pesos sinápticos do neurônio;
-              \item $ b $ - bias ou limiar de ativação;
-              \item $ \delta(.) $ - função de ativação;
-              \item $ y $ - sinal de saída do neurônio.
-            \end{itemize}
-
-          Um vetor de dados $ Xi_1,Xi_2,...,Xi_k $, que serão os sinais de entrada do neurônio serão apresentados à rede, relacionados à um valor supervisionado $Yi$.
-          O processo de mudança será no cálculo do erro quadrático médio que será apresentado à rede. 
-          O erro de na saída do neurônio j da camada de saída será calculado na iteração k após a apresentação do ultimo vetor de dados do conjunto teste:
-
-          $ e(k) =\frac{1}{2}*( \sum_{jEC}(Y_i*Y_j(k))^2 ) $
-          
-          O conjunto C incluirá os neurônios da camada de saída. No caso do problema de predição de demanda onde se busca apenas um valor de saída, que é a previsão de vendas em relação às variáveis de entrada, então o conjunto C será apenas de um neurônio J.
-          O algoritmo se segue então tendo Y_i(k) como valor supervisionado da iteração k neste neurônio j da camada de saída, e $Y_j(k)$ será a saída calculada deste mesmo neurônio.
-
-          A média dos valores de erro de todos os vetores $Xi$ calculados acima, correspondente ao erro quadrático médio de uma época de treino será dada por:
-          $m.s.e = \frac{1}{n} \sum_{k=1}^{n}e(k)$
-
-          
+        A rede Perceptron Múltiplas Camadas com Retro-propagação de erro (MLP - Backpropagation), faz o ajuste dos pesos se dá através de duas fases:
+  	       Feed-forward onde os sinais $X_{m0},X_{m0},...,X_{mn}$ com sua respectiva saída $Y_m$ são apresentados à todos os neurônios da primeira camada. O processo de aprendizagem apresentado na seção anterior, de um perceptron simples, é executado e cada neurônio obtém um cálculo de saída e um erro. Este erro será propagado aos neurônios seguintes, até a camada de saída, que irá resultar um vetor de saídas de tamanho igual ao número de neurônios desta camada de saídas. No caso do problema de predição, este vetor tem tamanho 1, pois um único valor de venda está relacionando à um conjunto de tamanho n de variáveis.
+  	       
+  	       Na fase Feed-backward o erro da camada de saída é propagado no sentido contrário em direção à camada de entrada. Isto permite que os pesos de todas as camadas de intermediárias neste processo tenham seus pesos ajustados
+  	       
+  	       \begin{figure}[!ht]
+  	       	\center{
+  	       		\includegraphics[width=0.65\textwidth]
+  	       		{13-mlp-back.png}
+  	       	}
+  	       	\caption{Fases de treino da MLP-Back-Propagation. Retirado de \cite{Almeida2013}\label{fig:MLP}}
+  	       \end{figure}
+  	       
+  	       \paragraph*{MLP Backpropagation em R.U}
+  	       Em \cite{Lopes2008} a rede neural perceptron de múltiplas camadas é utilizada para tratar a previsão de demanda do R.U da UFV, utilizando apenas como variáveis quantitativas as 5 ultimas observações anteriores ao dia a se analisar, e como variáveis qualitativas o dia da semana variando de segunda a sexta, conforme modelo já detalhado no método de regressão múltipla.
+  	       
+           \begin{figure}[!ht]
+          	\center{
+          		\includegraphics[width=0.65\textwidth]
+          		{15-rna-lopes.png}
+          	}
+          	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de \cite{Lopes2008}.\label{fig:Rna-Perceptron-MultiLayer}}
+           \end{figure}
+            
+           Em \cite{Rocha2011} o trabalho realizado com neurônios artificiais para prever a demanda do R.U da Unesp, envolve apenas uma única camada de entrada e uma segunda camada para saída, porém com uma diversidade maior de variáveis de entrada correlacionadas com o consumo do restaurante. 
+           \begin{figure}[!ht]
+          	\center{
+          		\includegraphics[width=0.65\textwidth]
+          		{16-rna-rocha.png}
+          	}
+          	\caption{Rede Neural Perceptron de Múltiplas Camadas. Retirado de  \cite{Rocha2011} \label{fig:rnaRocha}}
+           \end{figure}
+         
+            Ambos os modelos possuem topologia de uma camada de entrada, e uma camada de saída, que de acordo com \cite{Cybenko1988} é o suficiente para um modelo preditivo.
+            \cite{Flavia2014} cita que o número de neurônios na camada de entrada principalmente, e nas camadas intermediárias, é proporcional à dimensão do espaço de observação. Logo em modelos preditivos de demanda, supracitados, observa-se que no mínimo deve ser utilizado um número de neurônios igual ao número de variáveis que influenciam no dado preditivo.
+            
+            \paragraph*{Parâmetros de treino da MLP Backpropagation}
+            A definição da função $\delta$ de ativação interfere na linearidade  do modelo a ser analisado, sendo a função sigmoide a mais popular na literatura. 
+            
+            A taxa de aprendizagem, define a velocidade de reajuste dos pesos, podendo variar de 0 a 1. Ressalta-se que uma taxa próxima de 1 provoca picos oscilatórios na taxa de aprendizado, e taxa próxima de 0 provoca lentidão da convergência de aprendizagem. Valores comuns de utilização ficam entre 0,2 e 0,8.
+        
+        \subsection{Treino da MLP - BackPropagation}
+            No caso do problema de predição de demanda onde se busca apenas um valor de saída, que é a previsão de vendas em relação às variáveis de entrada, o cálculo é reduzido à apenas 1 neurônio na camada de saída, porém o somatório pode envolver outros neurônios de saída para outros casos.
+            
+            Um vetor de tamanho $n$ de dados $ X_{m0},X_{m1},...,X{mn} $, que serão os sinais de entrada do neurônio serão apresentados à rede, relacionados à um valor supervisionado $Ym$.
+            
+            O processo de mudança no funcionamento de cada neurônio da rede, diferentemente do que foi visto nas seções anteriores, será uma alteração do calculo do erro para um erro quadrático.
+            
+            O processo inicial do treino da rede perceptron com backpropagation segue os princípios de treino do um perceptron simples, aplicado à rede de perceptrons.\\
+            Em algumas literaturas o processo é denominado regra delta generalizada.
+            A função $\delta$ utilizada MLP - backpropagation deve ser uma Função não-linear diferenciável em todos os pontos, popularmente é usada a função sigmoide.
+            
+            O erro quadrático de um neurônio, em uma k-ésima época de treino será:\\ 
+            $ e(k) =\frac{1}{2}*( \sum(Y_d(m)-Y_u(m))^2 ) $
+            
+            O principal objetivo do treino é reduzir a média ( $m.s.e$ ) dos valores de erro $e(k)$ de uma k-ésima época de todos os neurônios $n$ da rede:
+            $m.s.e = \frac{1}{n} \sum_{k=1}^{n}e_j(k)$
+            
+            O valor $m.s.e$ será o critério de parada do treinamento de toda a rede, e deve ser observado a cada época de treinamento, assim que este valor atingir um ponto ótimo, conforme figura 14, o critério de parada será verdadeiro e o treinamento deve parar, pois a partir desse ponto a rede converge à um overfitting (diverge de uma capacidade de generalização, e começa a memorizar os dados de treino, podendo somente funcionar para eles).
+            
+            O Processo de minimização do erro quadrático é feito pelo método do Gradiente Descendente:\\
+            $\Delta W_{ij} = -\eta*\frac{\partial e}{\partial W_{ij}}$
+            
+            O peso sináptico $i$ do neurônio j é reajustado proporcionalmente ao negativo da derivada parcial do erro deste neurônio em relação ao seu peso.
+            
+            $ y_j = \sum X_i*W_{ij} + b$\\
+            $\delta_j= -\frac{\partial e}{\partial y_j}$
+            $\Delta W_{ij} = \eta*\delta_j*X_i$
+            
+            \paragraph*{Processo de aprendizado no neurônio de saída} 
+            \begin{figure}[!ht]
+          	\center{
+          		\includegraphics[width=0.40\textwidth]
+          		{17-mlp-bp-saida.png}
+          	}
+          	\caption{Aprendizado de um neurônio na camada de saída}
+           \end{figure}
+            $\delta_j = e_j*F'(y_j)$
+            
+            O valor $\delta_j$ é retro-propagado aos neurônios de entrada como um peso $w_i$.
+        
+            \paragraph{Passo1 - Inicialização da rede}
+             Todos os pesos são iniciados com valores aleatoriamente pequenos < 0.1.
+            
+            \paragraph{Algoritmo de Treinamento}
+            Enquanto $CP$ for diferente de  Ponto ótimo de parada, faça:
+            \begin{enumerate}
+            	    \item Aplica se um vetor de variáveis $x_i$ e seu respectivo valor de saída $y_d$ desejado;
+            		\item Calcula se as saídas dos neurônios, começando da primeira canada de entrada até o neurônio de saída.
+            		\item Calcula se o erro para cada neurônio da camada de saída, se erro for aceitável, volta para 1) para iniciar uma nova época, senão continue.
+            		\item Atualizar os pesos de cada processador, começando pela camada de saída, até a camada de entrada;
+            		\item voltar ao passo 1).
+            \end{enumerate}
 
   % ----------------------------------------------------------
   % Trabalhos relacionados
   % ----------------------------------------------------------
   \chapter{Trabalhos relacionados}
-    Entre os últimos artigos publicados em 2015 sobre enriquecimento de trajetórias está o trabalho de \cite{sublime2015}, que tem características específicas que permitem a extração de informações semântica sobre dados geográficos de imagens de alta resolução, esse tipo de extração de semântica é muito usado quando os dados não são obtidos via objetos móveis, já que se obtêm a semântica a partir de dados. Porém com estes dados, são gerados mapas atualizados que são proveitosos para aplicar semântica em trajetórias brutas de objetos móveis. Os estudos em torno de trajetórias semânticas e enriquecimento semântico têm tido um grande avanço nos últimos anos.\\
-    \indent No trabalho de \cite{alvares2007}, o enriquecimento de trajetórias é feito com informações geográficas para simplificar consultas que são complexas, então é proposto um pré-processamento de modelo de dados para adicionar informações semânticas as trajetórias.\\
-    \indent Em \cite{laube2005finding}, é introduzido o estudo de comportamento de movimentos de trajetórias, onde o autor explica como se obtêm cada tipo de movimento o que vem a ser proveitoso para este trabalho, o padrão de encontro que é exemplificado no livro é o mais complexo de se calcular, por que temos que medir o intervalo de tempo de todas as trajetórias que passam em um determinado raio \textit{R}.\\
-    \indent Em \cite{Bogorny2012} uma trajetória bruta pode ser enriquecida com diferentes informações semânticas de acordo com o contexto da aplicação e o problema que o usuário pretende resolver.\\
-    \indent Neste trabalho é utilizado o método de enriquecimento de trajetórias onde usaremos informações geográficas para conflitar com as trajetórias e dizer se são pontos de \textit{stops} através do algoritmo de \textit{stops and moves}, tendo esses dados enriquecidos semanticamente vai ser implementado um algoritmo que detecta encontros em trajetórias a partir de um raio dado e um tempo de permanência mínimo em cada \textit{stop}.
-  
+    \subsection{ANÁLISES EM RESTAURANTES UNIVERSITÁRIOS}
+        \paragraph*{} No estudo estatístico feito por \cite{Landim2016}, foi analisada a correlação entre a temperatura e o consumo nos dias de vendas do restaurante universitário do campus ICT da Unifesp, sendo que os dados continham uma amostra das vendas do segundo semestre de 2016. Devido ao baixo volume de ocorrências, os dados foram submetidos à reamostragem via bootstrap. De acordo com os gráficos das amostras, identificou-se que a correlação mostrada nos gráficos da primeira metade do semestre e do período total do semestre formaram distribuições bimodais. Porém, na segunda metade do semestre formou-se uma distribuição unimodal. Portanto, concluiu-se que outras variáveis e outros modelos de análises podem ser utilizados para tal análise de demanda.
+        
+        \paragraph*{} \cite{Lopes2008} faz o mesmo estudo deste cenário do ICT UNIFESP aplicado na Universidade Federal de Viçosa (UFV). Neste estudo, os dados utilizados foram somente o histórico de vendas do restaurante universitário, e nenhuma variável de ambiente foi coletada como temperatura, precipitação, número de alunos matriculados, etc. O algoritmo utilizado foi o Traincgp (Conjugate gradient backpropagation with Polak-Ribiere updates) no software Matlab. Este algoritmo não envolve o cálculo das derivadas segundas das variáveis e converge ao mínimo da função quadrática em um número finito de iterações como cita o autor. Foram então considerados para cada nó da rede neural, o dia da semana (como segunda, terça, quarta, quinta e sexta) e cada camada dessa rede utilizando os 5 dias anteriores para cada nó (as 5 segundas anteriores, 5 terças anteriores e assim sucessivamente) e, por fim, obtido um modelo pela rede que apresentou erro máximo de 3.
+        
+        \paragraph*{} \cite{Rocha2011} também realiza o estudo de demanda no restaurante universitário da Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP), novamente com os métodos de redes neurais artificiais com backpropagation, e utilizando apenas como fonte de dados o histórico numérico das vendas realizadas, e outras variáveis intermediárias obtidas a partir deste como médias de subconjunto de observações (médias de segundas-feiras), e a única variável de ambiente coletada foi o número de feriados próximos à observação de venda. No estudo do total de dias analisados, verifica-se que em 73\% (187 dias), o método de média simples propiciou um maior erro em relação à RNA, que por sua vez ocasionou um erro maior nos 23\% (69 dias) restantes.Em se tratando de menor desperdício, observa-se que a RNA apresenta erros maiores que 50 refeições em 13 dias, enquanto o método da média simples apresenta erros maiores que 50 refeições em 58 dias, concluindo-se então que o método de RNA foi bem mais eficiente do que o cálculo de média simples utilizado pela administração do restaurante universitário.
+      
+      \subsection{ANÁLISES EM OUTROS CENÁRIOS} 
+        \paragraph*{} \cite{Ruas2012} fazem uma análise de previsão de demanda de energia elétrica no estado do paraná, entre os anos de 2004 e 2006, utilizando redes neurais artificiais e máquinas de vetores de suporte. Apesar de não ser o mesmo exemplo do cenário do restaurante universitário do ICT UNIFESP, temos na distribuição dos dados de consumo coletados como uma série temporal, e foi utilizado nesta pesquisa uma rede parcialmente recorrente de Elman, que permite a previsão de um passo de tempo à frente. Para que seja possível realizar a previsão vários pontos à frente, é necessário utilizar os valores já previstos, ou seja, a saída da rede, como entradas da mesma. Logo, como o cenário da demanda do RU no ICT UNIFESP se apresenta como uma série temporal e tentaremos prever a demanda um passo à frente, será interessante a este trabalho utilizar e comparar as técnicas previstas nesta referência.
+        
+        \paragraph*{} \cite{Almeida2013} analisa um cenário semelhante de demanda de energia elétrica, porém utilizando-se técnicas de previsão de demanda com Rede Neural Artificial do tipo Multilayer Perceptron combinado com lógica fuzzy que permite colocar variáveis de temperatura (entre outras) em um conjunto de regras que impactam no problema. Esta análise é interessante pois é semelhante à referência 2 que faz um estudo com redes neurais perceptron no mesmo tema deste trabalho de conclusão de concurso, mas com a adição da lógica fuzzy que permite utilizar outras variáveis de ambiente impactantes, que não sejam somente o histórico numérico do consumo.
+        
+        \paragraph*{} \cite{Silva2010} também aplica técnicas de redes neurais para previsão de demanda de energia elétrica, com o estudo de variáveis climáticas, porém através de um modelo de MAPA SOM - (Self-Organizing Map) que é um tipo de rede neural desenvolvido para reconhecimento de padrões. Apesar de ser um modelo não supervisionado, o modelo é ideal para organizar as principais variáveis impactantes e descartáveis na previsão. O mapa som utilizado pelo autor apresenta os dados associados aos seus neurônios de forma que padrões similares encontram-se em neurônios contíguos, tendo uma organização topológica. Deste modo é possível se extrair relações abstratas entre as variáveis do vetor de dados através da sua posição nos mapas componentes, que por meio de uma escala de cores mostram a quantidade de uma variável específica em cada neurônio do mapa.
+       
+       \subsection{TESES COMPARATIVAS DE DIVERSOS MÉTODOS DE PREVISÃO DE DEMANDA.}
+        \paragraph*{} \cite{Junior2007} realiza um trabalho de comparação entre diversas técnicas de Métodos estocásticos e Rede Neural Artificial (RNA), para a previsão da demanda de produtos cosméticos, distribuídos em séries temporais. Entre eles Redes Neurais tipo feedforward, com o algoritmo backpropagation que foi o principal foco no trabalho de previsão de RU na Universidade Federal de Viçosa e na Universidade Estadual Paulista Júlio de Mesquita Filho. Será realizado a análise dessas comparações e seleção de principais algoritmos que possam ser aplicados e comparados neste trabalho.
+        
+  % entre os dados previstos e observados.
   % ----------------------------------------------------------
   % \chapter{Plano de atividades para o TCC II}
   % ----------------------------------------------------------
@@ -1188,10 +1203,14 @@
     		\end{tabular}
     \end{table}
     \begin{enumerate}
-    \item Busca de uma base de dados correta para a aplicação.
-    \item Evidenciar o contexto semântico a ser aplicado.
-    \item Implementar o algoritmo SMoT.
-    \item Implementar o algoritmo que detecta encontros.
+    
+    \item Estruturação do conjunto de dados do R.U do ano de 2017 conforme fundamentado na seção de regressão linear múltipla. O carregamento dos dados será realizado no Matlab, que já tem bibliotecas prontas que retornam o dia da semana baseado em uma data de entrada.    Aplicação do teste de linearidade no conjunto.    Após teste bem sucedido, a predição será realizada com os dados de treino de 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM).
+    
+    \item O conjunto de dados estruturado na etapa anterior, terá um conjunto de 20\% de observações retiradas de cada metade de     cada semestre. Serão formados através do conjunto original, 3 pares de conjunto treino - validação.
+    
+    \item Implementar a estrutura de dados perceptron, será criado 3 perceptrons, cada perceptron será associado com cada par de conjunto-treino validação gerado aleatoriamente do conjunto original, e implementar a função de treino perceptron simples. A função treino irá reajustar os pesos de cada perceptron. Com os perceptrons com pesos reajustados, todos os 3 irão receber um vetor de entradas de variáveis preditivas de 2018, e emitirão uma saída k1, k2 e k3. Será feita uma média aritmética da saída k1, k2 e k3, obtendo-se km que será comparado com a saída desejada Yi de 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM) de Yi com Km.
+    
+    \item .
     \item Análise e comparação dos resultados.
     \item Documentação total do trabalho.
     \item Apresentação do trabalho.
