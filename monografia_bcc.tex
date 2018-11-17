@@ -1166,29 +1166,30 @@
         \subsection{Treino da MLP - BackPropagation para 1 sinal de saída}
             No caso do problema de predição de demanda onde se busca apenas um valor de saída, que é a previsão de vendas em relação às variáveis de entrada, o cálculo de reajuste dos pesos da camada de saída é reduzido à apenas 1 neurônio na camada de saída, porém o somatório no calculo do erro pode envolver outros neurônios de saída em outros casos.
             
-            Um vetor $i$ do conjunto de dados, de tamanho $n$ de variáveis de entrada\\ $X_{0}(i),X_{1}(i),...,X{n}(i)$,\\ que são os sinais de entrada, são apresentados à rede, relacionados à um valor supervisionado $Y_i$.
+            Um vetor $i$ do conjunto de dados, de tamanho $n$ de variáveis de entrada\\ $Xi_{0}(j),Xi_{1}(j),...,Xi_{n}(j)$,\\ que são os sinais de entrada, são apresentados à rede, relacionados à um valor supervisionado $Y_i$.
             
-            Em resumo o treino da rede perceptron com backpropagation obtém o sinal de saída no último neurônio $s$ da rede, através da propagação dos sinais de saída dos neurônios anteriores da rede, feito pela aplicação da combinação linear dos sinais de entrada com os pesos sinápticos em uma função de ativação. É calculado o erro quadrático $e$ deste sinal de saída em $s$ com o valor $Y_i$, e a regra do Gradiente Descendente com base neste erro é utilizada para o reajuste dos pesos sinápticos em todas as conexões de todos os neurônios. O processo é denominado regra delta generalizada. $\Delta$
+            Em resumo o treino da rede perceptron com backpropagation obtém o sinal de saída no último neurônio $s$ da rede, através da propagação dos sinais de saída dos neurônios anteriores da rede, feito pela aplicação da combinação linear dos sinais de entrada com os pesos sinápticos em uma função de ativação. É calculado o erro quadrático $e$ deste sinal de saída em $s$ com o valor $Yi$, e a regra do Gradiente Descendente com base neste erro é utilizada para o reajuste dos pesos sinápticos em todas as conexões de todos os neurônios. O processo é denominado regra delta generalizada. $\Delta$
             
             Neste capítulo, será denominado a função de ativação do neurônio por $F(.)$ para uma melhor coerência, devido ao símbolo $\delta$ utilizado para esta função nas seção anterior sobre o neurônio artificial ser amplamente utilizado para outros fins na regra de reajuste dos pesos sinápticos da rede MLP. Esta função na MLP - Backpropagation deve ser uma função não-linear diferenciável em todos os pontos, popularmente é usada a função sigmoide.
             
-            O erro quadrático do treino de uma rede MLP com Backpropagation, com 1 sinal de saída, no neurônio de saída $s$, em uma k-ésima iteração de treino em uma determinada época será:\\ 
-            $ e(k) =\frac{1}{2}*( (Y_i(k)-Y_u(s))^2 ) $\\ onde $Y_u(s)$ é o sinal de saída deste neurônio de saída, e $Y_i$ é o valor de saída da observação do conjunto de dados.
+            O erro quadrático do treino de uma rede MLP com Backpropagation, com 1 sinal de saída, no neurônio de saída $s$, em uma i-ésima iteração de treino em uma determinada época $k$ será:\\ 
+            $ e(i) =\frac{1}{2}*( (Yi-Yi_{\mu}(s))^2 ) $\\ onde $Y_{\mu}(s)$ é o sinal de saída deste neurônio de saída, e $Y_i$ é o valor de saída da observação do conjunto de dados.
             
             O principal objetivo de todo o método backpropagation conforme o avanço de épocas, é o treino em uma determinada época reduzir a média de erros quadráticos do conjunto de validação ( $m.s.e$ ) em $n$ iterações de validação desta época:\\
             $m.s.e = \frac{1}{n} \sum_{k=1}^{n}e(k)$
-            É importante observar que 1 época consiste no par treino e validação. Logo após o treino, os erros $e(k)$ serão obtidos novamente através das entradas $Y_i$ do conjunto de validação, e respostas propagadas $Y_u$ da rede já treinada, para então o $m.s.e$ ser calculado.
+            É importante observar que 1 época consiste no par treino e validação. Logo após o treino, os erros $e(k)$ serão obtidos novamente através das entradas $Y_i$ do conjunto de validação, e respostas propagadas $Y_\mu$ na camada de saída da rede já treinada, para então o $m.s.e$ ser calculado.
             
             O valor $m.s.e$ será o critério de parada do treinamento de toda a rede e deve ser observado a cada época de treinamento, assim que este valor atingir um ponto ótimo, conforme figura deste ponto ótimo exibida anteriormente, o critério de parada será verdadeiro e o treinamento deve parar, pois a partir desse ponto a rede converge à um overfitting (divergindo de uma capacidade de generalização, e memorizando os dados de treino, podendo ter sua estimativa eficiente somente no conjunto de dados de treino).
             
             Ressaltando que toda saída de todo neurônio $j$ da rede, com $n$ entradas, é calculada através da equação:\\
-            $ y_{u}(j) = F(\sum_{i=1}^{n} (X_i(j)*W_{i}(j) + b) )$\\
+            $ Y_{\mu}(j) = F(\mu)$\\
+            Onde $\mu = (\sum_{i=1}^{n} (Xi_{n}(j)*Wi_{n}(j) + b)$ é o potencial de ativação do neurônio $j$ e $F$ é a função de ativação do neurônio.
             
+           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
            \paragraph*{Fase Feedforward}
-            Nesta fase, em determinada época (K), em um vetor de $n$ variáveis $Xi$ correspondentes à um total de venda $Yi$, todos os neurônios $j$ propagam o sinal de saída através do calculo de $Y_{i}(j) = F(\sum_{i=1}^{n} (X_i(j)*W_{i}(j) + b) )$.
-            Os pesos sinápticos de cada neurônio $j$ conectado à uma entrada $Xi_n$ são $Wi_(j)$. A saída estimada pela rede será $Yu_i(s)$.
+            Nesta fase, em determinada época $(k)$, em um vetor de $n$ variáveis $Xi$ correspondentes à um total de venda $Yi$, todos os neurônios $j$ propagam o sinal de saída através do calculo de $Yi_{\mu}(j) = F(\mu(j))$. No cálculo de $\mu$ os pesos sinápticos de cada neurônio $j$ conectado à uma entrada $Xi_{n}(j)$ são $Wi_{n}(j)$. A saída estimada pela rede será $Yi_{\mu}(s)$.
             
-            Se a iteração $i$ da época $K$ for a primeira, todos os pesos $Wi_(j)$ são inicializados com valores aleatórios pequenos.
+            Se a iteração $i$ da época $k$ for a primeira, todos os pesos $Wi_{n}j$ em todos os neurônios, são inicializados com valores aleatórios pequenos.
             
             \begin{figure}[!ht]
           	\center{
@@ -1206,22 +1207,18 @@
           	\caption{Cálculo do valor estimado de saída da rede.}
            \end{figure}
             
-            O valor de $Yu_{i}(j)$. dos neurônios da primeira camada oculta, são obtidos de forma que $Xi_{n}$ são os sinais de entrada das variáveis de 1 à $n$.
+            O valor de $Yi_{\mu}(j)$. dos neurônios da primeira camada oculta, são obtidos de forma que $Xi_{n}(j)$ são os sinais de entrada das variáveis de 1 à $n$.
             
-            O valor de $Yu_{i}(j)$. dos neurônios das próximas camadas, inclusive a de saída, utiliza o sinal de saída $yi_{u}$ dos neurônios da camada anterior conectados à $j$ como um sinal de entrada $Xi$.
+            O valor de $Yi_{\mu}(j)$. dos neurônios das próximas camadas, inclusive a de saída, utiliza o sinal de saída $Yi_{\mu}$ dos neurônios da camada anterior conectados à $j$ como um sinal de entrada $Xi_{n}$.
             
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
             \paragraph*{Fase Feedbackward}
-            O Processo de minimização do erro quadrático no treino, é feito pelo método do Gradiente Descendente, reajustando os pesos sinápticos $W_{i}(j)$ correspondente ao neurônio $j$ da rede, da seguinte forma:\\
-            $\Delta W_{i}(j) = \eta*\delta_j*X_i(j)$\\
+            O Processo de reajuste dos pesos sinápticos com o objetivo de atingir a minimalização do erro quadrático da validação, é feito pelo método do Gradiente Descendente, reajustando os pesos sinápticos $Wi_{n}(j)$ correspondente à cada neurônio $j$ da rede, para um valor $\Delta Wi_{n}(j)$, da seguinte forma:\\
+            $\Delta Wi_{n}(j) = \eta*\delta_j*Xi_{n}(j)$\\
             
-            
-            
-            
-            
-            O peso sináptico $W_i$ do neurônio j é reajustado proporcionalmente ao negativo da derivada parcial do erro deste neurônio em relação ao seu peso.\\ 
-            $\delta_j= -\frac{\partial e}{\partial y_{u}(j)}$\\
-            
-             
+            \subparagraph*{Regra $\delta$ para neurônio de saída}
+            Exclusivamente para a camada de saída, $\delta$ é calculado por\\
+            $\delta_s = (Yi - Yi_{\mu}(s) )*F'(\mu(s))$.
             \begin{figure}[!ht]
           	\center{
           		\includegraphics[width=0.40\textwidth]
@@ -1229,21 +1226,72 @@
           	}
           	\caption{Aprendizado de um neurônio na camada de saída}
            \end{figure}
-            $\delta_j = e_j*F'(y_j)$
             
-            O valor $\delta_j$ é retro-propagado aos neurônios de entrada como um peso $w_i$.
+            O valor dos $n$ pesos $Wi_{n}(s)$ do neurônio de saída $s$ com $n$ entradas vindas das saídas de neurônios $j$ das camadas anteriores, é obtido por $\Delta Wi_{n}(s) = \eta*\delta_s*Yi_{\mu}(j)$\\.
+            \begin{figure}[!ht]
+          	\center{
+          		\includegraphics[width=0.65\textwidth]
+          		{20-mlp-bp-fb.png}
+          	}
+          	\caption{Reajuste dos pesos de saída}
+           \end{figure}
+           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+           \subparagraph*{Regra $\delta$ para neurônios de camadas ocultas}
+            Nesta etapa, os neurônios $n$ da camada oculta obterão seu $\delta$ através da seguinte equação usando o $\delta$ dos $m$ neurônios da camada posterior que se conectam à ele:\\ 
+            
+            $\delta_n = F'(\mu(n))*(\sum \delta_m*Wi_{n}m)$\\
+            
+            Na rede neural de 1 camada oculta e 1 neurônio de saída, a soma será reduzida à apenas 1 neurônio, ficando então a regra $\delta$ da seguinte forma:\\
+            
+            $\delta_n = F'(\mu(n))*(\delta_s*Wi_{n}s)$\\
+            
+            Por fim os pesos das $n$ entradas $Wi_{n}(n)$ conectadas ao neurônio $n$ terão seus pesos reajustados da seguinte forma:\\
+            $\Delta Wi_{n}(n) = \eta*\delta_n*Xi_{n}(n)$\\
+            
+            Após o reajuste chegar na primeira camada oculta, um novo vetor de observações $i$ é apresentado à rede repetindo, iniciando novamente a fase feed-forward e repetindo o ciclo até o fim das entradas.
+            
+            \begin{figure}[!ht]
+          	\center{
+          		\includegraphics[width=0.65\textwidth]
+          		{21-mlp-bp-fbe.png}
+          	}
+          	\caption{Reajuste dos pesos de camadas ocultas}
+            \end{figure}
+           
+            \subparagraph{Validação de treino}
+            Após se encerrar uma época, que percorreu todas as i-ésimas entradas do conjunto de treino, um conjunto de dados de validação, previamente separado, é apresentado à rede.
+            A validação ocorre só com a fase feedforward, obtendo-se os erros quadráticos da camada de saída com o dado de validação observado.
+            Então é calculado o $m.s.e$, obtendo-se a média de todos os i-ésimos erros quadráticos do conjunto de validação.
+            O valor $m.s.e$ deve ser acompanhado até que se atinja um ponto ótimo, ou seja, um limite inferior após k épocas.
+            Quando este limite for atingido em uma época $k_o$, todos os parâmetros da rede dentro da época $k_o$ serão os parâmetros desejados do modelo final da rede.
+            
+            Quando a curva do $m.s.e$ estiver sendo realizada, não se saberá o ponto ótimo de parada, até que ele comece a ser superado, logo é importante arbitrar um número $l$ para salvar os parâmetros das $l$ épocas anteriores.
         
-            \paragraph{Passo1 - Inicialização da rede}
-             Todos os pesos são iniciados com valores aleatoriamente pequenos < 0.1.
-            
-            \paragraph{Algoritmo de Treinamento}
-            Enquanto $CP$ for diferente de  Ponto ótimo de parada, faça:
+        \subsection{Algoritmo de treino e validação backpropagation}
+            Parâmetros de entrada:
+            \begin{itemize}
+                \item 'rna'[][], Grafo de nós do tipo neurônio, da rede neural, onde rna[m][n] corresponde ao nó "n" da camada "m".
+                \item $\eta$, Taxa de aprendizado .
+                \item Yt[][] e Yv[][], Matrizes Yt do conjunto de treino e Yv do conjunto de validação, onde Y[0][0] corresponde ao primeiro valor supervisionado, e Y[0][m] corresponde ao último parâmetro X relacionado ao valor supervisionado.
+                \item L, Limite de armazenamento de épocas, para uma lista de tamanho L, de grafos 'rna' contendo a cópia de todos os parâmetros da rede. 
+                
+            \end{itemize}
             \begin{enumerate}
-            	    \item Aplica se um vetor de variáveis $x_i$ e seu respectivo valor de saída $y_d$ desejado;
-            		\item Calcula se as saídas dos neurônios, começando da primeira canada de entrada até o neurônio de saída.
-            		\item Calcula se o erro para cada neurônio da camada de saída, se erro for aceitável, volta para 1) para iniciar uma nova época, senão continue.
-            		\item Atualizar os pesos de cada processador, começando pela camada de saída, até a camada de entrada;
-            		\item voltar ao passo 1).
+                \item Inicializa-se uma fila circular de grafos 'rna' de tamanho L, K[L].
+                \item Inicializa-se uma fila circular com zeros, do tipo real, $m.s.e$ de tamanho L, mse[L].
+                \item Copiar 'rna'[][] para K[0].
+                \item Inicializar aleatoriamente todos os pesos sinápticos de K[0].
+                \item Aplicar Y
+                \item Calcula se as saídas dos neurônios, começando da primeira canada de entrada até o neurônio de saída.
+                \item LAÇO: Enquanto soma (mse[0] à mse[$\frac{L}{2}$]) for maior que (mse[$\frac{L}{2} +1$] à mse[L]) 
+                \item inicializa-se todos os pesos da rede com valores aleatoriamente pequenos.
+                 sinápticos
+                \item Enquanto $m.s.e$ atual for menor do que $l$ de $k.o$ de parada, faça:
+        	    \item Aplica se um vetor de variáveis $x_i$ e seu respectivo valor de saída $y_d$ desejado;
+        	
+        		\item Calcula se o erro para cada neurônio da camada de saída, se erro for aceitável, volta para 1) para iniciar uma nova época, senão continue.
+        		\item Atualizar os pesos de cada processador, começando pela camada de saída, até a camada de entrada;
+        		\item voltar ao passo 1).
             \end{enumerate}
 
   % ----------------------------------------------------------
