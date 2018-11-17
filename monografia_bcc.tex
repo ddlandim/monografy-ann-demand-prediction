@@ -1273,25 +1273,41 @@
                 \item 'rna'[][], Grafo de nós do tipo neurônio, da rede neural, onde rna[m][n] corresponde ao nó "n" da camada "m".
                 \item $\eta$, Taxa de aprendizado .
                 \item Yt[][] e Yv[][], Matrizes Yt do conjunto de treino e Yv do conjunto de validação, onde Y[0][0] corresponde ao primeiro valor supervisionado, e Y[0][m] corresponde ao último parâmetro X relacionado ao valor supervisionado.
-                \item L, Limite de armazenamento de épocas, para uma lista de tamanho L, de grafos 'rna' contendo a cópia de todos os parâmetros da rede. 
-                
+                \item L, Limite de armazenamento de épocas, para uma lista de tamanho L, de grafos 'rna' contendo a cópia de todos os parâmetros da rede.                
             \end{itemize}
+
+            Será criado uma fila circular que irá armazenar cópias dos parâmetros da rede, da época vigente. Retornando os parâmetros da cópia corresponte ao ponto ótimo de parada.
+
+            Nos passos abaixo, o critério de parada do treino (laço raiz) irá interromper o treino com o auxílio de uma fila circular de valores $m.s.e$.
+            Essa fila circular mse de tamanho L é criada, percorrendo a curva m.s.e em função do aumento de épocas de treino, armazenando valores do $m.s.e$. Se L for suficientemente grande para compensar as oscilações de validação, quando a segunda metade dessa fila estiver totalmente após o ponto ótimo de parada, a soma dos valores desta segunda metade será maior que a soma dos valores da primeira metade. E assim o laço irá parar.
+
+            Como a fila de cópias da rede avança simultaneamente com a fila de mse, a cópia contida na posição $\frac{L}{2}$ será a rede com os parâmetros ótimos, do ponto ótimo de treino.
+
             \begin{enumerate}
-                \item Inicializa-se uma fila circular de grafos 'rna' de tamanho L, K[L].
-                \item Inicializa-se uma fila circular com zeros, do tipo real, $m.s.e$ de tamanho L, mse[L].
-                \item Copiar 'rna'[][] para K[0].
-                \item Inicializar aleatoriamente todos os pesos sinápticos de K[0].
-                \item Aplicar Y
-                \item Calcula se as saídas dos neurônios, começando da primeira canada de entrada até o neurônio de saída.
-                \item LAÇO: Enquanto soma (mse[0] à mse[$\frac{L}{2}$]) for maior que (mse[$\frac{L}{2} +1$] à mse[L]) 
-                \item inicializa-se todos os pesos da rede com valores aleatoriamente pequenos.
-                 sinápticos
-                \item Enquanto $m.s.e$ atual for menor do que $l$ de $k.o$ de parada, faça:
-        	    \item Aplica se um vetor de variáveis $x_i$ e seu respectivo valor de saída $y_d$ desejado;
-        	
-        		\item Calcula se o erro para cada neurônio da camada de saída, se erro for aceitável, volta para 1) para iniciar uma nova época, senão continue.
-        		\item Atualizar os pesos de cada processador, começando pela camada de saída, até a camada de entrada;
-        		\item voltar ao passo 1).
+                \item Inicialize uma fila circular de grafos 'rna' de tamanho L, K[L].
+                \item Inicialize uma fila circular com zeros, do tipo real, $m.s.e$ de tamanho L, mse[L].
+                \item Copie 'rna'[][] para K[0].
+                \item Inicialize uma variável inteira, contador de épocas, ck = 0.
+                \item Inicialize uma variável inteira, errok.
+                \item Insira uma cópia de 'rna'[][] para K[]
+                
+                \item LAÇO: Enquanto soma (mse[0] à mse[$\frac{L}{2}$]) for maior que (mse[$\frac{L}{2} +1$] à mse[L]) faça:
+                \item   LAÇO: Percorra it[] em Yt[i].
+                \item     Se i=0, inicialize os pesos de K[atual] com valores aleatoriamente pequenos. 
+                \item     Execute a fase feedforward apresentando it[] em K[atual] e guarde o erro em errok.
+                \item     Execute a fase feedbackward reajustando os pesos de K[atual] com errok.
+
+                \item   Inicialize um vetor temporario ev[] de tamanho Yv[].tamanho, a quantidade de observações de treino.
+
+                \item   LAÇO: Percorra iv[] em Yv[i].
+                \item     Execute a fase feedforward apresentando iv[] em K[atual] e insira o erro quadrático em ev[i].
+
+                \item   Obtenha a média dos valores quadráticos do vetor ev[] e insira em mse[]
+                \item   Destrua ev[].
+                \item   Insira uma cópia de K[atual] atual em K[].
+                \item   incremente ck, ck=ck+1.
+
+                \item Retorne K[$\frac{L}{2}$]
             \end{enumerate}
 
   % ----------------------------------------------------------
@@ -1338,17 +1354,23 @@
     \end{table}
     \begin{enumerate}
     
-    \item Estruturação do conjunto de dados do R.U do ano de 2017 conforme fundamentado na seção de regressão linear múltipla. O carregamento dos dados será realizado no Matlab, que já tem bibliotecas prontas que retornam o dia da semana baseado em uma data de entrada.    Aplicação do teste de linearidade no conjunto.    Após teste bem sucedido, a predição será realizada com os dados de treino de 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM).
+    \item Estruturação do conjunto de dados do R.U do ano de 2017 conforme fundamentado na seção de estruturação de dados linear múltipla. O carregamento dos dados será realizado no Matlab, que já tem bibliotecas prontas que retornam o dia da semana baseado em uma data de entrada. Realizar predição de regressão com dados de 2017 e validar com 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM).
     
-    \item O conjunto de dados estruturado na etapa anterior, terá um conjunto de 20\% de observações retiradas de cada metade de     cada semestre. Serão formados através do conjunto original, 3 pares de conjunto treino - validação.
+    \item O conjunto de dados estruturado na etapa anterior, terá um conjunto de 20\% de observações retiradas de cada estação do ano de 2017. Serão formados através do conjunto original, 3 pares de conjunto treino - validação.
     
-    \item Implementar a estrutura de dados perceptron, será criado 3 perceptrons, cada perceptron será associado com cada par de conjunto-treino validação gerado aleatoriamente do conjunto original, e implementar a função de treino perceptron simples. A função treino irá reajustar os pesos de cada perceptron. Com os perceptrons com pesos reajustados, todos os 3 irão receber um vetor de entradas de variáveis preditivas de 2018, e emitirão uma saída k1, k2 e k3. Será feita uma média aritmética da saída k1, k2 e k3, obtendo-se km que será comparado com a saída desejada Yi de 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM) de Yi com Km.
-    
-    \item .
-    \item .
-    \item .
-    \item .
+    \item Implementação do grafo rede neural com nós perceptrons. Cada nó deve conter métodos de inicialização do número de entradas, inicialização dos pesos, inicialização de função de ativação, inicialização de bias e calculo de saída. O grafo deve conter métodos de criar camadas, nós em cada camada, criar arestas orientadas das conexões dos nós.
+
+    \item Implementação do método feedforward que deve ser capaz de percorrer as camadas do grafo, e calcular o sinal de saída.
+
+    \item Implementação do método feedbackward que deve ser capaz de percorrer inversamente as camadas do gravo, e regravar os pesos sinápticos de cada nó.
+
+    \item Implementação do Algoritmo de treino e validação backpropagation
+
+    \item Execução 
+
     \end{enumerate}
+
+     estrutura de dados perceptron, será criado 3 perceptrons, cada perceptron será associado com cada par de conjunto-treino validação gerado aleatoriamente do conjunto original, e implementar a função de treino perceptron simples. A função treino irá reajustar os pesos de cada perceptron. Com os perceptrons com pesos reajustados, todos os 3 irão receber um vetor de entradas de variáveis preditivas de 2018, e emitirão uma saída k1, k2 e k3. Será feita uma média aritmética da saída k1, k2 e k3, obtendo-se km que será comparado com a saída desejada Yi de 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM) de Yi com Km.
 
   % ----------------------------------------------------------
   % \chapter{Plano de atividades para o TCC II}
