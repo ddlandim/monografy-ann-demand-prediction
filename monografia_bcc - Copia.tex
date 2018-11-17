@@ -271,10 +271,7 @@
     \item[ICT] Instituto Central de Tecnologia
     \item[R.U] Restaurante Universitário
     \item[UNIFESP] Universidade Federal de São Paulo
-    \item[UFV] Universidade FEderal de Viçosa
-    \item[UNESP] Universidade Estadual Paulista Júlio de Mesquita Filho
     \item[BDMEP] Banco de Dados Meteorológicos para Ensino e Pesquisa
-    \item[MLP] Multi Layer Perceptron
 
     \end{siglas}
   % ---
@@ -347,14 +344,14 @@
           Por se tratar de um trabalho de previsão de demanda,  este trabalho irá realizar a coleta e tratamento dos dados de consumo do restaurante universitário da Unifesp, a coleta de dados climáticos que influenciam em tal demanda, calcular os dados de calendário derivados das datas de coleta, como por exemplo obter o dia da semana de acordo com a data, estação do ano, número do semestre (se par ou ímpar), entre outros.
 
           Após a estruturação dos dados é realizado uma análise exploratória fundamentada por \cite{Junior2007} no capítulo 3.3, para previsões de demanda em geral.
-          O modelo de dados de venda estruturados receberá o acréscimo de dados de variáveis climáticas, como possíveis fatores de influencia no consumo, conforme ocorre no trabalho de previsão de demanda de energia elétrica fundamentado por \cite{Almeida2013} \cite{RUAS2012} e \cite{Silva2010}
+          O modelo de dados de venda estruturados receberá o acréscimo de dados de variáveis climáticas, como possíveis fatores de influencia no consumo, conforme ocorre no trabalho de previsão de demanda de energia elétrica fundamentado por \cite{Almeida2013} \cite{Ruas2012} e \cite{Silva2010}
 
           Os trabalhos de \cite{Junior2007} e \cite{Silva2010} fundamentam também uma classificação de análises dos dados estruturados indicando os métodos de previsão de demanda para este modelo quantitavo que são a Regressão Linear Múltipla e Redes Neurais por Inteligência Artificial.
 
           O trabalho se inicia com sua primeira análise estatística de regressão linear múltipla fundamentadas por \cite{Clarice2011} para se obter um modelo de previsão de demanda do R.U do ICT-UNIFESP.
 
         \paragraph*{Estudo de Aprendizado de máquina}
-          As análises de inteligência artificial, fundamentadas por trabalhos de previsão de demanda em R.U na Universidade Federal de Viçosa, de acordo \cite{Lopes2008} e na Universidade Estadual Paulista Júlio de Mesquita por \cite{Rocha2011}, concluem a segunda aplicação da técnica de redes neurais artificiais com o método de perceptron de múltiplas de backpropagation fundamentado em \cite{Haykin1994}, incrementando-se na técnica a inclusão de variáveis climáticas utilizadas nos trabalhos de previsão de  \cite{Almeida2013} \cite{RUAS2012} e \cite{Silva2010}, modificando a topologia vista em \cite{Lopes2008} para receber tais dados. 
+          As análises de inteligência artificial, fundamentadas por trabalhos de previsão de demanda em R.U na Universidade Federal de Viçosa, de acordo \cite{Lopes2008} e na Universidade Estadual Paulista Júlio de Mesquita por \cite{Rocha2011}, concluem a segunda aplicação da técnica de redes neurais artificiais com o método de perceptron de múltiplas de backpropagation fundamentado em \cite{Haykin1994}, incrementando-se na técnica a inclusão de variáveis climáticas utilizadas nos trabalhos de previsão de  \cite{Almeida2013} \cite{Ruas2012} e \cite{Silva2010}, modificando a topologia vista em \cite{Lopes2008} para receber tais dados. 
 
           Após a modificação da topologia, os dados serão estruturados com a retirada de amostras aleatórias de validação, e será realizado um comitê de 3 redes neurais, usando a média aritmética como combinador estimador.
 
@@ -493,14 +490,14 @@
             DATA,ENTR. ALMOÇO;
             (26/02/2018),446;
             (27/02/2018),470;   
-            \end{algorithm}
+            \end{algorithm}\\
 
             Na tabela de dados climáticos, a redução ocorre para o valor da data, na linha 0000, contendo o valor de temperatura máxima, e precipitação.\\
 
             \begin{algorithm}
             26/02/2018;27.2;88;
             27/02/2018;28.5;84;
-            \end{algorithm}
+            \end{algorithm}\\
 
             A informação de data, irá gerar informações derivadas de data como o valor em forma de fator do dia da semana (obtido através de métodos que retornam o dia da semana, dado uma data, numero do semestre sendo 1 para o primeiro, e 2 para o segundo.
 
@@ -679,14 +676,14 @@
            $\frac {\partial L}{\partial \beta_0} = -2 \sum_{i=1}^{n}[Y_i-\beta_0-\beta_1*x_{i1}-...-\beta_p*x_{ip}]$\\
            $\frac {\partial L}{\partial \beta_j} = -2 \sum_{i=1}^{n}[Y_i-\beta_0-\beta_1*x_{i1}-...-\beta_p*x_{ip}]x_{ji}$
           
-          Aplicando-se álgebra, igualando as derivadas parciais a zero e organizando o sistema em forma matricial, o modelo final pode ser dado por: $Y=X\beta+\varepsilon$.
+          Aplicando-se álgebra, igualando as derivadas parciais a zero e organizando o sistema em forma matricial, o modelo final pode ser dado por: $$\begin{equation*}Y=X\beta+\varepsilon,\end{equation*}$$.
           
           $$Y=\left[\begin{array}{c}Y_1\\Y_2\\\vdots\\Y_n\\\end{array} \right]~~,~~X=\left[\begin{array}{ccccc}1~x_{11}~ x_{12}~\ldots~x_{1p}\\1~x_{21}~x_{22}~\ldots~x_{2p}\\\vdots~~~\vdots~~~\vdots~~~\ddots~~~\vdots\\1~x_{n1}~x_{n2}~\ldots~x_{np}\\\end{array} \right]~~,~~\beta=\left[ \begin{array}{c}\beta_0\\\beta_1\\\vdots\\\beta_p\\\end{array} \right]~~\mbox{e}~~ \varepsilon=\left[ \begin{array}{c}\varepsilon_1\\\varepsilon_2\\\vdots\\\varepsilon_n\\\end{array}\right],$$
           
           Logo, $$\frac{\partial L}{\partial\beta}=-2X^\prime Y+2X^\prime X\beta.$$
           
           Aplicando-se álgebra matricial, substituindo o vetor de coeficientes $\beta$ por $\widehat\beta$ que é o objetivo da relação busca entre as variáveis $X$ e $Y$:
-          $\widehat{\beta}=(X^\prime X)^{-1} X^\prime Y$
+          $ \begin{equation*}\widehat{\beta}=(X^\prime X)^{-1} X^\prime Y.\end{equation*} $
           
           Portanto o modelo final é dado por $Y_{estimado} = X\widehat{\beta}$.
           
@@ -1295,20 +1292,20 @@
                 \item Insira uma cópia de 'rna'[][] para K[]
                 
                 \item LAÇO: Enquanto soma (mse[0] à mse[$\frac{L}{2}$]) for maior que (mse[$\frac{L}{2} +1$] à mse[L]) faça:
-                \item--LAÇO: Percorra it[] em Yt[i].
-                \item----Se i=0, inicialize os pesos de K[atual] com valores aleatoriamente pequenos. 
-                \item----Execute a fase feedforward apresentando it[] em K[atual] e guarde o erro em errok.
-                \item----Execute a fase feedbackward reajustando os pesos de K[atual] com errok.
+                \item   LAÇO: Percorra it[] em Yt[i].
+                \item     Se i=0, inicialize os pesos de K[atual] com valores aleatoriamente pequenos. 
+                \item     Execute a fase feedforward apresentando it[] em K[atual] e guarde o erro em errok.
+                \item     Execute a fase feedbackward reajustando os pesos de K[atual] com errok.
 
-                \item--Inicialize um vetor temporario ev[] de tamanho Yv[].tamanho, a quantidade de observações de treino.
+                \item   Inicialize um vetor temporario ev[] de tamanho Yv[].tamanho, a quantidade de observações de treino.
 
-                \item--LAÇO: Percorra iv[] em Yv[i].
-                \item----Execute a fase feedforward apresentando iv[] em K[atual] e insira o erro quadrático em ev[i].
+                \item   LAÇO: Percorra iv[] em Yv[i].
+                \item     Execute a fase feedforward apresentando iv[] em K[atual] e insira o erro quadrático em ev[i].
 
-                \item--Obtenha a média dos valores quadráticos do vetor ev[] e insira em mse[]
-                \item--Destrua ev[].
-                \item--Insira uma cópia de K[atual] atual em K[].
-                \item--incremente ck, ck=ck+1.
+                \item   Obtenha a média dos valores quadráticos do vetor ev[] e insira em mse[]
+                \item   Destrua ev[].
+                \item   Insira uma cópia de K[atual] atual em K[].
+                \item   incremente ck, ck=ck+1.
 
                 \item Retorne K[$\frac{L}{2}$]
             \end{enumerate}
@@ -1325,7 +1322,7 @@
         \paragraph*{} \cite{Rocha2011} também realiza o estudo de demanda no restaurante universitário da Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP), novamente com os métodos de redes neurais artificiais com backpropagation, e utilizando apenas como fonte de dados o histórico numérico das vendas realizadas, e outras variáveis intermediárias obtidas a partir deste como médias de subconjunto de observações (médias de segundas-feiras), e a única variável de ambiente coletada foi o número de feriados próximos à observação de venda. No estudo do total de dias analisados, verifica-se que em 73\% (187 dias), o método de média simples propiciou um maior erro em relação à RNA, que por sua vez ocasionou um erro maior nos 23\% (69 dias) restantes.Em se tratando de menor desperdício, observa-se que a RNA apresenta erros maiores que 50 refeições em 13 dias, enquanto o método da média simples apresenta erros maiores que 50 refeições em 58 dias, concluindo-se então que o método de RNA foi bem mais eficiente do que o cálculo de média simples utilizado pela administração do restaurante universitário.
       
       \subsection{ANÁLISES EM OUTROS CENÁRIOS} 
-        \paragraph*{} \cite{RUAS2012} fazem uma análise de previsão de demanda de energia elétrica no estado do paraná, entre os anos de 2004 e 2006, utilizando redes neurais artificiais e máquinas de vetores de suporte. Apesar de não ser o mesmo exemplo do cenário do restaurante universitário do ICT UNIFESP, temos na distribuição dos dados de consumo coletados como uma série temporal, e foi utilizado nesta pesquisa uma rede parcialmente recorrente de Elman, que permite a previsão de um passo de tempo à frente. Para que seja possível realizar a previsão vários pontos à frente, é necessário utilizar os valores já previstos, ou seja, a saída da rede, como entradas da mesma. Logo, como o cenário da demanda do RU no ICT UNIFESP se apresenta como uma série temporal e tentaremos prever a demanda um passo à frente, será interessante a este trabalho utilizar e comparar as técnicas previstas nesta referência.
+        \paragraph*{} \cite{Ruas2012} fazem uma análise de previsão de demanda de energia elétrica no estado do paraná, entre os anos de 2004 e 2006, utilizando redes neurais artificiais e máquinas de vetores de suporte. Apesar de não ser o mesmo exemplo do cenário do restaurante universitário do ICT UNIFESP, temos na distribuição dos dados de consumo coletados como uma série temporal, e foi utilizado nesta pesquisa uma rede parcialmente recorrente de Elman, que permite a previsão de um passo de tempo à frente. Para que seja possível realizar a previsão vários pontos à frente, é necessário utilizar os valores já previstos, ou seja, a saída da rede, como entradas da mesma. Logo, como o cenário da demanda do RU no ICT UNIFESP se apresenta como uma série temporal e tentaremos prever a demanda um passo à frente, será interessante a este trabalho utilizar e comparar as técnicas previstas nesta referência.
         
         \paragraph*{} \cite{Almeida2013} analisa um cenário semelhante de demanda de energia elétrica, porém utilizando-se técnicas de previsão de demanda com Rede Neural Artificial do tipo Multilayer Perceptron combinado com lógica fuzzy que permite colocar variáveis de temperatura (entre outras) em um conjunto de regras que impactam no problema. Esta análise é interessante pois é semelhante à referência 2 que faz um estudo com redes neurais perceptron no mesmo tema deste trabalho de conclusão de concurso, mas com a adição da lógica fuzzy que permite utilizar outras variáveis de ambiente impactantes, que não sejam somente o histórico numérico do consumo.
         
@@ -1352,52 +1349,34 @@
     			\hline 4 & 	&$\checkmark$ &$\checkmark$ &$\checkmark$ & 	\\
     			\hline 5 & 	&$\checkmark$ &$\checkmark$ &$\checkmark$ & 	\\
                 \hline 6 &  & & & &$\checkmark$ 	\\
-                \hline 7 & 	&$\checkmark$ &$\checkmark$ &$\checkmark$ & 	\\
-                \hline 8 & 	&$\checkmark$ &$\checkmark$ &$\checkmark$ & 	\\
     			\hline 
     		\end{tabular}
     \end{table}
     \begin{enumerate}
     
-    \item Estruturação do conjunto de dados do R.U do ano de 2017 conforme Tabela 1. O carregamento dos dados será realizado no Matlab, que já tem bibliotecas prontas que retornam o dia da semana baseado em uma data de entrada. Realizar predição de regressão com dados de 2017 e validar com 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM).
+    \item Estruturação do conjunto de dados do R.U do ano de 2017 conforme fundamentado na seção de estruturação de dados linear múltipla. O carregamento dos dados será realizado no Matlab, que já tem bibliotecas prontas que retornam o dia da semana baseado em uma data de entrada. Realizar predição de regressão com dados de 2017 e validar com 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM).
     
-    \item Implementação do grafo rede neural com nós perceptrons. A topologia seguirá conforme dados já estruturados na seção 2.2.3, será criado uma primeira camada oculta com o número de neurônios igual ao número de entradas, e 1 camada de saída, com 1 neurônio. Cada nó deve conter métodos de inicialização do número de entradas, inicialização dos pesos, inicialização de função de ativação, inicialização de bias e calculo de saída. O grafo deve conter métodos de criar camadas, nós em cada camada, criar arestas orientadas das conexões dos nós.
-    \begin{figure}[!ht]
-          	\center{
-          		\includegraphics[width=0.65\textwidth]
-          		{22-propostaRna.png}
-          	}
-          	\caption{Proposta de RNA}
-    \end{figure}
+    \item O conjunto de dados estruturado na etapa anterior, terá um conjunto de 20\% de observações retiradas de cada estação do ano de 2017. Serão formados através do conjunto original, 3 pares de conjunto treino - validação.
+    
+    \item Implementação do grafo rede neural com nós perceptrons. Cada nó deve conter métodos de inicialização do número de entradas, inicialização dos pesos, inicialização de função de ativação, inicialização de bias e calculo de saída. O grafo deve conter métodos de criar camadas, nós em cada camada, criar arestas orientadas das conexões dos nós.
 
     \item Implementação do método feedforward que deve ser capaz de percorrer as camadas do grafo, e calcular o sinal de saída.
 
     \item Implementação do método feedbackward que deve ser capaz de percorrer inversamente as camadas do gravo, e regravar os pesos sinápticos de cada nó.
 
-    \item Implementação do Algoritmo de treino e validação backpropagation, com $\eta = 0,5$ e função de ativação sigmóide para todos os neurônios.
+    \item Implementação do Algoritmo de treino e validação backpropagation
 
-    \item O conjunto de dados original e estruturado na etapa anterior com regressão, estruturado conforme tabela 1, com todos os dados de 2017, terá um conjunto de 20\% de observações retiradas aleatoriamente de cada estação do ano de 2017, e será formado um par 80\% de treino e 20\% validação. Este processo de formação de pares será repetido 3x, obtendo 3 pares.
-    Os 3 pares farão 3 treinos backpropagation, obtendo-se 3 modelos, será feito um metodo comiteRna, com combinador de média das saídas, onde o conjunto de dados de teste de 2018 será apresentado ao método, que replicara os dados aos 3 modelos de rna, e apresentará um valor mediano da saída dos 3 modelos.
-    
-    \item Meta-análise dos resultados da regressão, e do comiteRna, com os avaliadores de qualidade dos modelos, Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM).
-    
-    \item Escrita do TCC2
+    \item Execução 
 
     \end{enumerate}
+
+     estrutura de dados perceptron, será criado 3 perceptrons, cada perceptron será associado com cada par de conjunto-treino validação gerado aleatoriamente do conjunto original, e implementar a função de treino perceptron simples. A função treino irá reajustar os pesos de cada perceptron. Com os perceptrons com pesos reajustados, todos os 3 irão receber um vetor de entradas de variáveis preditivas de 2018, e emitirão uma saída k1, k2 e k3. Será feita uma média aritmética da saída k1, k2 e k3, obtendo-se km que será comparado com a saída desejada Yi de 2018. Anotando-se o Erro Absoluto Médio (EAM), Erro Quadrado Médio (EQM) e Raiz do Erro Quadrado Médio (REQM) de Yi com Km.
 
   % ----------------------------------------------------------
   % \chapter{Plano de atividades para o TCC II}
   % ----------------------------------------------------------
   \chapter{Conclusão}
-    As análises diversas de previsão de demanda para o tema abordado requerem extensos métodos de implementação e estruturação de dados.
-    Uma das etapas mais importantes do trabalho, é o método de coleta de dados. Muitos podem ser de acesso burocrático, ou de díficil busca. E são o requisito primordial para o inicio de qualquer análise.
-    
-    A diversidade de métodos de aprendizado de máquina é imensurável, e dentro de apenas uma análise, que é o treino com retropropagação, pode-se montar infinitas topologias diferentes com base na estrutura dos dados coletados. 
-    As heurísticas sobre a definição de topologia apesar de diversas, não são determinísticas, e o processo requer análise exploratória, subjetiva e de tentativa e erro sobre o tema e problema a ser abordado.
-    
-    Todavia foi notório a eficência dos modelos de aprendizado de máquina em trabalhos relacionados à restaurantes universitários. 
-    
-    Como no ICT - Unifesp, não há qualquer modelo atual de previsão, e a falta de um modelo causa desperdício de alimentos e prejuízo ao restaurante, a abordagem dessa pesquisa e sua continuação com novos métodos após a conclusão deste trabalho torna-se viável.
+    .
 
   %\begin{itemize}
   %\item Contextualização e Motivação; 
