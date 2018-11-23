@@ -13,26 +13,16 @@
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/monografias\-.poli\-.ufrj\-.br\-/monografias\-/monopoli10007620\-.pdf$>$}{http://monografias.poli.ufrj.br/monografias/monopoli10007620.pdf}.}
 
-\bibitem[Alvares et al. 2007]{alvares2007}
-\abntrefinfo{Alvares et al.}{ALVARES et al.}{2007}
-{ALVARES, L.~O. et al. A model for enriching trajectories with semantic
-  geographical information. In:  \emph{Proceedings of the 15th Annual ACM
-  International Symposium on Advances in Geographic Information Systems}. New
-  York, NY, USA: ACM, 2007.  (GIS '07), p. 22:1--22:8.
-ISBN 978-1-59593-914-2. Dispon{\'\i}vel em:
-  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/1341012\-.1341041$>$}{http://doi.acm.org/10.1145/1341012.1341041}.}
+\bibitem[Bryan Kolb;~Arif 2014]{Muhammad2014}
+\abntrefinfo{Bryan Kolb;~Arif}{BRYAN KOLB;~ARIF}{2014}
+{BRYAN KOLB;~ARIF, M. Harnessing the power of neuroplasticity for intervention.
+  In:  \emph{FRONTIERS IN HUMAN NEUROSCIENCE}. [S.l.: s.n.], 2014. p.~13.}
 
 \bibitem[Clarice G.B. Demétrio;~Zocchi 2011]{Clarice2011}
 \abntrefinfo{Clarice G.B. Demétrio;~Zocchi}{CLARICE G.B.
   DEMéTRIO;~ZOCCHI}{2011}
 {CLARICE G.B. DEMéTRIO;~ZOCCHI, S.~S. \emph{Modelos de Regressão}. [S.l.]:
   Departamento de Ciências Exatas, ESALQ, USP, 2011.}
-
-\bibitem[Giannotti e Pedreschi 2008]{Giannotti2008}
-\abntrefinfo{Giannotti e Pedreschi}{GIANNOTTI; PEDRESCHI}{2008}
-{GIANNOTTI, F.; PEDRESCHI, D. \emph{Mobility, data mining and privacy:
-  Geographic knowledge discovery}. [S.l.]: Springer Science \& Business Media,
-  2008.}
 
 \bibitem[HAYKIN 1994]{Haykin1994}
 \abntrefinfo{HAYKIN}{HAYKIN}{1994}
@@ -47,11 +37,14 @@ ISBN 978-1-59593-914-2. Dispon{\'\i}vel em:
 Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade do Paraná.
   Curitiba, 2007.}
 
-\bibitem[Laube, Kreveld e Imfeld 2005]{laube2005finding}
-\abntrefinfo{Laube, Kreveld e Imfeld}{LAUBE; KREVELD; IMFELD}{2005}
-{LAUBE, P.; KREVELD, M. van; IMFELD, S. Finding remo—detecting relative
-  motion patterns in geospatial lifelines. In:  \emph{Developments in spatial
-  data handling}. [S.l.]: Springer Berlin Heidelberg, 2005. p. 201--215.}
+\bibitem[Landim 2016]{Landim2016}
+\abntrefinfo{Landim}{LANDIM}{2016}
+{LANDIM, D.~D. Análise de demanda no restaurante universitário do instituto
+  de ciência e tecnologia da unifesp - universidade federal de são paulo.
+\emph{Projeto da Disciplina de Simulação de Sistemas}, Universidade Federal
+  de São Paulo, v.~1, n.~1, p.~6, 2016.
+Dispon{\'\i}vel em:
+  $<$https:\-/\-/github\-.com\-/ddlandim\-/monografy-ann-demand-prediction\-/tree\-/master\-/referencias$>$.}
 
 \bibitem[LOPES 2008]{Lopes2008}
 \abntrefinfo{LOPES}{LOPES}{2008}
@@ -61,6 +54,12 @@ Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade do Paraná.
   Viçosa.}, Universidade Federal De Viçosa, IV, n.~1, p.~14, 2008.
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/www\-.novoscursos\-.ufv\-.br\-/projetos\-/ufv\-/gesep\-/www\-/wp-content\-/uploads\-/5\-.$>$}{http://www.novoscursos.ufv.br/projetos/ufv/gesep/www/wp-content/uploads/5.}}
+
+\bibitem[Luger 2004]{Luger2004}
+\abntrefinfo{Luger}{LUGER}{2004}
+{LUGER, G.~F. \emph{Inteligência Artificial. Estruturas e Estratégias para a
+  Solução de Problemas Complexos,4ª ed}. [S.l.]: Porto Alegre: Bookman,
+  2004.}
 
 \bibitem[Mariano 2014]{Flavia2014}
 \abntrefinfo{Mariano}{MARIANO}{2014}
@@ -74,10 +73,10 @@ Dispon{\'\i}vel em:
 {MORETTIN, P.~A. \emph{Análise de séries temporais}. [S.l.]: Editora Blucher,
   1987.}
 
-\bibitem[Rezende 2003]{Rezende2003}
-\abntrefinfo{Rezende}{REZENDE}{2003}
-{REZENDE, S.~O. \emph{Sistemas inteligentes: fundamentos e aplicações}.
-  [S.l.]: Editora Manole Ltda, 2003.}
+\bibitem[RAGA A. de P.;~CARVALHO 2000]{Braga2000}
+\abntrefinfo{RAGA A. de P.;~CARVALHO}{RAGA A. DE P.;~CARVALHO}{2000}
+{RAGA A. DE P.;~CARVALHO, A. P. L. F.~L. \emph{Redes neurais artificiais:
+  teoria e aplicações}. [S.l.]: Livros técnicos e científicos, 2000.}
 
 \bibitem[ROCHA JOSÉ CELSO;~MATOS 2011]{Rocha2011}
 \abntrefinfo{ROCHA JOSÉ CELSO;~MATOS}{ROCHA JOSÉ CELSO;~MATOS}{2011}
@@ -108,10 +107,9 @@ Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/alegrete\-.unipampa\-.edu\-.br\-/gesep\-/wp-content\-/uploads\-/2010\-/05\-/Previs\%C3\%A3o-dedemanda-utiilizando-m\%C3\%A9todo-de-Markov\underline{\
   }Final\-.pdf$>$}{http://alegrete.unipampa.edu.br/gesep/wp-content/uploads/2010/05/Previs\%C3\%A3o-dedemanda-utiilizando-m\%C3\%A9todo-de-Markov_Final.pdf}.}
 
-\bibitem[Sublime et al. 2015]{sublime2015}
-\abntrefinfo{Sublime et al.}{SUBLIME et al.}{2015}
-{SUBLIME, J. et al. Semantic rich icm algorithm for vhr satellite images
-  segmentation. In:  \emph{Machine Vision Applications (MVA), 2015 14th IAPR
-  International Conference on}. [S.l.: s.n.], 2015. p. 45--48.}
+\bibitem[Zorzetto 2012]{Fapesp192}
+\abntrefinfo{Zorzetto}{ZORZETTO}{2012}
+{ZORZETTO, R. Recontagem de neurônios põe em xeque ideias da neurociência.
+\emph{Revista Fapesp 192}, Fapesp, v.~1, n.~1, p.~6, 2012.}
 
 \end{thebibliography}

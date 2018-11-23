@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.23)  17 NOV 2018 02:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.23)  21 NOV 2018 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1147,13 +1147,13 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 [12
 
 ] (./monografia_bcc.lof
-Overfull \hbox (38.70059pt too wide) in paragraph at lines 8--8
+Overfull \hbox (38.70059pt too wide) in paragraph at lines 7--7
  [][] [][][]\T1/ptm/m/n/12 Neuronio Bi-o-ló-gico, re-ti-rado de https://pt.khan
 academy.org/science/biology/human- 
  []
 
 
-Overfull \hbox (1.36977pt too wide) in paragraph at lines 16--16
+Overfull \hbox (1.36977pt too wide) in paragraph at lines 15--15
  [][] [][][]\T1/ptm/m/n/12 Ponto ótimo de pa-rada da va-li-da-ção cru-zada. Re-
 ti-rado de ([][]MA-RI-ANO[][], [][]2014[][][]) 
  []
@@ -1167,7 +1167,10 @@ ti-rado de ([][]MA-RI-ANO[][], [][]2014[][][])
 ] [18
 
 ] (./monografia_bcc.toc
-[19]) [20] [21
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
+ [19])
+[20] [21
 
 
 ]
@@ -1178,294 +1181,267 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 340.
-
-[22] [23] [24]
+ [22] [23]
+[24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25
 
 ]
 [26]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 415.
-
-Overfull \hbox (62.15869pt too wide) in paragraph at lines 436--437
-\T1/ptm/m/n/12 a in-for-ma-ção deve ser ob-tida atra-vés do link ofi-cial da in
-s-ti-tui-ção, http://www.unifesp.br/reitoria/prograd/pro-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27]
-Overfull \hbox (21.13596pt too wide) in paragraph at lines 441--442
-[]\T1/ptm/m/n/12 É ne-ces-sá-rio um ca-das-tro no site http://www.inmet.gov.br/
-portal/index.php?r=bdmep/bdmep
- []
-
-
-Overfull \hbox (3.70786pt too wide) in paragraph at lines 445--447
-\T1/ptm/m/n/12 Mínima($[]$C), In-so-la-ção(horas) Eva-po-ra-ção do Pi-che(mm), 
-Tem-pe-ra-tura Com-pen-sada Média($[]$C),
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--481
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
-
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
-
- []
-
-<04-lopes-entradas-dia-semana.png, id=393, 335.00156pt x 225.09094pt>
-File: 04-lopes-entradas-dia-semana.png Graphic file (type png)
-<use 04-lopes-entradas-dia-semana.png>
-Package pdftex.def Info: 04-lopes-entradas-dia-semana.png  used on input line 5
-12.
-(pdftex.def)             Requested size: 295.74722pt x 198.71259pt.
-[30 <./04-lopes-entradas-dia-semana.png>] [31]
-<01-junior-metodos-quantitativos.png, id=418, 387.69844pt x 192.72pt>
+<01-junior-metodos-quantitativos.png, id=368, 387.69844pt x 192.72pt>
 File: 01-junior-metodos-quantitativos.png Graphic file (type png)
 <use 01-junior-metodos-quantitativos.png>
 Package pdftex.def Info: 01-junior-metodos-quantitativos.png  used on input lin
-e 581.
+e 415.
 (pdftex.def)             Requested size: 295.74722pt x 147.01567pt.
- [32 <./01-junior-metodos-quantitativos.png>]
-<02-junior-metodos-previsao-demanda.png, id=429, 577.40718pt x 323.70938pt>
+<02-junior-metodos-previsao-demanda.png, id=374, 577.40718pt x 323.70938pt>
 File: 02-junior-metodos-previsao-demanda.png Graphic file (type png)
 <use 02-junior-metodos-previsao-demanda.png>
 Package pdftex.def Info: 02-junior-metodos-previsao-demanda.png  used on input 
-line 594.
+line 428.
 (pdftex.def)             Requested size: 295.74722pt x 165.81075pt.
- [33 <./02-junior-metodos-previsao-demanda.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
+ [27 <./01-junior-metodos-quantitativos.png> <./02-junior-metodos-previsao-dema
+nda.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
-<03-ruas-serie-temporal-sazonal.png, id=454, 861.2175pt x 474.27188pt>
+[28]
+<03-ruas-serie-temporal-sazonal.png, id=402, 861.2175pt x 474.27188pt>
 File: 03-ruas-serie-temporal-sazonal.png Graphic file (type png)
 <use 03-ruas-serie-temporal-sazonal.png>
 Package pdftex.def Info: 03-ruas-serie-temporal-sazonal.png  used on input line
- 631.
+ 460.
 (pdftex.def)             Requested size: 295.74722pt x 162.87134pt.
-[34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35 <./03-ruas-serie-temporal-sazonal.png>] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+ [29 <./03-ruas-serie-temporal-sazonal.png>] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
 
-Overfull \hbox (11.11426pt too wide) in paragraph at lines 697--698
+Overfull \hbox (11.11426pt too wide) in paragraph at lines 526--527
 []\T1/ptm/m/n/12 Obtenção do ve-tor de co-e-fi-ci-en-tes $[]$ das va-riá-veis $
 \OML/cmm/m/it/12 X$\T1/ptm/m/n/12 , atra-vés da ope-ra-ção $[] \OT1/cmr/m/n/12 
 = (\OML/cmm/m/it/12 X[]X\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 X[]Y$ 
  []
 
 
-LaTeX Warning: Citation `Luger2004' on page 37 undefined on input line 704.
+Overfull \hbox (13.35567pt too wide) in paragraph at lines 533--535
+\T1/ptm/m/n/12 ti-fi-cial In-tel-li-gence, se-di-ada nos Es-ta-dos Uni-dos em D
+art-mouth Col-lege, Ha-no-ver, New Hampshire,
+ []
 
-[37]
-
-LaTeX Warning: Citation `Muhammad2014' on page 38 undefined on input line 718.
-
-
-LaTeX Warning: Citation `Fapesp192' on page 38 undefined on input line 720.
-
-<05-neuronio.jpg, id=492, 602.25pt x 268.75406pt>
+[31]
+<05-neuronio.jpg, id=448, 602.25pt x 268.75406pt>
 File: 05-neuronio.jpg Graphic file (type jpg)
 <use 05-neuronio.jpg>
-Package pdftex.def Info: 05-neuronio.jpg  used on input line 727.
+Package pdftex.def Info: 05-neuronio.jpg  used on input line 556.
 (pdftex.def)             Requested size: 295.74722pt x 131.9818pt.
-[38 <./05-neuronio.jpg>]
-<06-neuronio-artificial.png, id=498, 413.545pt x 192.72pt>
+ [32 <./05-neuronio.jpg>]
+<06-neuronio-artificial.png, id=456, 413.545pt x 192.72pt>
 File: 06-neuronio-artificial.png Graphic file (type png)
 <use 06-neuronio-artificial.png>
-Package pdftex.def Info: 06-neuronio-artificial.png  used on input line 740.
+Package pdftex.def Info: 06-neuronio-artificial.png  used on input line 569.
 (pdftex.def)             Requested size: 295.74722pt x 137.82608pt.
 
-Overfull \hbox (25.48563pt too wide) in paragraph at lines 745--747
+Overfull \hbox (25.48563pt too wide) in paragraph at lines 574--576
 []\T1/ptm/m/n/12 Assim como no neurô-nio bi-o-ló-gico, este mo-delo re-age à um
  ve-tor de en-tra-das $\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; X\
 OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; :::; Xn$
  []
 
-<07-neuronio-operacao-and.png, id=499, 438.63875pt x 249.93375pt>
+<07-neuronio-operacao-and.png, id=457, 438.63875pt x 249.93375pt>
 File: 07-neuronio-operacao-and.png Graphic file (type png)
 <use 07-neuronio-operacao-and.png>
-Package pdftex.def Info: 07-neuronio-operacao-and.png  used on input line 753.
+Package pdftex.def Info: 07-neuronio-operacao-and.png  used on input line 582.
 (pdftex.def)             Requested size: 295.74722pt x 168.51875pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39 <./06-neuronio-artificial.png (PNG copy)>] [40 <./07-neuronio-operacao-and
-.png (PNG copy)>]
-<08-perceptron.png, id=512, 452.4403pt x 266.49562pt>
+[33 <./06-neuronio-artificial.png (PNG copy)>] [34 <./07-neuronio-operacao-and.
+png (PNG copy)>]
+<08-perceptron.png, id=470, 452.4403pt x 266.49562pt>
 File: 08-perceptron.png Graphic file (type png)
 <use 08-perceptron.png>
-Package pdftex.def Info: 08-perceptron.png  used on input line 796.
+Package pdftex.def Info: 08-perceptron.png  used on input line 625.
 (pdftex.def)             Requested size: 295.74722pt x 174.20009pt.
-<09-delta.png, id=513, 490.83376pt x 287.57437pt>
+<09-delta.png, id=471, 490.83376pt x 287.57437pt>
 File: 09-delta.png Graphic file (type png)
 <use 09-delta.png>
-Package pdftex.def Info: 09-delta.png  used on input line 809.
+Package pdftex.def Info: 09-delta.png  used on input line 638.
 (pdftex.def)             Requested size: 295.74722pt x 173.27875pt.
- [41 <./08-perceptron.png> <./09-delta.png>] [42] [43] [44] [45] [46]
-[47]
-<10-limite-perceptron.png, id=634, 525.46312pt x 243.15843pt>
+ [35 <./08-perceptron.png>] [36 <./09-delta.png>] [37] [38]
+[39] [40] [41]
+<10-limite-perceptron.png, id=591, 525.46312pt x 243.15843pt>
 File: 10-limite-perceptron.png Graphic file (type png)
 <use 10-limite-perceptron.png>
-Package pdftex.def Info: 10-limite-perceptron.png  used on input line 1062.
+Package pdftex.def Info: 10-limite-perceptron.png  used on input line 891.
 (pdftex.def)             Requested size: 295.74722pt x 136.86162pt.
-<11-solucao-mlp.png, id=639, 166.37157pt x 182.18062pt>
+<11-solucao-mlp.png, id=596, 166.37157pt x 182.18062pt>
 File: 11-solucao-mlp.png Graphic file (type png)
 <use 11-solucao-mlp.png>
-Package pdftex.def Info: 11-solucao-mlp.png  used on input line 1072.
+Package pdftex.def Info: 11-solucao-mlp.png  used on input line 901.
 (pdftex.def)             Requested size: 136.50139pt x 149.48079pt.
- [48]
-<12-mlp.png, id=649, 313.9228pt x 179.92218pt>
+ [42]
+<12-mlp.png, id=607, 313.9228pt x 179.92218pt>
 File: 12-mlp.png Graphic file (type png)
 <use 12-mlp.png>
-Package pdftex.def Info: 12-mlp.png  used on input line 1084.
+Package pdftex.def Info: 12-mlp.png  used on input line 913.
 (pdftex.def)             Requested size: 295.74722pt x 169.51122pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49 <./10-limite-perceptron.png> <./11-solucao-mlp.png>]
+ [43 <./10-limite-perceptron.png> <./11-solucao-mlp.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50 <./12-mlp.png>]
-<14-validacaocruzada.png, id=666, 236.38312pt x 183.68625pt>
+ [44 <./12-mlp.png>]
+<14-validacaocruzada.png, id=623, 236.38312pt x 183.68625pt>
 File: 14-validacaocruzada.png Graphic file (type png)
 <use 14-validacaocruzada.png>
-Package pdftex.def Info: 14-validacaocruzada.png  used on input line 1119.
+Package pdftex.def Info: 14-validacaocruzada.png  used on input line 948.
 (pdftex.def)             Requested size: 295.74722pt x 229.82303pt.
- [51 <./14-validacaocruzada.png>]
-<13-mlp-back.png, id=680, 237.13594pt x 190.46156pt>
+ [45 <./14-validacaocruzada.png>]
+<13-mlp-back.png, id=637, 237.13594pt x 190.46156pt>
 File: 13-mlp-back.png Graphic file (type png)
 <use 13-mlp-back.png>
-Package pdftex.def Info: 13-mlp-back.png  used on input line 1135.
+Package pdftex.def Info: 13-mlp-back.png  used on input line 964.
 (pdftex.def)             Requested size: 295.74722pt x 237.5445pt.
-<15-rna-lopes.png, id=687, 685.05937pt x 394.47375pt>
+<15-rna-lopes.png, id=644, 685.05937pt x 394.47375pt>
 File: 15-rna-lopes.png Graphic file (type png)
 <use 15-rna-lopes.png>
-Package pdftex.def Info: 15-rna-lopes.png  used on input line 1146.
+Package pdftex.def Info: 15-rna-lopes.png  used on input line 975.
 (pdftex.def)             Requested size: 295.74722pt x 170.30057pt.
-<16-rna-rocha.png, id=694, 488.57532pt x 495.35063pt>
+<16-rna-rocha.png, id=651, 488.57532pt x 495.35063pt>
 File: 16-rna-rocha.png Graphic file (type png)
 <use 16-rna-rocha.png>
-Package pdftex.def Info: 16-rna-rocha.png  used on input line 1155.
+Package pdftex.def Info: 16-rna-rocha.png  used on input line 984.
 (pdftex.def)             Requested size: 295.74722pt x 299.85057pt.
-
-
-LaTeX Warning: Citation `Braga2000' on page 52 undefined on input line 1160.
-
-[52 <./13-mlp-back.png>]
+ [46 <./13-mlp-back.png>]
 Underfull \vbox (badness 1831) has occurred while \output is active []
 
- [53 <./15-rna-lopes.png> <./16-rna-rocha.png>] [54]
-<18-mlp-bp-ff1.png, id=721, 536.0025pt x 394.47375pt>
+ [47 <./15-rna-lopes.png> <./16-rna-rocha.png>] [48]
+<18-mlp-bp-ff1.png, id=682, 536.0025pt x 394.47375pt>
 File: 18-mlp-bp-ff1.png Graphic file (type png)
 <use 18-mlp-bp-ff1.png>
-Package pdftex.def Info: 18-mlp-bp-ff1.png  used on input line 1200.
+Package pdftex.def Info: 18-mlp-bp-ff1.png  used on input line 1029.
 (pdftex.def)             Requested size: 295.74722pt x 217.65343pt.
-<18-mlp-bp-ff2.png, id=722, 536.0025pt x 394.47375pt>
+<18-mlp-bp-ff2.png, id=683, 536.0025pt x 394.47375pt>
 File: 18-mlp-bp-ff2.png Graphic file (type png)
 <use 18-mlp-bp-ff2.png>
-Package pdftex.def Info: 18-mlp-bp-ff2.png  used on input line 1208.
+Package pdftex.def Info: 18-mlp-bp-ff2.png  used on input line 1037.
 (pdftex.def)             Requested size: 295.74722pt x 217.65343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1050
 
  []
 
-[55]
-<17-mlp-bp-saida.png, id=729, 313.9228pt x 156.585pt>
+[49]
+<17-mlp-bp-saida.png, id=690, 313.9228pt x 156.585pt>
 File: 17-mlp-bp-saida.png Graphic file (type png)
 <use 17-mlp-bp-saida.png>
-Package pdftex.def Info: 17-mlp-bp-saida.png  used on input line 1228.
+Package pdftex.def Info: 17-mlp-bp-saida.png  used on input line 1057.
 (pdftex.def)             Requested size: 181.99722pt x 90.77873pt.
-<20-mlp-bp-fb.png, id=730, 536.0025pt x 394.47375pt>
+<20-mlp-bp-fb.png, id=691, 536.0025pt x 394.47375pt>
 File: 20-mlp-bp-fb.png Graphic file (type png)
 <use 20-mlp-bp-fb.png>
-Package pdftex.def Info: 20-mlp-bp-fb.png  used on input line 1237.
+Package pdftex.def Info: 20-mlp-bp-fb.png  used on input line 1066.
 (pdftex.def)             Requested size: 295.74722pt x 217.65343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1073
 
  []
 
-[56 <./18-mlp-bp-ff1.png> <./18-mlp-bp-ff2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+[50 <./18-mlp-bp-ff1.png> <./18-mlp-bp-ff2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1253
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1079
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1082
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57 <./17-mlp-bp-saida.png> <./20-mlp-bp-fb.png>]
-<21-mlp-bp-fbe.png, id=745, 536.0025pt x 394.47375pt>
+ [51 <./17-mlp-bp-saida.png> <./20-mlp-bp-fb.png>]
+<21-mlp-bp-fbe.png, id=706, 536.0025pt x 394.47375pt>
 File: 21-mlp-bp-fbe.png Graphic file (type png)
 <use 21-mlp-bp-fbe.png>
-Package pdftex.def Info: 21-mlp-bp-fbe.png  used on input line 1259.
+Package pdftex.def Info: 21-mlp-bp-fbe.png  used on input line 1088.
 (pdftex.def)             Requested size: 295.74722pt x 217.65343pt.
- [58 <./21-mlp-bp-fbe.png>] [59]
-[60]
+ [52 <./21-mlp-bp-fbe.png>] [53]
+[54] [55
 
-LaTeX Warning: Citation `Landim2016' on page 61 undefined on input line 1321.
-
-[61
-
-] [62] [63] [64
+] [56] [57] [58
 
 ]
-<22-propostaRna.png, id=816, 562.35094pt x 436.63126pt>
+<22-propostaRna.png, id=779, 562.35094pt x 436.63126pt>
 File: 22-propostaRna.png Graphic file (type png)
 <use 22-propostaRna.png>
-Package pdftex.def Info: 22-propostaRna.png  used on input line 1368.
+Package pdftex.def Info: 22-propostaRna.png  used on input line 1194.
 (pdftex.def)             Requested size: 295.74722pt x 229.62793pt.
- [65] [66 <./22-propostaRna.png>] (./monografia_bcc.bbl
+ [59] [60 <./22-propostaRna.png>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1239.
+ [61] [62]
+Overfull \hbox (21.13596pt too wide) in paragraph at lines 1266--1267
+[]\T1/ptm/m/n/12 É ne-ces-sá-rio um ca-das-tro no site http://www.inmet.gov.br/
+portal/index.php?r=bdmep/bdmep
+ []
+
+
+Overfull \hbox (3.70786pt too wide) in paragraph at lines 1270--1272
+\T1/ptm/m/n/12 Mínima($[]$C), In-so-la-ção(horas) Eva-po-ra-ção do Pi-che(mm), 
+Tem-pe-ra-tura Com-pen-sada Média($[]$C),
+ []
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
+
+ []
+
+[64]
+<04-lopes-entradas-dia-semana.png, id=832, 335.00156pt x 225.09094pt>
+File: 04-lopes-entradas-dia-semana.png Graphic file (type png)
+<use 04-lopes-entradas-dia-semana.png>
+Package pdftex.def Info: 04-lopes-entradas-dia-semana.png  used on input line 1
+350.
+(pdftex.def)             Requested size: 181.99722pt x 122.28572pt.
+ [65 <./04-lopes-entradas-dia-semana.png>] [66] (./monografia_bcc.bbl
 (./monografia_bcc.brf)
 \tf@brf=\write5
 \openout5 = `monografia_bcc.brf'.
@@ -1488,33 +1464,30 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `monografia_bcc.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1511.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1511.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1526.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1526.
  (./monografia_bcc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1511.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1511.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1526.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1526.
 
 Package rerunfilecheck Info: File `monografia_bcc.brf' has not changed.
-(rerunfilecheck)             Checksum: A02B017B620731F904F27C158BCCF752;3369.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: CE934FEC63A36196D543C4DE458DAFE8;3315.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1511.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1526.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13240 strings out of 492982
- 189567 string characters out of 6136225
- 340116 words of memory out of 5000000
- 16225 multiletter control sequences out of 15000+600000
- 52930 words of font info for 65 fonts, out of 8000000 for 9000
+ 13213 strings out of 492982
+ 189011 string characters out of 6136225
+ 340858 words of memory out of 5000000
+ 16195 multiletter control sequences out of 15000+600000
+ 55778 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,13n,32p,1200b,3249s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/tex
@@ -1531,10 +1504,10 @@ f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texl
 ive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on monografia_bcc.pdf (72 pages, 1400913 bytes).
+Output written on monografia_bcc.pdf (72 pages, 1400498 bytes).
 PDF statistics:
- 1209 PDF objects out of 1440 (max. 8388607)
- 1041 compressed objects within 11 object streams
- 333 named destinations out of 1000 (max. 500000)
- 584 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1217 PDF objects out of 1440 (max. 8388607)
+ 1049 compressed objects within 11 object streams
+ 334 named destinations out of 1000 (max. 500000)
+ 576 words of extra memory for PDF output out of 10000 (max. 10000000)
 
