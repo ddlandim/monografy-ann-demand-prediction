@@ -1,0 +1,470 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.5 -M 0.2 -N 50 -V 0 -S 0 -E 40 -H 19 -G -R -batch-size 148
+Relation:     alunos almoco sem feriados - treino-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    149
+Attributes:   19
+              Temperatura
+              Precipitação
+              Segunda
+              Terça
+              Quarta
+              Quinta
+              Sexta
+              Primavera
+              Verao
+              Outono
+              Inverno
+              Distancia Data Posterior
+              Distancia Data Anterior
+              Vendas 1d anterior
+              Vendas 2d anterior
+              Vendas 3d anterior
+              Vendas 4d anterior
+              Vendas 5d anterior
+              TOTAL VENDIDO ALMOCO
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Linear Node 0
+    Inputs    Weights
+    Threshold    -0.24773410096618123
+    Node 1    1.4372261399937227
+    Node 2    -0.05206878872739367
+    Node 3    -0.4950377024355099
+    Node 4    -1.003541834584293
+    Node 5    -0.5134544205422951
+    Node 6    -0.035881243136898854
+    Node 7    -0.27750842228666184
+    Node 8    -0.2327935802886167
+    Node 9    0.8709773268342565
+    Node 10    -0.5199824031435273
+    Node 11    0.6011686715519622
+    Node 12    -0.18690489530283216
+    Node 13    0.4548490359811398
+    Node 14    0.5263757789304059
+    Node 15    -0.8217492479503874
+    Node 16    -0.6868696412365907
+    Node 17    -0.35055090360878216
+    Node 18    0.01883371047811199
+    Node 19    0.016946006904354504
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -0.917950711746332
+    Attrib Temperatura    0.7458406614080657
+    Attrib Precipitação    -0.20070797721158745
+    Attrib Segunda    0.16287163654514566
+    Attrib Terça    1.8646320012716362
+    Attrib Quarta    -0.1737667620026569
+    Attrib Quinta    0.9853599055083244
+    Attrib Sexta    -0.20009203779970453
+    Attrib Primavera    0.6252589909080438
+    Attrib Verao    -0.02064915524811133
+    Attrib Outono    -0.4091836722631647
+    Attrib Inverno    0.7340325204769426
+    Attrib Distancia Data Posterior    0.7087100762081603
+    Attrib Distancia Data Anterior    1.0301272679602473
+    Attrib Vendas 1d anterior    1.204415615463767
+    Attrib Vendas 2d anterior    -0.35818190001426875
+    Attrib Vendas 3d anterior    -0.2890354206385971
+    Attrib Vendas 4d anterior    -1.5751506319645439
+    Attrib Vendas 5d anterior    -0.1197624484715961
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -0.6022368339826741
+    Attrib Temperatura    0.009353636480048597
+    Attrib Precipitação    -0.09069408108086509
+    Attrib Segunda    0.3562658888670331
+    Attrib Terça    0.5603587628304318
+    Attrib Quarta    0.21356812063549435
+    Attrib Quinta    0.3723358226218728
+    Attrib Sexta    0.2969067520952076
+    Attrib Primavera    0.2345519715184881
+    Attrib Verao    0.007574859833005064
+    Attrib Outono    0.16885184638453046
+    Attrib Inverno    0.20454656931001794
+    Attrib Distancia Data Posterior    0.502102458879752
+    Attrib Distancia Data Anterior    0.628842965834286
+    Attrib Vendas 1d anterior    0.2650405622119085
+    Attrib Vendas 2d anterior    0.08146472239265933
+    Attrib Vendas 3d anterior    0.04212816548563521
+    Attrib Vendas 4d anterior    0.042422494149196
+    Attrib Vendas 5d anterior    0.02494501401803791
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.4991067080329648
+    Attrib Temperatura    -0.1905879668551143
+    Attrib Precipitação    -0.42582627955787355
+    Attrib Segunda    0.4035686018489783
+    Attrib Terça    0.338669872250539
+    Attrib Quarta    0.2514830479500869
+    Attrib Quinta    0.3980792163547504
+    Attrib Sexta    0.5859892270462038
+    Attrib Primavera    0.2274503635966482
+    Attrib Verao    -0.033153940274708735
+    Attrib Outono    0.24028782490441808
+    Attrib Inverno    0.2223356208686158
+    Attrib Distancia Data Posterior    0.9399292069268547
+    Attrib Distancia Data Anterior    0.6026817968139536
+    Attrib Vendas 1d anterior    -0.4741963048594368
+    Attrib Vendas 2d anterior    -0.1386146398396626
+    Attrib Vendas 3d anterior    -0.2072080657596537
+    Attrib Vendas 4d anterior    -0.21958145567688317
+    Attrib Vendas 5d anterior    -0.028712372178058616
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.5885379185114232
+    Attrib Temperatura    -0.6611584733206007
+    Attrib Precipitação    -1.0656201055999797
+    Attrib Segunda    0.48313445369122016
+    Attrib Terça    0.512593862101861
+    Attrib Quarta    0.8387680460034626
+    Attrib Quinta    -0.08927884571520044
+    Attrib Sexta    0.5241399227259548
+    Attrib Primavera    -0.005375543821214139
+    Attrib Verao    -0.012826103117104248
+    Attrib Outono    -0.28574212685825157
+    Attrib Inverno    1.068507269271765
+    Attrib Distancia Data Posterior    1.4852001784045321
+    Attrib Distancia Data Anterior    0.1641278378259037
+    Attrib Vendas 1d anterior    -1.164653129918833
+    Attrib Vendas 2d anterior    -0.24249440290276875
+    Attrib Vendas 3d anterior    0.18835800136252304
+    Attrib Vendas 4d anterior    0.07794097072920347
+    Attrib Vendas 5d anterior    0.5409185832907464
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.519684913012035
+    Attrib Temperatura    -0.012008609426278568
+    Attrib Precipitação    -0.38950873617530707
+    Attrib Segunda    0.5595262160453252
+    Attrib Terça    0.1768631322484586
+    Attrib Quarta    0.23258324235459338
+    Attrib Quinta    0.35021502234293694
+    Attrib Sexta    0.6162689122253998
+    Attrib Primavera    0.34525827111770696
+    Attrib Verao    -0.026535141732882184
+    Attrib Outono    0.10596042128128583
+    Attrib Inverno    0.10058532035044064
+    Attrib Distancia Data Posterior    0.8404028849946501
+    Attrib Distancia Data Anterior    0.5197889227077657
+    Attrib Vendas 1d anterior    -0.34321186087773276
+    Attrib Vendas 2d anterior    -0.12499313083027358
+    Attrib Vendas 3d anterior    -0.26469137799409925
+    Attrib Vendas 4d anterior    -0.323618464240326
+    Attrib Vendas 5d anterior    0.05800277301515788
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.6659818819989443
+    Attrib Temperatura    0.06784241733859589
+    Attrib Precipitação    -0.12215858316185893
+    Attrib Segunda    0.3179255200450772
+    Attrib Terça    0.5591791095471688
+    Attrib Quarta    0.192049629933574
+    Attrib Quinta    0.3967313503268036
+    Attrib Sexta    0.29449093324077313
+    Attrib Primavera    0.22869791945386042
+    Attrib Verao    0.0038427644862212076
+    Attrib Outono    0.1746595902189925
+    Attrib Inverno    0.22930102975272493
+    Attrib Distancia Data Posterior    0.4884504324785768
+    Attrib Distancia Data Anterior    0.5836500492031973
+    Attrib Vendas 1d anterior    0.2394276250727492
+    Attrib Vendas 2d anterior    0.08866269222219163
+    Attrib Vendas 3d anterior    0.08927699813807312
+    Attrib Vendas 4d anterior    -0.009302858706889211
+    Attrib Vendas 5d anterior    0.04884004793403516
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -0.5492964166653791
+    Attrib Temperatura    0.005967510398255797
+    Attrib Precipitação    -0.2234825105455466
+    Attrib Segunda    0.394100672188518
+    Attrib Terça    0.34492154236452804
+    Attrib Quarta    0.2492400310748352
+    Attrib Quinta    0.36553899444428223
+    Attrib Sexta    0.4529188409402254
+    Attrib Primavera    0.32019438438548115
+    Attrib Verao    -0.014505574274310422
+    Attrib Outono    0.16740530039891197
+    Attrib Inverno    0.158042693088037
+    Attrib Distancia Data Posterior    0.617949641770792
+    Attrib Distancia Data Anterior    0.538038509048226
+    Attrib Vendas 1d anterior    -0.016472259687483295
+    Attrib Vendas 2d anterior    -0.11071039010880525
+    Attrib Vendas 3d anterior    -0.10933088247430034
+    Attrib Vendas 4d anterior    -0.13030779094893166
+    Attrib Vendas 5d anterior    -0.05173319248952344
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.6120681806296278
+    Attrib Temperatura    0.03553076085916322
+    Attrib Precipitação    -0.174860532039752
+    Attrib Segunda    0.3905977623815106
+    Attrib Terça    0.4076444789072403
+    Attrib Quarta    0.1893690892258883
+    Attrib Quinta    0.3147436084156782
+    Attrib Sexta    0.4000019441188983
+    Attrib Primavera    0.257849045614357
+    Attrib Verao    -0.018993494992989125
+    Attrib Outono    0.14790537465998002
+    Attrib Inverno    0.17561191198077652
+    Attrib Distancia Data Posterior    0.6149474584054646
+    Attrib Distancia Data Anterior    0.5289828756511006
+    Attrib Vendas 1d anterior    0.07400697299741751
+    Attrib Vendas 2d anterior    -0.03167298562403204
+    Attrib Vendas 3d anterior    -0.08680874130510187
+    Attrib Vendas 4d anterior    -0.09367880490128241
+    Attrib Vendas 5d anterior    -0.03808514460286466
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.398179208886139
+    Attrib Temperatura    1.607278300220192
+    Attrib Precipitação    0.19365410062737262
+    Attrib Segunda    0.721251049168996
+    Attrib Terça    0.9083833082535389
+    Attrib Quarta    0.3854653939993905
+    Attrib Quinta    0.20892032240645808
+    Attrib Sexta    -1.6986099404191461
+    Attrib Primavera    0.003037073440484553
+    Attrib Verao    0.03374548634922726
+    Attrib Outono    -0.5586222688253605
+    Attrib Inverno    0.6654269847930477
+    Attrib Distancia Data Posterior    -0.853015364109794
+    Attrib Distancia Data Anterior    0.8940844947229414
+    Attrib Vendas 1d anterior    2.639490255126105
+    Attrib Vendas 2d anterior    1.1264542531443793
+    Attrib Vendas 3d anterior    1.337337886728272
+    Attrib Vendas 4d anterior    -1.2569361426832077
+    Attrib Vendas 5d anterior    -0.029761936976475875
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -0.5352512632818636
+    Attrib Temperatura    -0.10036989881909329
+    Attrib Precipitação    -0.4388680004643362
+    Attrib Segunda    0.4814534163296289
+    Attrib Terça    0.18681835582544082
+    Attrib Quarta    0.2978467251351597
+    Attrib Quinta    0.29210574046606824
+    Attrib Sexta    0.6759941575011535
+    Attrib Primavera    0.31488956710621413
+    Attrib Verao    0.01707815148496379
+    Attrib Outono    0.07708721628202406
+    Attrib Inverno    0.27352947601946453
+    Attrib Distancia Data Posterior    0.9082036230482516
+    Attrib Distancia Data Anterior    0.49105666612341037
+    Attrib Vendas 1d anterior    -0.48992233597275925
+    Attrib Vendas 2d anterior    -0.16223373600315683
+    Attrib Vendas 3d anterior    -0.15009347134844636
+    Attrib Vendas 4d anterior    -0.25900673345396186
+    Attrib Vendas 5d anterior    0.11680365872127343
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -0.8387092094543346
+    Attrib Temperatura    -0.3368861194929124
+    Attrib Precipitação    0.7979344140621322
+    Attrib Segunda    0.7419113985775738
+    Attrib Terça    0.8342486457951033
+    Attrib Quarta    0.21739670102325215
+    Attrib Quinta    0.3962001178549169
+    Attrib Sexta    -0.13944604202092392
+    Attrib Primavera    -0.04623037877484
+    Attrib Verao    -0.03909262546651873
+    Attrib Outono    0.5988764288979075
+    Attrib Inverno    0.16463640254044237
+    Attrib Distancia Data Posterior    0.4151058255208266
+    Attrib Distancia Data Anterior    0.7041626537884702
+    Attrib Vendas 1d anterior    0.7854754582366326
+    Attrib Vendas 2d anterior    0.262914764217061
+    Attrib Vendas 3d anterior    0.936692455030973
+    Attrib Vendas 4d anterior    -0.4350210309625013
+    Attrib Vendas 5d anterior    0.22158320511467072
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -0.5664862709725799
+    Attrib Temperatura    0.05449043824160581
+    Attrib Precipitação    -0.17310489818606206
+    Attrib Segunda    0.3298629622324713
+    Attrib Terça    0.47161880172178533
+    Attrib Quarta    0.2020465691404518
+    Attrib Quinta    0.30648276225547283
+    Attrib Sexta    0.38377912524205826
+    Attrib Primavera    0.1972636463535453
+    Attrib Verao    0.04356312223638416
+    Attrib Outono    0.1630789675392001
+    Attrib Inverno    0.1529215576837034
+    Attrib Distancia Data Posterior    0.6076089143835538
+    Attrib Distancia Data Anterior    0.5973642828032282
+    Attrib Vendas 1d anterior    0.1079151539389718
+    Attrib Vendas 2d anterior    0.029685568874506272
+    Attrib Vendas 3d anterior    -0.03506228994005002
+    Attrib Vendas 4d anterior    -0.0381805427669474
+    Attrib Vendas 5d anterior    -0.07565997951855159
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -0.8352639938858913
+    Attrib Temperatura    -0.24448191432666
+    Attrib Precipitação    0.4935038539225924
+    Attrib Segunda    0.635641644663574
+    Attrib Terça    0.6084420656804631
+    Attrib Quarta    0.18113102402975534
+    Attrib Quinta    0.42076759839014444
+    Attrib Sexta    0.05018864117736897
+    Attrib Primavera    -0.04527030407918814
+    Attrib Verao    0.037530745633800766
+    Attrib Outono    0.5777611219480451
+    Attrib Inverno    0.09834640967745106
+    Attrib Distancia Data Posterior    0.47218430549242324
+    Attrib Distancia Data Anterior    0.6723052403186124
+    Attrib Vendas 1d anterior    0.6213165036518382
+    Attrib Vendas 2d anterior    0.3968740318300749
+    Attrib Vendas 3d anterior    0.761050825721734
+    Attrib Vendas 4d anterior    -0.09117286962254742
+    Attrib Vendas 5d anterior    0.2464041263595173
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -0.7912006677574155
+    Attrib Temperatura    -0.2021649585923553
+    Attrib Precipitação    0.44887079522778395
+    Attrib Segunda    0.6922203627654712
+    Attrib Terça    0.6225528497569509
+    Attrib Quarta    0.07754090346436246
+    Attrib Quinta    0.48734803846706526
+    Attrib Sexta    0.11463227919068182
+    Attrib Primavera    -0.034605128510189286
+    Attrib Verao    0.03520002717912567
+    Attrib Outono    0.6592251562929481
+    Attrib Inverno    0.043021550557543475
+    Attrib Distancia Data Posterior    0.49483972909884694
+    Attrib Distancia Data Anterior    0.6774193475724465
+    Attrib Vendas 1d anterior    0.5084471903696716
+    Attrib Vendas 2d anterior    0.40338944375960983
+    Attrib Vendas 3d anterior    0.840166876648098
+    Attrib Vendas 4d anterior    0.08963273293695324
+    Attrib Vendas 5d anterior    0.34228188429981804
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -0.538544160982552
+    Attrib Temperatura    -0.5464871474724101
+    Attrib Precipitação    -0.8152512895706692
+    Attrib Segunda    0.4825457626797587
+    Attrib Terça    0.4129945132695033
+    Attrib Quarta    0.6319447169445723
+    Attrib Quinta    0.031345988410890036
+    Attrib Sexta    0.651934539132955
+    Attrib Primavera    0.03191776877323273
+    Attrib Verao    -0.01056068188326631
+    Attrib Outono    -0.24446894749530307
+    Attrib Inverno    0.8705941862901723
+    Attrib Distancia Data Posterior    1.3529771754006665
+    Attrib Distancia Data Anterior    0.16188734574712893
+    Attrib Vendas 1d anterior    -1.0164654231509305
+    Attrib Vendas 2d anterior    -0.2144751263399865
+    Attrib Vendas 3d anterior    0.14133870188628583
+    Attrib Vendas 4d anterior    -0.03063498234150602
+    Attrib Vendas 5d anterior    0.3810440780070228
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -0.22513660594109364
+    Attrib Temperatura    -0.6937504032986712
+    Attrib Precipitação    -1.442668421221837
+    Attrib Segunda    -0.4783464277373445
+    Attrib Terça    1.297982446871259
+    Attrib Quarta    0.28699082200270387
+    Attrib Quinta    0.976958533686263
+    Attrib Sexta    -0.45298736773808385
+    Attrib Primavera    -0.31804347803721156
+    Attrib Verao    -0.012171262832913053
+    Attrib Outono    1.4562094901958664
+    Attrib Inverno    -0.6422394509506983
+    Attrib Distancia Data Posterior    0.7108586898200687
+    Attrib Distancia Data Anterior    0.5376768352278302
+    Attrib Vendas 1d anterior    -1.5015252817906648
+    Attrib Vendas 2d anterior    -0.2241278145759738
+    Attrib Vendas 3d anterior    -0.9306942372552088
+    Attrib Vendas 4d anterior    0.3935266814126104
+    Attrib Vendas 5d anterior    0.3717491064570892
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -0.5729092756464301
+    Attrib Temperatura    0.026972628362501427
+    Attrib Precipitação    -0.323518399313092
+    Attrib Segunda    0.4572135573115421
+    Attrib Terça    0.31618456107604215
+    Attrib Quarta    0.22515878037906867
+    Attrib Quinta    0.3049232573876648
+    Attrib Sexta    0.4745606020228684
+    Attrib Primavera    0.29489323788113864
+    Attrib Verao    0.0026255691493604766
+    Attrib Outono    0.2031214191357968
+    Attrib Inverno    0.1608054794221304
+    Attrib Distancia Data Posterior    0.6932322506800535
+    Attrib Distancia Data Anterior    0.5262788468409839
+    Attrib Vendas 1d anterior    -0.12577690861696944
+    Attrib Vendas 2d anterior    -0.10788612720609654
+    Attrib Vendas 3d anterior    -0.17153609113775337
+    Attrib Vendas 4d anterior    -0.18021337853530042
+    Attrib Vendas 5d anterior    -0.0035805699197955384
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -0.6539434919377913
+    Attrib Temperatura    0.06282133923992252
+    Attrib Precipitação    -0.06369997420923194
+    Attrib Segunda    0.33708162975612044
+    Attrib Terça    0.68607901923311
+    Attrib Quarta    0.1782992829520845
+    Attrib Quinta    0.4482763735422917
+    Attrib Sexta    0.2018798996333346
+    Attrib Primavera    0.25393789129956584
+    Attrib Verao    -0.049598636781153366
+    Attrib Outono    0.10547088479662338
+    Attrib Inverno    0.2594074694072851
+    Attrib Distancia Data Posterior    0.4832033474195146
+    Attrib Distancia Data Anterior    0.662779230011715
+    Attrib Vendas 1d anterior    0.37167679904719697
+    Attrib Vendas 2d anterior    0.10768334175374725
+    Attrib Vendas 3d anterior    0.12224426723376967
+    Attrib Vendas 4d anterior    -0.014779513529770437
+    Attrib Vendas 5d anterior    0.01317340215921271
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -0.6726115404610307
+    Attrib Temperatura    0.002049657025559575
+    Attrib Precipitação    -0.042100723509154586
+    Attrib Segunda    0.3626490889358217
+    Attrib Terça    0.637294546260803
+    Attrib Quarta    0.19346156672239578
+    Attrib Quinta    0.4319993771580311
+    Attrib Sexta    0.2615474710663487
+    Attrib Primavera    0.1855878385830474
+    Attrib Verao    -0.04653936512939604
+    Attrib Outono    0.18027475502707763
+    Attrib Inverno    0.1786735671424787
+    Attrib Distancia Data Posterior    0.5099113049399249
+    Attrib Distancia Data Anterior    0.5744495960004156
+    Attrib Vendas 1d anterior    0.3682116892748037
+    Attrib Vendas 2d anterior    0.19091125871454662
+    Attrib Vendas 3d anterior    0.1935123224085774
+    Attrib Vendas 4d anterior    -0.010305981361686244
+    Attrib Vendas 5d anterior    0.02037101556535416
+Class 
+    Input
+    Node 0
+
+
+Time taken to build model: 9.57 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.6859
+Mean absolute error                     75.1448
+Root mean squared error                103.3329
+Relative absolute error                 48.5476 %
+Root relative squared error             59.5575 %
+Total Number of Instances              151     
+

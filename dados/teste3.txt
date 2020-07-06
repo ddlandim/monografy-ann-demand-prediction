@@ -1,0 +1,741 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.5 -M 0.2 -N 50 -V 0 -S 0 -E 40 -H "19, 10, 5" -G -R -batch-size 148
+Relation:     alunos almoco sem feriados - treino-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    149
+Attributes:   19
+              Temperatura
+              Precipitação
+              Segunda
+              Terça
+              Quarta
+              Quinta
+              Sexta
+              Primavera
+              Verao
+              Outono
+              Inverno
+              Distancia Data Posterior
+              Distancia Data Anterior
+              Vendas 1d anterior
+              Vendas 2d anterior
+              Vendas 3d anterior
+              Vendas 4d anterior
+              Vendas 5d anterior
+              TOTAL VENDIDO ALMOCO
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Linear Node 0
+    Inputs    Weights
+    Threshold    -0.8756627900790132
+    Node 30    1.5019975895571034
+    Node 31    1.4929354086570366
+    Node 32    1.501847816755879
+    Node 33    1.4996986039378173
+    Node 34    1.4994120269831648
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    0.029282594952455245
+    Attrib Temperatura    0.30565221219302263
+    Attrib Precipitação    -0.06300837182157709
+    Attrib Segunda    -0.32544382527067295
+    Attrib Terça    1.252333100395077
+    Attrib Quarta    -1.1221393273928395
+    Attrib Quinta    0.894867918969071
+    Attrib Sexta    -0.5859146343585571
+    Attrib Primavera    -0.7084444713068498
+    Attrib Verao    0.04128248017014047
+    Attrib Outono    1.1901089560507447
+    Attrib Inverno    -0.46741352614039405
+    Attrib Distancia Data Posterior    -0.25864946114106313
+    Attrib Distancia Data Anterior    0.14517613543149868
+    Attrib Vendas 1d anterior    0.304015547767523
+    Attrib Vendas 2d anterior    -0.23974266934595678
+    Attrib Vendas 3d anterior    -0.2049706378702167
+    Attrib Vendas 4d anterior    -0.6538756377074114
+    Attrib Vendas 5d anterior    -0.5416331957007428
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -0.25876071873719003
+    Attrib Temperatura    -0.13840697856371934
+    Attrib Precipitação    -0.22104496284741149
+    Attrib Segunda    0.0035114604098275453
+    Attrib Terça    -0.1626287724036278
+    Attrib Quarta    0.20396992941405476
+    Attrib Quinta    0.1624410763551682
+    Attrib Sexta    0.756122290068442
+    Attrib Primavera    0.11407990905536072
+    Attrib Verao    -0.02577111402111102
+    Attrib Outono    0.29136925878626285
+    Attrib Inverno    -0.010101813143376144
+    Attrib Distancia Data Posterior    0.4482463605223302
+    Attrib Distancia Data Anterior    0.3188169826856915
+    Attrib Vendas 1d anterior    -0.797428109046074
+    Attrib Vendas 2d anterior    -0.4359049197745228
+    Attrib Vendas 3d anterior    -0.3756862107229066
+    Attrib Vendas 4d anterior    0.03868480074135656
+    Attrib Vendas 5d anterior    0.04456712887331399
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.2939590128600576
+    Attrib Temperatura    -0.7349696383929415
+    Attrib Precipitação    -0.2702036362383347
+    Attrib Segunda    -0.23188199935297005
+    Attrib Terça    0.17174999800948812
+    Attrib Quarta    0.23486919277130602
+    Attrib Quinta    0.3636604253392781
+    Attrib Sexta    0.5857507320511891
+    Attrib Primavera    -0.1923348341853238
+    Attrib Verao    0.02994951694072885
+    Attrib Outono    0.5282360128727258
+    Attrib Inverno    -0.08402234054023736
+    Attrib Distancia Data Posterior    0.5902928715013581
+    Attrib Distancia Data Anterior    0.23982082611315605
+    Attrib Vendas 1d anterior    -1.7613501343689604
+    Attrib Vendas 2d anterior    -0.7215252115993702
+    Attrib Vendas 3d anterior    -0.8799956458554572
+    Attrib Vendas 4d anterior    0.4197314042557838
+    Attrib Vendas 5d anterior    0.298776656756101
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.30381903158186413
+    Attrib Temperatura    -0.5670770902069199
+    Attrib Precipitação    -0.2203687698641116
+    Attrib Segunda    -0.23329091191649265
+    Attrib Terça    0.06305637688744313
+    Attrib Quarta    0.04546823001831641
+    Attrib Quinta    0.2769719986407683
+    Attrib Sexta    0.8231984446333412
+    Attrib Primavera    0.05165348089354415
+    Attrib Verao    0.01969689113428985
+    Attrib Outono    0.4601102491726681
+    Attrib Inverno    -0.10788237490145539
+    Attrib Distancia Data Posterior    0.5550659724771155
+    Attrib Distancia Data Anterior    0.18712688852137424
+    Attrib Vendas 1d anterior    -1.505067348043871
+    Attrib Vendas 2d anterior    -0.6090231238728904
+    Attrib Vendas 3d anterior    -0.8131521350532113
+    Attrib Vendas 4d anterior    0.3305240302627083
+    Attrib Vendas 5d anterior    0.14914907139241926
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.344024962877196
+    Attrib Temperatura    -0.4497522978286796
+    Attrib Precipitação    -0.2178432264414285
+    Attrib Segunda    -0.31824724446111086
+    Attrib Terça    0.1005143113380963
+    Attrib Quarta    0.261215023064065
+    Attrib Quinta    0.373154133918291
+    Attrib Sexta    0.6742226254762267
+    Attrib Primavera    -0.1312783473334164
+    Attrib Verao    0.03609911840660775
+    Attrib Outono    0.6420886464436333
+    Attrib Inverno    -0.14539615015310167
+    Attrib Distancia Data Posterior    0.5505373702403252
+    Attrib Distancia Data Anterior    0.2009750974654005
+    Attrib Vendas 1d anterior    -1.500259534192342
+    Attrib Vendas 2d anterior    -0.7021538471131316
+    Attrib Vendas 3d anterior    -0.8108588510435096
+    Attrib Vendas 4d anterior    0.3619481308413943
+    Attrib Vendas 5d anterior    0.20032057993757357
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.3522223083509379
+    Attrib Temperatura    -1.054621230725719
+    Attrib Precipitação    -0.14847680539189034
+    Attrib Segunda    -0.4458833859371068
+    Attrib Terça    0.4873262957236751
+    Attrib Quarta    0.42570637730814703
+    Attrib Quinta    0.40776216405980253
+    Attrib Sexta    0.32595263422738796
+    Attrib Primavera    -0.39749993428201214
+    Attrib Verao    -0.04209346793984012
+    Attrib Outono    0.9184258872826122
+    Attrib Inverno    -0.18807355269614262
+    Attrib Distancia Data Posterior    0.6599741493822108
+    Attrib Distancia Data Anterior    0.18566210008877365
+    Attrib Vendas 1d anterior    -2.100482769733971
+    Attrib Vendas 2d anterior    -0.7636330761901522
+    Attrib Vendas 3d anterior    -1.2885078098724283
+    Attrib Vendas 4d anterior    0.8545152072135666
+    Attrib Vendas 5d anterior    0.4715278092308703
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -0.2910334019659403
+    Attrib Temperatura    -0.13061001711349765
+    Attrib Precipitação    -0.1346007905911456
+    Attrib Segunda    0.09395726393462851
+    Attrib Terça    -0.09256892924970359
+    Attrib Quarta    0.19466657164360363
+    Attrib Quinta    0.13201920549155927
+    Attrib Sexta    0.6054729748400863
+    Attrib Primavera    0.06831795449408683
+    Attrib Verao    0.044385820894360994
+    Attrib Outono    0.24844843013449194
+    Attrib Inverno    -0.05697690730880969
+    Attrib Distancia Data Posterior    0.4167887947127008
+    Attrib Distancia Data Anterior    0.3250798159295674
+    Attrib Vendas 1d anterior    -0.5596540737861493
+    Attrib Vendas 2d anterior    -0.3875940533806803
+    Attrib Vendas 3d anterior    -0.2591201633069501
+    Attrib Vendas 4d anterior    -0.0435733763233859
+    Attrib Vendas 5d anterior    -0.08066599171377259
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.37617071285641185
+    Attrib Temperatura    -0.4304173459136014
+    Attrib Precipitação    -0.29556085671058374
+    Attrib Segunda    -0.15988570294183208
+    Attrib Terça    0.007501758725060783
+    Attrib Quarta    0.28258616296404554
+    Attrib Quinta    0.2849135367250682
+    Attrib Sexta    0.6011247194147306
+    Attrib Primavera    -0.1232086518055556
+    Attrib Verao    0.01547064502599707
+    Attrib Outono    0.5253060083676114
+    Attrib Inverno    -0.038024533554821924
+    Attrib Distancia Data Posterior    0.5708653581635836
+    Attrib Distancia Data Anterior    0.2562387044298937
+    Attrib Vendas 1d anterior    -1.3125845951790025
+    Attrib Vendas 2d anterior    -0.611259148311094
+    Attrib Vendas 3d anterior    -0.681933575480603
+    Attrib Vendas 4d anterior    0.23311900194458116
+    Attrib Vendas 5d anterior    0.17078016124647236
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.3649365287315318
+    Attrib Temperatura    0.03386646423550419
+    Attrib Precipitação    0.09652061046959651
+    Attrib Segunda    0.1360456297937942
+    Attrib Terça    0.5107017322424088
+    Attrib Quarta    0.03373196327527222
+    Attrib Quinta    0.11736340419029113
+    Attrib Sexta    0.15639737665763762
+    Attrib Primavera    -0.1507614144896299
+    Attrib Verao    0.03827498808932467
+    Attrib Outono    0.2419807598805134
+    Attrib Inverno    0.16742082332611607
+    Attrib Distancia Data Posterior    0.2416509482067504
+    Attrib Distancia Data Anterior    0.3732331138768764
+    Attrib Vendas 1d anterior    -0.05807682534239678
+    Attrib Vendas 2d anterior    -0.49141275722832434
+    Attrib Vendas 3d anterior    -0.27553074904409597
+    Attrib Vendas 4d anterior    -0.6173246072581043
+    Attrib Vendas 5d anterior    -0.46553022247962306
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -0.2771186831969313
+    Attrib Temperatura    -0.13589294211372385
+    Attrib Precipitação    -0.3067639800447616
+    Attrib Segunda    -0.01516933949320472
+    Attrib Terça    -0.27604474029827974
+    Attrib Quarta    0.11546801933690538
+    Attrib Quinta    0.10052762435749556
+    Attrib Sexta    0.9512070470125006
+    Attrib Primavera    0.13375109809345634
+    Attrib Verao    0.010339486798490428
+    Attrib Outono    0.1620316190548243
+    Attrib Inverno    -0.033279912616736435
+    Attrib Distancia Data Posterior    0.3766201220873877
+    Attrib Distancia Data Anterior    0.2002130046244586
+    Attrib Vendas 1d anterior    -0.7319293942244304
+    Attrib Vendas 2d anterior    -0.3945229915297494
+    Attrib Vendas 3d anterior    -0.2758740090718177
+    Attrib Vendas 4d anterior    -0.001134028346925506
+    Attrib Vendas 5d anterior    0.030687673448611456
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -0.2945882405964887
+    Attrib Temperatura    -0.2865610244750764
+    Attrib Precipitação    -0.3197219649673155
+    Attrib Segunda    -0.04268516073574465
+    Attrib Terça    -0.318763121014369
+    Attrib Quarta    0.01792842528109509
+    Attrib Quinta    0.0900874603554282
+    Attrib Sexta    1.0167923556841565
+    Attrib Primavera    0.14072510313771547
+    Attrib Verao    0.01021389432018592
+    Attrib Outono    0.11572851300003524
+    Attrib Inverno    0.05494441871720249
+    Attrib Distancia Data Posterior    0.4788531244173879
+    Attrib Distancia Data Anterior    0.15346756192332767
+    Attrib Vendas 1d anterior    -1.229628120399648
+    Attrib Vendas 2d anterior    -0.5027564911195787
+    Attrib Vendas 3d anterior    -0.47051708860925634
+    Attrib Vendas 4d anterior    0.06129221040374467
+    Attrib Vendas 5d anterior    0.16879411786619894
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -0.20613352701326143
+    Attrib Temperatura    -0.22433601500333367
+    Attrib Precipitação    -0.30994381165342866
+    Attrib Segunda    -0.1935745923690638
+    Attrib Terça    -0.2583963754595742
+    Attrib Quarta    0.10127511754495393
+    Attrib Quinta    0.1777325845896498
+    Attrib Sexta    1.063396289428048
+    Attrib Primavera    0.08156838845079316
+    Attrib Verao    0.04114848447780449
+    Attrib Outono    0.22530646082321434
+    Attrib Inverno    -0.06811831508003
+    Attrib Distancia Data Posterior    0.46125543270141955
+    Attrib Distancia Data Anterior    0.21711777489970666
+    Attrib Vendas 1d anterior    -1.1362421544474497
+    Attrib Vendas 2d anterior    -0.5551266268682754
+    Attrib Vendas 3d anterior    -0.4042393075191669
+    Attrib Vendas 4d anterior    0.07217970482681446
+    Attrib Vendas 5d anterior    0.12960150267448867
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -0.3638115111779625
+    Attrib Temperatura    -1.2336772669114144
+    Attrib Precipitação    -0.17098802977063685
+    Attrib Segunda    -0.5115626173077756
+    Attrib Terça    0.5264667762511059
+    Attrib Quarta    0.43304041667974114
+    Attrib Quinta    0.37496375652117203
+    Attrib Sexta    0.2590297547988146
+    Attrib Primavera    -0.3896588923156357
+    Attrib Verao    0.03023741315527681
+    Attrib Outono    1.0047435061826921
+    Attrib Inverno    -0.16717960402537652
+    Attrib Distancia Data Posterior    0.6958527359109794
+    Attrib Distancia Data Anterior    0.17503308339299814
+    Attrib Vendas 1d anterior    -2.3718733720855325
+    Attrib Vendas 2d anterior    -0.7649939568057378
+    Attrib Vendas 3d anterior    -1.4124931474128728
+    Attrib Vendas 4d anterior    1.0118484042191849
+    Attrib Vendas 5d anterior    0.5319171658463153
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -0.18706392525830567
+    Attrib Temperatura    -0.15180238810969054
+    Attrib Precipitação    -0.37226649012743557
+    Attrib Segunda    -0.06326851103060474
+    Attrib Terça    -0.5607905762618467
+    Attrib Quarta    -0.15627795847007714
+    Attrib Quinta    -0.10830413691331768
+    Attrib Sexta    1.360498737241067
+    Attrib Primavera    0.1785789099998894
+    Attrib Verao    -0.010862882301298116
+    Attrib Outono    -0.08243012668723591
+    Attrib Inverno    0.10872836353230016
+    Attrib Distancia Data Posterior    0.42455525308981834
+    Attrib Distancia Data Anterior    0.12745787476354814
+    Attrib Vendas 1d anterior    -1.0080739495599682
+    Attrib Vendas 2d anterior    -0.43126105569449724
+    Attrib Vendas 3d anterior    -0.2719532438168976
+    Attrib Vendas 4d anterior    -0.020663587735720922
+    Attrib Vendas 5d anterior    0.13883582099187633
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -0.3273815614577588
+    Attrib Temperatura    -0.32157016624140067
+    Attrib Precipitação    -0.2819561321234974
+    Attrib Segunda    -0.03646467924042385
+    Attrib Terça    -0.05417485074965865
+    Attrib Quarta    0.23464343845166058
+    Attrib Quinta    0.2628704315305913
+    Attrib Sexta    0.640783304234346
+    Attrib Primavera    -0.046106837350123005
+    Attrib Verao    -0.02401183049107103
+    Attrib Outono    0.37496105108336764
+    Attrib Inverno    -0.01641737874748484
+    Attrib Distancia Data Posterior    0.5479498630667134
+    Attrib Distancia Data Anterior    0.2813764121508776
+    Attrib Vendas 1d anterior    -1.1104409938828432
+    Attrib Vendas 2d anterior    -0.5269815097319047
+    Attrib Vendas 3d anterior    -0.559935742451994
+    Attrib Vendas 4d anterior    0.19829594261198666
+    Attrib Vendas 5d anterior    0.04433985517073509
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -0.22444223031490215
+    Attrib Temperatura    -0.19461036307611773
+    Attrib Precipitação    -0.3575363269844471
+    Attrib Segunda    -0.07744896046654219
+    Attrib Terça    -0.3003079013728852
+    Attrib Quarta    0.10099187779680442
+    Attrib Quinta    0.13814544909384022
+    Attrib Sexta    1.0016391611187887
+    Attrib Primavera    0.10789262862239157
+    Attrib Verao    0.024004757063985777
+    Attrib Outono    0.20650940383524805
+    Attrib Inverno    0.033149922763898235
+    Attrib Distancia Data Posterior    0.49958130502200715
+    Attrib Distancia Data Anterior    0.19483919067117184
+    Attrib Vendas 1d anterior    -1.102816339768146
+    Attrib Vendas 2d anterior    -0.4981774599549981
+    Attrib Vendas 3d anterior    -0.4277774642741278
+    Attrib Vendas 4d anterior    0.07024357306027211
+    Attrib Vendas 5d anterior    0.07898572596327381
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -0.2959691735702721
+    Attrib Temperatura    -0.10258571669088216
+    Attrib Precipitação    -0.19372834771366826
+    Attrib Segunda    0.01718119046024832
+    Attrib Terça    -0.20015159095254217
+    Attrib Quarta    0.12631336766159007
+    Attrib Quinta    0.159108621487561
+    Attrib Sexta    0.8664144877164067
+    Attrib Primavera    0.14834151476927818
+    Attrib Verao    -0.03589043738281265
+    Attrib Outono    0.17384969473455522
+    Attrib Inverno    -0.08775680407316917
+    Attrib Distancia Data Posterior    0.416576392169213
+    Attrib Distancia Data Anterior    0.21106583677665108
+    Attrib Vendas 1d anterior    -0.6899787766872129
+    Attrib Vendas 2d anterior    -0.38055087445458374
+    Attrib Vendas 3d anterior    -0.2772359909443979
+    Attrib Vendas 4d anterior    -0.04760000689828574
+    Attrib Vendas 5d anterior    0.008346988053366044
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -0.290256706775076
+    Attrib Temperatura    -0.312197357679715
+    Attrib Precipitação    -0.24680908119362446
+    Attrib Segunda    -0.03427402700291928
+    Attrib Terça    -0.13113259631386856
+    Attrib Quarta    0.120440469550868
+    Attrib Quinta    0.1923769137651514
+    Attrib Sexta    0.8211263643977664
+    Attrib Primavera    0.06829443288392524
+    Attrib Verao    -0.047145898942977715
+    Attrib Outono    0.26015889036741635
+    Attrib Inverno    -0.051520947646858155
+    Attrib Distancia Data Posterior    0.5354811383380053
+    Attrib Distancia Data Anterior    0.2430113541187462
+    Attrib Vendas 1d anterior    -1.0269016554311627
+    Attrib Vendas 2d anterior    -0.49344244028457224
+    Attrib Vendas 3d anterior    -0.5108749853630414
+    Attrib Vendas 4d anterior    0.11849939407979855
+    Attrib Vendas 5d anterior    0.07036235967505135
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -0.3056574884163202
+    Attrib Temperatura    -0.765752511769374
+    Attrib Precipitação    -0.2998104709926744
+    Attrib Segunda    -0.34927958409645615
+    Attrib Terça    0.16825724702660874
+    Attrib Quarta    0.1564894857548709
+    Attrib Quinta    0.3131049372414539
+    Attrib Sexta    0.6890517132938148
+    Attrib Primavera    -0.1308669993086643
+    Attrib Verao    -0.03052379685540887
+    Attrib Outono    0.5834497220304932
+    Attrib Inverno    -0.1564706748514611
+    Attrib Distancia Data Posterior    0.5938061060256598
+    Attrib Distancia Data Anterior    0.21059538611183348
+    Attrib Vendas 1d anterior    -1.8337504787347554
+    Attrib Vendas 2d anterior    -0.708448300673584
+    Attrib Vendas 3d anterior    -0.9754162669445827
+    Attrib Vendas 4d anterior    0.43886711540407863
+    Attrib Vendas 5d anterior    0.31647529601190555
+Sigmoid Node 20
+    Inputs    Weights
+    Threshold    -1.3924102008045178
+    Node 1    -0.5688088259568026
+    Node 2    0.17479115128918704
+    Node 3    0.4147947767215095
+    Node 4    0.34231455096752555
+    Node 5    0.362038389286284
+    Node 6    0.5924115777191347
+    Node 7    0.08536412399619765
+    Node 8    0.31481739940514025
+    Node 9    -0.17516215903911506
+    Node 10    0.13514173118383516
+    Node 11    0.2930157855766885
+    Node 12    0.28848388847862355
+    Node 13    0.6885525641914817
+    Node 14    0.27080210085565937
+    Node 15    0.21758040019299824
+    Node 16    0.30274000336115736
+    Node 17    0.12494418579757018
+    Node 18    0.1758415301383553
+    Node 19    0.4153620675887304
+Sigmoid Node 21
+    Inputs    Weights
+    Threshold    -1.5309489537407646
+    Node 1    -0.5904822360468808
+    Node 2    0.15578905678274832
+    Node 3    0.47164521386416697
+    Node 4    0.3611158153120102
+    Node 5    0.37605593579074914
+    Node 6    0.6880418194637735
+    Node 7    0.10416272156523596
+    Node 8    0.35599086165424076
+    Node 9    -0.1764306177374758
+    Node 10    0.1901179723631136
+    Node 11    0.2713660251089767
+    Node 12    0.28443000210596997
+    Node 13    0.8006287509686688
+    Node 14    0.32504292053334854
+    Node 15    0.1955502792567376
+    Node 16    0.2947256782105105
+    Node 17    0.17343218707100228
+    Node 18    0.26786157640574676
+    Node 19    0.5033639331225619
+Sigmoid Node 22
+    Inputs    Weights
+    Threshold    -1.5400399488706944
+    Node 1    -0.5778210135379314
+    Node 2    0.20029588648302551
+    Node 3    0.43667104970421833
+    Node 4    0.3467489369823507
+    Node 5    0.4262210853971158
+    Node 6    0.730617305919445
+    Node 7    0.07353638880875746
+    Node 8    0.33285123409670747
+    Node 9    -0.20532440350437184
+    Node 10    0.16310022123823203
+    Node 11    0.32208220743621435
+    Node 12    0.2814798935511128
+    Node 13    0.7792069440798608
+    Node 14    0.37119281307330637
+    Node 15    0.2591412067088347
+    Node 16    0.26051570715110073
+    Node 17    0.15605654314760647
+    Node 18    0.2246191200522408
+    Node 19    0.5180478634322282
+Sigmoid Node 23
+    Inputs    Weights
+    Threshold    -1.5372176435506617
+    Node 1    -0.5619000163204863
+    Node 2    0.14714841366242984
+    Node 3    0.4422175058075724
+    Node 4    0.40717162860587647
+    Node 5    0.3562657421647262
+    Node 6    0.6347175487882107
+    Node 7    0.13748140004039341
+    Node 8    0.33233251542225783
+    Node 9    -0.20250386704099585
+    Node 10    0.20683028575516016
+    Node 11    0.2599911587563173
+    Node 12    0.2605167162318733
+    Node 13    0.7942335776017986
+    Node 14    0.3099641326756246
+    Node 15    0.30529126666623163
+    Node 16    0.29639518301572737
+    Node 17    0.18599927705477942
+    Node 18    0.228078698053414
+    Node 19    0.48979814332610244
+Sigmoid Node 24
+    Inputs    Weights
+    Threshold    -1.3872411493451737
+    Node 1    -0.5482684160807377
+    Node 2    0.20191901319419076
+    Node 3    0.36647294939717723
+    Node 4    0.3189532554238663
+    Node 5    0.37655331803977804
+    Node 6    0.5821380800942932
+    Node 7    0.04518742476049442
+    Node 8    0.26700909190007577
+    Node 9    -0.1916023633958906
+    Node 10    0.1947954477517782
+    Node 11    0.2959868481664459
+    Node 12    0.24465543710589188
+    Node 13    0.6872316025825193
+    Node 14    0.25078705822656044
+    Node 15    0.22665753701932065
+    Node 16    0.22130846582776548
+    Node 17    0.17986787669711382
+    Node 18    0.2195499540604892
+    Node 19    0.470223081937006
+Sigmoid Node 25
+    Inputs    Weights
+    Threshold    -1.4686257834271748
+    Node 1    -0.5225807633194955
+    Node 2    0.15424087795604005
+    Node 3    0.4076121311277581
+    Node 4    0.3244990631991
+    Node 5    0.3910921998159135
+    Node 6    0.5901690538582224
+    Node 7    0.04841682857216564
+    Node 8    0.34078494286392186
+    Node 9    -0.1513186002787207
+    Node 10    0.22467781098966957
+    Node 11    0.22917098659272633
+    Node 12    0.23629683049252212
+    Node 13    0.7012171539665923
+    Node 14    0.3448681111448287
+    Node 15    0.21424956016329363
+    Node 16    0.22735051255613464
+    Node 17    0.1163161418010351
+    Node 18    0.25866943677279425
+    Node 19    0.46439393549828284
+Sigmoid Node 26
+    Inputs    Weights
+    Threshold    -1.4552773790863556
+    Node 1    -0.5341641693612151
+    Node 2    0.18798240714070966
+    Node 3    0.4175516154402472
+    Node 4    0.34751028204054957
+    Node 5    0.3679761942230624
+    Node 6    0.5956229927446779
+    Node 7    0.03137683011059412
+    Node 8    0.31107786837843043
+    Node 9    -0.14603444960487133
+    Node 10    0.13519503998985438
+    Node 11    0.2684862571504736
+    Node 12    0.27874226791401213
+    Node 13    0.7113402247245426
+    Node 14    0.3127176648108839
+    Node 15    0.20994772615815416
+    Node 16    0.21292837377734522
+    Node 17    0.1376171136007328
+    Node 18    0.2228339090797116
+    Node 19    0.48268519167621743
+Sigmoid Node 27
+    Inputs    Weights
+    Threshold    -1.4550517657711313
+    Node 1    -0.5708917404262227
+    Node 2    0.1727914045177712
+    Node 3    0.4824048335956678
+    Node 4    0.3315907855216231
+    Node 5    0.3688814225826118
+    Node 6    0.6632639327360677
+    Node 7    0.049043340731450266
+    Node 8    0.2904799946708901
+    Node 9    -0.1630230448534245
+    Node 10    0.18724561330150594
+    Node 11    0.2597438735741178
+    Node 12    0.2608585052651326
+    Node 13    0.727036875719581
+    Node 14    0.28106001916954415
+    Node 15    0.2325661186382538
+    Node 16    0.2520034213367495
+    Node 17    0.17325733474393643
+    Node 18    0.2270557826596463
+    Node 19    0.44829840209500066
+Sigmoid Node 28
+    Inputs    Weights
+    Threshold    -1.3790536396110775
+    Node 1    -0.49673363520654695
+    Node 2    0.11253777380002142
+    Node 3    0.43976762030069955
+    Node 4    0.36280306602986023
+    Node 5    0.37864857586378214
+    Node 6    0.5680954519298596
+    Node 7    0.0697370038994274
+    Node 8    0.2835531060501797
+    Node 9    -0.20731873780617457
+    Node 10    0.12667260589209797
+    Node 11    0.2874553742021395
+    Node 12    0.22755629507439493
+    Node 13    0.6695357182019974
+    Node 14    0.2725900274712311
+    Node 15    0.19673066081369972
+    Node 16    0.22301373798105578
+    Node 17    0.11150328143360957
+    Node 18    0.1791592891744905
+    Node 19    0.40240817380350896
+Sigmoid Node 29
+    Inputs    Weights
+    Threshold    -1.5531004073078025
+    Node 1    -0.5374772567558455
+    Node 2    0.13813142473895582
+    Node 3    0.4651068719396807
+    Node 4    0.36937051448324015
+    Node 5    0.3825126566568662
+    Node 6    0.7058391992622741
+    Node 7    0.11063560285024043
+    Node 8    0.2714707572670731
+    Node 9    -0.2109460906691025
+    Node 10    0.22128340029496715
+    Node 11    0.28229295012533034
+    Node 12    0.30396029979142225
+    Node 13    0.7901780314259981
+    Node 14    0.2904637436665663
+    Node 15    0.2908207667720809
+    Node 16    0.30800008254816824
+    Node 17    0.18591371431169934
+    Node 18    0.22191702007949912
+    Node 19    0.4451116336067367
+Sigmoid Node 30
+    Inputs    Weights
+    Threshold    -0.2437853369639578
+    Node 20    -0.649294700749099
+    Node 21    -0.7455413510419188
+    Node 22    -0.7096265821951661
+    Node 23    -0.6980799895294136
+    Node 24    -0.6511488347168535
+    Node 25    -0.6083336759070831
+    Node 26    -0.603651539864163
+    Node 27    -0.6645871445306036
+    Node 28    -0.566741226775352
+    Node 29    -0.7306576974270937
+Sigmoid Node 31
+    Inputs    Weights
+    Threshold    -0.18689234219311457
+    Node 20    -0.6438925856826048
+    Node 21    -0.7041490284935001
+    Node 22    -0.7452444700279861
+    Node 23    -0.7177021923152035
+    Node 24    -0.5877198362039359
+    Node 25    -0.6716082190413197
+    Node 26    -0.6886533294737135
+    Node 27    -0.6809129805723977
+    Node 28    -0.5879837363559639
+    Node 29    -0.7132714567048747
+Sigmoid Node 32
+    Inputs    Weights
+    Threshold    -0.2448129793331436
+    Node 20    -0.6362229906191623
+    Node 21    -0.7056532458264771
+    Node 22    -0.7135133235014051
+    Node 23    -0.7208413852822576
+    Node 24    -0.6547142739313433
+    Node 25    -0.6632238372061707
+    Node 26    -0.6221856404144063
+    Node 27    -0.6418826168628283
+    Node 28    -0.5846202940488388
+    Node 29    -0.6846772387334812
+Sigmoid Node 33
+    Inputs    Weights
+    Threshold    -0.2282809365906892
+    Node 20    -0.6368890885308207
+    Node 21    -0.6830614955674882
+    Node 22    -0.7389698320859049
+    Node 23    -0.7097483812186538
+    Node 24    -0.5927534576818267
+    Node 25    -0.5983077789575474
+    Node 26    -0.6651936815803142
+    Node 27    -0.6520688252069466
+    Node 28    -0.6557126062541417
+    Node 29    -0.7269201281413745
+Sigmoid Node 34
+    Inputs    Weights
+    Threshold    -0.22560182764500478
+    Node 20    -0.5867802769377114
+    Node 21    -0.7495405040845018
+    Node 22    -0.7090413562107711
+    Node 23    -0.669248869928735
+    Node 24    -0.6321915937955445
+    Node 25    -0.6882313489466039
+    Node 26    -0.6282032134070927
+    Node 27    -0.6877336562915728
+    Node 28    -0.6119727461121889
+    Node 29    -0.702037970796597
+Class 
+    Input
+    Node 0
+
+
+Time taken to build model: 21.19 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.6547
+Mean absolute error                     75.0178
+Root mean squared error                110.1236
+Relative absolute error                 48.4655 %
+Root relative squared error             63.4715 %
+Total Number of Instances              151     
+

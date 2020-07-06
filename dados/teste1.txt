@@ -1,0 +1,250 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a -G -R -batch-size 148
+Relation:     alunos almoco sem feriados - treino-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    149
+Attributes:   19
+              Temperatura
+              Precipitação
+              Segunda
+              Terça
+              Quarta
+              Quinta
+              Sexta
+              Primavera
+              Verao
+              Outono
+              Inverno
+              Distancia Data Posterior
+              Distancia Data Anterior
+              Vendas 1d anterior
+              Vendas 2d anterior
+              Vendas 3d anterior
+              Vendas 4d anterior
+              Vendas 5d anterior
+              TOTAL VENDIDO ALMOCO
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Linear Node 0
+    Inputs    Weights
+    Threshold    0.4427122787288309
+    Node 1    1.8501586957373823
+    Node 2    -0.7946791990673289
+    Node 3    -1.125233501967608
+    Node 4    0.3911088970275388
+    Node 5    -1.056251235211819
+    Node 6    -0.8061404493467891
+    Node 7    0.27622711045586656
+    Node 8    -0.8545022637277132
+    Node 9    0.4853934651211823
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -1.2234514252447504
+    Attrib Temperatura    0.4900040614145629
+    Attrib Precipitação    -0.3377650471782069
+    Attrib Segunda    0.1021654720409596
+    Attrib Terça    1.894296412656833
+    Attrib Quarta    -0.1282315933868506
+    Attrib Quinta    1.292735661416651
+    Attrib Sexta    -0.2623196204495436
+    Attrib Primavera    0.6342081959249571
+    Attrib Verao    -0.031133174223040818
+    Attrib Outono    -0.5303982729252207
+    Attrib Inverno    0.9003685824211295
+    Attrib Distancia Data Posterior    0.7468370973967946
+    Attrib Distancia Data Anterior    1.1044203689006653
+    Attrib Vendas 1d anterior    1.5680826436414068
+    Attrib Vendas 2d anterior    -0.4661538322849769
+    Attrib Vendas 3d anterior    -0.6251318637807409
+    Attrib Vendas 4d anterior    -1.8054916154391836
+    Attrib Vendas 5d anterior    -0.02275011131476896
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -0.3889975304788472
+    Attrib Temperatura    -0.18598114999532792
+    Attrib Precipitação    -0.6082512243981353
+    Attrib Segunda    0.5285351181260521
+    Attrib Terça    0.159854226268963
+    Attrib Quarta    0.598047484300941
+    Attrib Quinta    0.1109796796341548
+    Attrib Sexta    0.297861138167989
+    Attrib Primavera    0.17328890297048857
+    Attrib Verao    -0.020223861817994817
+    Attrib Outono    -0.15841172926059596
+    Attrib Inverno    0.5347480840973411
+    Attrib Distancia Data Posterior    1.3183605980855762
+    Attrib Distancia Data Anterior    0.28600424427205606
+    Attrib Vendas 1d anterior    -0.2859348316578284
+    Attrib Vendas 2d anterior    -0.22809800689565946
+    Attrib Vendas 3d anterior    -0.135214590721661
+    Attrib Vendas 4d anterior    -0.21651250459538945
+    Attrib Vendas 5d anterior    0.06723562603908666
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.2590158545308016
+    Attrib Temperatura    -1.0848566004330016
+    Attrib Precipitação    -0.8251608020337056
+    Attrib Segunda    -0.8449471453733209
+    Attrib Terça    1.037971220275204
+    Attrib Quarta    0.2821058794233936
+    Attrib Quinta    1.016126662482876
+    Attrib Sexta    0.5556113700777602
+    Attrib Primavera    0.018374302683394086
+    Attrib Verao    0.025847087995515772
+    Attrib Outono    0.8207009391816866
+    Attrib Inverno    -0.08185201789187932
+    Attrib Distancia Data Posterior    1.1876437935396444
+    Attrib Distancia Data Anterior    1.5787072680200114
+    Attrib Vendas 1d anterior    -0.427355697587497
+    Attrib Vendas 2d anterior    -0.33161772901300945
+    Attrib Vendas 3d anterior    -0.40113285481193317
+    Attrib Vendas 4d anterior    -0.4918471745107395
+    Attrib Vendas 5d anterior    -0.5951272324969358
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.6572913305680494
+    Attrib Temperatura    -0.07260109759521402
+    Attrib Precipitação    0.11640015117273325
+    Attrib Segunda    0.21373545077906111
+    Attrib Terça    0.5693009168988646
+    Attrib Quarta    0.12555025936512698
+    Attrib Quinta    0.38156813005916207
+    Attrib Sexta    0.49607072012732095
+    Attrib Primavera    0.01769664108071063
+    Attrib Verao    -0.04534119709180913
+    Attrib Outono    0.25279565163002515
+    Attrib Inverno    0.20655669795325374
+    Attrib Distancia Data Posterior    0.37678700015808
+    Attrib Distancia Data Anterior    0.5383551279859191
+    Attrib Vendas 1d anterior    0.413042197503096
+    Attrib Vendas 2d anterior    0.376694215798688
+    Attrib Vendas 3d anterior    0.49784255190097126
+    Attrib Vendas 4d anterior    0.10312151138697544
+    Attrib Vendas 5d anterior    0.3060239704103892
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    0.7430964411185215
+    Attrib Temperatura    -1.4099823217616114
+    Attrib Precipitação    -0.7296587588262238
+    Attrib Segunda    -1.021079438947429
+    Attrib Terça    -0.7451306744165866
+    Attrib Quarta    -0.8870077653667924
+    Attrib Quinta    -0.18262649677467638
+    Attrib Sexta    2.33265629116425
+    Attrib Primavera    -0.08468269381113322
+    Attrib Verao    -0.04139314321016965
+    Attrib Outono    0.12608971657854406
+    Attrib Inverno    -0.21056282062329737
+    Attrib Distancia Data Posterior    0.8300065279440023
+    Attrib Distancia Data Anterior    -0.6987612373134942
+    Attrib Vendas 1d anterior    -3.311938732922119
+    Attrib Vendas 2d anterior    -1.0151589915542505
+    Attrib Vendas 3d anterior    -2.7462574255295715
+    Attrib Vendas 4d anterior    1.5670522807486853
+    Attrib Vendas 5d anterior    0.2615053014389192
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.4656331419869203
+    Attrib Temperatura    -0.25630715528671427
+    Attrib Precipitação    -0.6535125635995794
+    Attrib Segunda    0.38416089209514087
+    Attrib Terça    0.3016335159277211
+    Attrib Quarta    0.6160028982533062
+    Attrib Quinta    0.12449886466755529
+    Attrib Sexta    0.3125975046419408
+    Attrib Primavera    0.03955851863255876
+    Attrib Verao    0.03922236965205332
+    Attrib Outono    -0.07664856157124193
+    Attrib Inverno    0.6276244716677639
+    Attrib Distancia Data Posterior    1.30631470798036
+    Attrib Distancia Data Anterior    0.33894198653132485
+    Attrib Vendas 1d anterior    -0.4514742716766757
+    Attrib Vendas 2d anterior    -0.22783675991969599
+    Attrib Vendas 3d anterior    -0.2006648774919213
+    Attrib Vendas 4d anterior    -0.08320140366993148
+    Attrib Vendas 5d anterior    0.003589641049180717
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -0.6837712905943294
+    Attrib Temperatura    0.08001928418134083
+    Attrib Precipitação    0.03592465030237548
+    Attrib Segunda    0.17010186360319662
+    Attrib Terça    0.7094868019598287
+    Attrib Quarta    0.09955698215449539
+    Attrib Quinta    0.4744905540903002
+    Attrib Sexta    0.31710584409608383
+    Attrib Primavera    0.20031899102858985
+    Attrib Verao    0.0034638761596543013
+    Attrib Outono    0.20924105200213403
+    Attrib Inverno    0.2137325298097636
+    Attrib Distancia Data Posterior    0.4532950222946481
+    Attrib Distancia Data Anterior    0.5352045368227045
+    Attrib Vendas 1d anterior    0.44854764937196906
+    Attrib Vendas 2d anterior    0.3394968562916199
+    Attrib Vendas 3d anterior    0.3954737326462668
+    Attrib Vendas 4d anterior    0.0016626309857693247
+    Attrib Vendas 5d anterior    0.2377756821193921
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.44696847269164824
+    Attrib Temperatura    -0.2618125736073082
+    Attrib Precipitação    -0.6827355765978584
+    Attrib Segunda    0.4094987408447276
+    Attrib Terça    0.20747005498114748
+    Attrib Quarta    0.6679556403365774
+    Attrib Quinta    0.08364818144522078
+    Attrib Sexta    0.4111848086833999
+    Attrib Primavera    0.009432943142370481
+    Attrib Verao    -0.04143576810363191
+    Attrib Outono    -0.17244974229252358
+    Attrib Inverno    0.6255960249479964
+    Attrib Distancia Data Posterior    1.3423999123508494
+    Attrib Distancia Data Anterior    0.36428615201300224
+    Attrib Vendas 1d anterior    -0.49285235269511557
+    Attrib Vendas 2d anterior    -0.2735069470024771
+    Attrib Vendas 3d anterior    -0.12644435011007182
+    Attrib Vendas 4d anterior    -0.19043167068406952
+    Attrib Vendas 5d anterior    0.06663888437037621
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.7177208401259794
+    Attrib Temperatura    -0.07931516009755436
+    Attrib Precipitação    0.22403414119905968
+    Attrib Segunda    0.21452994729786423
+    Attrib Terça    0.5267936624034846
+    Attrib Quarta    0.11007891148842347
+    Attrib Quinta    0.3452144489104608
+    Attrib Sexta    0.4635662460676416
+    Attrib Primavera    -0.08493693881395632
+    Attrib Verao    0.0031352545694726883
+    Attrib Outono    0.32816734326062474
+    Attrib Inverno    0.2623093603835808
+    Attrib Distancia Data Posterior    0.3559567404333907
+    Attrib Distancia Data Anterior    0.48725613694021785
+    Attrib Vendas 1d anterior    0.4651708835884952
+    Attrib Vendas 2d anterior    0.49126061262823567
+    Attrib Vendas 3d anterior    0.6601350433847621
+    Attrib Vendas 4d anterior    0.1493282431259947
+    Attrib Vendas 5d anterior    0.38564594509408506
+Class 
+    Input
+    Node 0
+
+
+Time taken to build model: 76.64 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.7384
+Mean absolute error                     77.0148
+Root mean squared error                102.6235
+Relative absolute error                 49.7557 %
+Root relative squared error             59.1486 %
+Total Number of Instances              151     
+
