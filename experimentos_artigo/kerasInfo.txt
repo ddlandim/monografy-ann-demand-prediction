@@ -1,7 +1,0 @@
-Tensor Flow Version: 1.12.0
-Keras Version: 2.1.6-tf
-
-Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)]
-Pandas 0.24.2
-Scikit-Learn 0.19.1
-GPU is NOT AVAILABLE
