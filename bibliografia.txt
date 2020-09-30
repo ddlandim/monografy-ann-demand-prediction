@@ -1,0 +1,44 @@
+BRAGA, A. de P.; CARVALHO, A. P. L. F.; LUDERMIR, Teresa Bernarda. Redes neurais
+artificiais: teoria e aplicações. Livros Técnicos e Científicos, 2000.
+
+HAYKIN, Simon. Neural networks, a comprehensive foundation. Macmilan, 1994.
+
+JUNIOR, A. M. Análise de métodos de previsão de demanda baseados em séries temporais em
+uma empresa do setor de perfumes e cosméticos. 2007. 120 f. Dissertação de Mestrado
+(Mestrado em Engenharia de Produção) – Pontifícia Universidade do Paraná. Curitiba.
+
+LANDIM, DOUGLAS DINIZ. Análise De Demanda No Restaurante Universitário Do Instituto
+De Ciência E Tecnologia Da Unifesp - Universidade Federal De São Paulo. 2016. 6f. Trabalho
+Individual (Projeto Da Disciplina De Simulação De Sistemas) - Instituto de Ciência e Tecnologia,
+Universidade Federal de São Paulo, São José dos Campos. Disponível Em:
+<https://goo.gl/a1oXuA> Acesso Em: 07 De Abril De 2018.
+
+LOPES, L.C. Modelos Para Previsão De Demanda No Restaurante Universitário Utilizando
+Técnicas De Redes Neurais. 2008. 14f. IV Congresso Nacional De Excelência Em Gestão.Dma
+Universidade Federal De Viçosa. Disponível Em:
+<http://www.novoscursos.ufv.br/projetos/ufv/gesep/www/wp-content/uploads/5.pdf> Acesso Em:
+07 De Abril De 2018.
+
+ROCHA, JOSÉ CELSO; MATOS, FELIPE DELESTRO;FREI, FERNANDO. Utilização De Redes
+Neurais Artificiais Para A Determinação Do Números De Refeições Diárias De Um
+Restaurante Universitário. 2011. 8f. Rev. Nutr., Campinas, set./out.2011. Universidade Estadual
+Paulista Júlio de Mesquita Filho. Assis. SP. Disponível Em <http://www.scielo.br/scielo.php?
+pid=S1415-52732011000500007&script=sci_arttext&tlng=pt> Acesso Em: 07 De Abril De 2018.
+
+RUAS, GABRIEL I.S. et.al. [S.l] Previsão De Demanda De Energia Elétrica Utilizando Redes
+Neurais Artificiais E Support Vector Regression. 2012. 10f. Universidade Federal do Paraná
+(UFPR). Disponível Em <http://www.dcc.fc.up.pt/~ines/enia07_html/pdf/27927.pdf> Acesso Em:
+07 De Abril De 2018
+
+SCHÖLKOPF, Bernhard; SMOLA, Alexander; MÜLLER, Klaus-Robert. Nonlinear component
+analysis as a kernel eigenvalue problem. Neural computation, v. 10, n. 5, p. 1299-1319, 1998.
+Massachusetts Institute of Technology. Disponível Em
+<http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.3.6497&rep=rep1&type=pdf> Acesso
+Em: 07 De Abril De 2018.
+
+SILVA, C.V.M et. al. Metodologia Para Previsão De Demanda De Energia Elétrica Em
+Curtíssimo Prazo Baseada Em Um Modelo Probabilístico Discreto. 2010. 5f. Desenvolvimento
+de Algoritmos e Software para Previsão de Carga na Área de Concessão da MuxEnergia - Horizonte
+de Curtíssimo Prazo. Disponível Em
+<http://alegrete.unipampa.edu.br/gesep/wp-content/uploads/2010/05/Previs%C3%A3o-dedemanda-
+utiilizando-m%C3%A9todo-de-Markov_Final.pdf> Acesso Em: 07 De Abril De 2018.
