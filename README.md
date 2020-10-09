@@ -1,5 +1,8 @@
 # MONOGRAFIA PARA O MEU TRABALHO DE CONCLUSÃO DE CURSO EM CIÊNCIA DA COMPUTAÇÃO NA UNIVERSIDADE FEDERAL DE SÃO PAULO.
 
+# DEFESA : 15/10/2020, 2a Submissão : 19/10/2020 (meu aniversário hehehe ='( )
+# OVERLEAF : https://pt.overleaf.com/read/ytwssshdjgny
+
 ## Primeiros estudos realizados na disciplina de Simulação de Sistemas : 
     https://github.com/ddlandim/monografy-ann-demand-prediction/blob/master/Referencias/LANDIM%202016%20-%20ANALISE%20DE%20CORRELACAO%20TEMP%20X%20VENDAS%20NO%20RU.pdf
 
