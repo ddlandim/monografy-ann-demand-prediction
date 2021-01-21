@@ -1,7 +1,21 @@
-# MONOGRAFIA PARA O MEU TRABALHO DE CONCLUSÃO DE CURSO EM CIÊNCIA DA COMPUTAÇÃO NA UNIVERSIDADE FEDERAL DE SÃO PAULO.
+# ANÁLISE DE DEMANDA DO RESTAURANTE UNIVERSITÁRIO DO ICT UNIFESP VIA REDES NEURAIS.
+Trabalho de conclusão de curso apresentado ao
+Instituto de Ciência e Tecnologia – UNIFESP (Universidade Federal de São Paulo),
+como parte das atividades para obtenção do título
+de Bacharel em Ciência da Computação.
 
-# DEFESA : 15/10/2020, 2a Submissão : 19/10/2020 (meu aniversário hehehe ='( )
-# OVERLEAF : https://pt.overleaf.com/read/ytwssshdjgny
+[![SLIDES AND PRESENTATION](http://img.youtube.com/vi/IT0fiuOemBY/0.jpg)](http://www.youtube.com/watch?v=IT0fiuOemBY "ANÁLISE DE DEMANDA DO RESTAURANTE UNIVERSITÁRIO DO ICT UNIFESP VIA REDES NEURAIS.")
+
+# DOCUMENTO FINAL (PT-BR)
+https://github.com/ddlandim/monografy-ann-demand-prediction/blob/master/monografy_ann_demand_prediction.pdf
+## OVERLEAF (online latex PT-BR):  
+https://pt.overleaf.com/read/ytwssshdjgny
+
+## LATEX REPO (PT-BR):  
+https://github.com/ddlandim/monografy-ann-demand-prediction-2020-final
+
+## OVERLEAF (EN-US): 
+em breve
 
 ## Primeiros estudos realizados na disciplina de Simulação de Sistemas : 
     https://github.com/ddlandim/monografy-ann-demand-prediction/blob/master/Referencias/LANDIM%202016%20-%20ANALISE%20DE%20CORRELACAO%20TEMP%20X%20VENDAS%20NO%20RU.pdf
@@ -16,7 +30,7 @@
     confira atual repositório : 
         https://github.com/ddlandim/monografy-ann-demand-prediction-tex
 
-# EXPERIMENTOS FINAIS
+# EXPERIMENTOS FINAIS (encontrados na pasta Notebooks)
 ## 1a Fase Experimental
 ###	    Pré-Processamento e treino dos modelos
 	        https://colab.research.google.com/drive/1spSZDJk1EwK9UK-jfYbWinKEq0EEYIuM?usp=sharing
