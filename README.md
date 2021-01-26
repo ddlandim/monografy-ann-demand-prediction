@@ -4,6 +4,8 @@ Instituto de Ciência e Tecnologia – UNIFESP (Universidade Federal de São Pau
 como parte das atividades para obtenção do título
 de Bacharel em Ciência da Computação.
 
+# APRESENTAÇÃO - YOUTUBE (CLIQUE NA IMAGEM ABAIXO)
+
 [![SLIDES AND PRESENTATION](http://img.youtube.com/vi/IT0fiuOemBY/0.jpg)](http://www.youtube.com/watch?v=IT0fiuOemBY "ANÁLISE DE DEMANDA DO RESTAURANTE UNIVERSITÁRIO DO ICT UNIFESP VIA REDES NEURAIS.")
 
 # DOCUMENTO FINAL (PT-BR)
